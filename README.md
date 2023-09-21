@@ -18,3 +18,5 @@ Al definir la oferta y  público objetivo, estamos mejor preparados para diseña
 
 
 descripcion de integrantes
+
+- Martinez Imanol: Mi nombre es Imanol Martínez y tengo 26 años, soy estudiante de primer año de la carrera de software en el Instituto Ezpeleta, ubicado en Morteros, Córdoba. Me siento muy entusiasmado con la posibilidad de poder desarrollar mis habilidades y conocimientos en esta oportunidad brindada de DH. Actualmente tengo hecho varios cursos en Testing Manual, como también en programación con Python. Soy una persona apasionada por aprender, crecer y mejorar constantemente. Espero tener la oportunidad de demostrar mis habilidades y aprender de los miembros más experimentados del equipo. Por último, quiero destacar que, aunque no tengo experiencia laboral previa dentro del área IT, mi entusiasmo y dedicación me llevan a tener una actitud proactiva y positiva frente a los desafíos que se presenten.
