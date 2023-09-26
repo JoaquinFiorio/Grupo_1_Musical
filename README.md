@@ -26,3 +26,6 @@ Al definir la oferta y  público objetivo, estamos mejor preparados para diseña
 - Virginia Schreter: Mi nombre es Virginia Schreter, tengo 33 años, vivo en Rafaela, Santa Fe. Tengo un hijo y soy comercial en una prepaga.
 
 - Soy Lourdes Fiorito, me recibí de ciencias de la comunicación y me gusta mucho la parte creativa de la programación.
+
+- Soy Leonardo Bolatti y tengo 30 años. Trabaje como comerciante autónomo en un negocio familiar de venta de Muebles. Luego en el año 2019 ingrese a mi primer trabajo en relación de dependencia en el grupo Sancor Salud que se dedica a brindar servicios de medicina privada. Pase primero por el área de afiliaciones donde aprendí todo el proceso de ingreso de nuestros asociados. Actualmente trabajo para una empresa del grupo denominada Crescens S.A.U. que se dedica al otorgamiento de préstamos a distintos sectores de nuestra economía. 
+Hace tiempo que queria ingresar al mundo del desarrollo. Primero hice algunos cursos de introducción a la programación y luego de python, pero nunca tuve la oportunidad de profundizar. Hasta ahora que, gracias al programa de Sancor Salud y Glubits, puedo internalizarme en este marivilloso mundo. 
