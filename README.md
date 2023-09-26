@@ -24,3 +24,5 @@ Al definir la oferta y  público objetivo, estamos mejor preparados para diseña
 - Fiorio Joaquín: Mi nombre es Joaquín Fiorio, tengo 24 años, soy estudiante de derecho de 4to año, en la UNR FDER, en Rosario, Santa Fe. Soy desarrollador de Software hace 2 años, estudié autodidacta con cursos en internet y me apasionó el área IT, conseguí mi primer trabajo freelance con una empresa de EE.UU por unos meses, después empece a hacer trabajos para una consultora en Panamá con proyectos varios, luego me surgió la opotunidad de trabajar para una empresa de desarrollo de software para estadios de deportes de EE.UU. Y, por último, vi la oportunidad de entrar en el proyecto de Glubits, que junto con Sancor Salud y Digital House estaban llevando adelante y me pareció una oportunidad única.
 
 - Virginia Schreter: Mi nombre es Virginia Schreter, tengo 33 años, vivo en Rafaela, Santa Fe. Tengo un hijo y soy comercial en una prepaga.
+
+- Soy Lourdes Fiorito, me recibí de ciencias de la comunicación y me gusta mucho la parte creativa de la programación.
