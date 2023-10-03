@@ -35,4 +35,4 @@ Hace tiempo que queria ingresar al mundo del desarrollo. Primero hice algunos cu
 
 # SPRINT 2
 
-- LINK INVITACION TRELLO : https://trello.com/invite/b/v8HfdtmP/ATTI1d4574ca43c905caec8a97f412d5a13d79AE1C2D/musitienda
+- LINK INVITACION TRELLO : https://trello.com/b/v8HfdtmP/musitienda
