@@ -135,6 +135,18 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.olvido {
+    color: white;
+    text-decoration: underline;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.olvido a{
+    cursor: pointer;
+}
+
 .rowRight {
     margin-left: 15%;
 }
