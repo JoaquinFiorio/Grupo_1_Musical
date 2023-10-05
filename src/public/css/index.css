@@ -1,3 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Raleway'; /* Puedes darle el nombre que quieras */
+    src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito'; /* Puedes darle el nombre que quieras */
+    src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
+}
+
 h1 {
-    color: red;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* NAVBAR */
+
+header .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    border-bottom: 2px solid gray;
+    height: 150px;
+    padding-top: 30px;
+}
+
+img {
+    width: 20%;
+}
+
+.search-container {
+    width: 55%;
+    position: relative;
+    margin: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.rightOptions {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Nav Products */
+
+.navProducts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    padding: 20px 0px;
+}
+
+.navProducts button {
+    background-color: #9b2b2b;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Nunino', sans-serif;
 }

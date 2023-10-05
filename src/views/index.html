@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" href="/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
 </head>
 <body>
-    <h1>Somos unos cracks</h1>
+    <header>
+        <nav class="navBar">
+            <img src="/img/logo.png" alt="logo">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos marcas y más">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            <div class="rightOptions">
+                <a class="options">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h5>Iniciar Sesión</h5>
+                </a>
+                <a class="options">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h5>Regístrate</h5>
+                </a>
+                <a class="options">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h5>Carrito 0</h5>
+                </a>
+            </div>
+        </nav>
+        <div class="navProducts">
+            <button>Inst. Cuerda <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Inst. Viento <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Percusión <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Teclado y Piano <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Accesorios <i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+    </header>
+    <section>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="open-modal-btn">
+                            <img src="/img/products/bajo.jpg" alt="12" class="card-img">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="open-modal-btn2">
+                            <img src="/img/products/bajo.jpg" alt="12" class="card-img">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="open-modal-btn3">
+                            <img src="/img/products/bajo.jpg" alt="12" class="card-img">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="open-modal-btn4">
+                            <img src="/img/products/bajo.jpg" alt="12" class="card-img">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="open-modal-btn5">
+                            <img src="/img/products/bajo.jpg" alt="12" class="card-img">
+                        </a>
+                    </div>
+                </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/js.js"></script>
 </body>
 </html>
