@@ -13,14 +13,14 @@ const swiper = new Swiper(".slide-content", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    breakpoints:{
-        0:{
-            slidesPerView:1,
-        },
-        520:{
+    breakpoints: {
+        0: {
             slidesPerView: 1,
         },
-        950:{
+        520: {
+            slidesPerView: 1,
+        },
+        950: {
             slidesPerView: 1,
         }
     }
@@ -36,14 +36,14 @@ const swiper2 = new Swiper(".slide-content2", {
     autoplay: {
         delay: 4000, // tiempo en milisegundos
     },
-    breakpoints:{
-        0:{
+    breakpoints: {
+        0: {
             slidesPerView: 1,
         },
-        520:{
+        520: {
             slidesPerView: 1,
         },
-        950:{
+        950: {
             slidesPerView: 1,
         },
         1450: {
