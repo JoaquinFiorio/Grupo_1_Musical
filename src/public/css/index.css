@@ -164,6 +164,58 @@ header img {
 
 /* SERVICIOS */
 
+
+/* NEWSLETTER */
+
+/* Estilos para el rectángulo */
+.rectangulo {
+    width: 85%;
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    padding: 20px;
+    text-align: center;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rectangulo h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.rectangulo p {
+    font-size: 16px;
+    color: #666;
+}
+
+.rectangulo .formulario {
+    display: flex;
+    gap: 15px;
+}
+
+.rectangulo input[type="text"],
+.rectangulo input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.rectangulo button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
 /*Footer*/
 .pie-pagina {
     width: 100%;
