@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color-1: #f3680b;
+    --color-2: #9b2b2b;
+    --color-3: #542404;
+    --color-4: #9b806f;
+    --color-5: #beb5af;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -11,12 +19,14 @@ a {
 }
 
 @font-face {
-    font-family: 'Raleway'; /* Puedes darle el nombre que quieras */
+    font-family: 'Raleway';
+    /* Puedes darle el nombre que quieras */
     src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Nunito'; /* Puedes darle el nombre que quieras */
+    font-family: 'Nunito';
+    /* Puedes darle el nombre que quieras */
     src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
 }
 
@@ -98,4 +108,89 @@ img {
     border-radius: 10px;
     cursor: pointer;
     font-family: 'Nunino', sans-serif;
+}
+
+/*Footer*/
+.pie-pagina {
+    width: 100%;
+    background-color: var(--color-4);
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: var(--color-2);
+    text-align: center;
+    transition: all 300ms ease;
+    border-radius: 50px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: var(--color-5);
+}
+
+.pie-pagina .grupo-2 {
+    background-color: var(--color-5);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 20px 0;
+        /* Ajusta el espacio vertical en pantallas más pequeñas */
+    }
+
+    .pie-pagina .grupo-1 .box {
+        text-align: center;
+        /* Centra el contenido en pantallas más pequeñas */
+    }
 }
