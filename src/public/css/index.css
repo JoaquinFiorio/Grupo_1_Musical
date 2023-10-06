@@ -172,9 +172,9 @@ header img {
 
 .pie-pagina .grupo-1 {
     width: 100%;
-    max-width: 1200px;
     margin: auto;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     padding: 20px 0;
@@ -182,21 +182,26 @@ header img {
 }
 
 
-.pie-pagina .grupo-1 .box figure {
+.pie-pagina .grupo-1 .box,
+.box-pagos {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 3%;
 }
 
-.pie-pagina .grupo-1 .box figure img {
+.pie-pagina .grupo-1 .box img {
     width: 200px;
 }
 
-.pie-pagina .grupo-1 .box h2 {
+.pie-pagina .grupo-1 .box h2,
+.box-pagos h2 {
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 
@@ -205,7 +210,21 @@ header img {
     margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .red-social a {
+.pie-pagina .grupo-1 .box-pagos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.pie-pagina .grupo-1 .box-pagos .metodos-pagos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .red-social a,
+.metodos-pagos i {
     display: inline-block;
     text-decoration: none;
     width: 45px;
