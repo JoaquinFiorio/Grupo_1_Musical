@@ -6,9 +6,6 @@ const swiper = new Swiper(".slide-content", {
     centerSlide: "true",
     face: "true",
     grabCursor: "true",
-    autoplay: {
-        delay: 3000, // tiempo en milisegundos
-    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -26,28 +23,56 @@ const swiper = new Swiper(".slide-content", {
     }
 })
 
-const swiper2 = new Swiper(".slide-content2", {
+const swiper2 = new Swiper(".slide2", {
     slidesPerView: 3,
-    spaceBetween: 5,
     loop: true,
     centerSlide: "true",
     face: "true",
     grabCursor: "true",
-    autoplay: {
-        delay: 4000, // tiempo en milisegundos
+    autoplay: false,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     breakpoints: {
         0: {
             slidesPerView: 1,
         },
         520: {
-            slidesPerView: 1,
+            slidesPerView: 2,
         },
         950: {
-            slidesPerView: 1,
+            slidesPerView: 3,
         },
         1450: {
+            slidesPerView: 3,
+        }
+    }
+})
+
+const swiper3 = new Swiper(".slide3", {
+    slidesPerView: 3,
+    loop: true,
+    centerSlide: "true",
+    face: "true",
+    grabCursor: "true",
+    autoplay: false,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
             slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+        1450: {
+            slidesPerView: 3,
         }
     }
 })
