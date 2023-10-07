@@ -184,7 +184,8 @@ header img {
 
 /* SWIPER PRODUCTOS*/
 
-.buscado, .destacado {
+.buscado,
+.destacado {
     padding: 0px 3%;
     margin: 30px auto;
 }
@@ -349,16 +350,44 @@ header img {
 }
 
 
-@media screen and (max-width: 800px) {
+@media (max-width: 768px) {
     .pie-pagina .grupo-1 {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 20px 0;
-        /* Ajusta el espacio vertical en pantallas más pequeñas */
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        display: flex;
+        flex-direction: column;
     }
 
-    .pie-pagina .grupo-1 .box {
-        text-align: center;
-        /* Centra el contenido en pantallas más pequeñas */
+    .pie-pagina .grupo-1 .box img {
+        width: 150px;
+    }
+
+    .pie-pagina .grupo-1 .box h2,
+    .box-pagos h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pie-pagina .grupo-1 {
+        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pie-pagina .grupo-1 .box img {
+        width: 100px;
+    }
+
+    .pie-pagina .grupo-1 .box h2,
+    .box-pagos h2 {
+        font-size: 16px;
+    }
+
+    .pie-pagina .grupo-1 .red-social a,
+    .metodos-pagos i {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
     }
 }
