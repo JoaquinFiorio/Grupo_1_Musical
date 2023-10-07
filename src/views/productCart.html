@@ -7,53 +7,125 @@
     <title>Product Cart</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         type="text/css">
+    <link rel="icon" href="/img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-...">
     <link rel="stylesheet" href="/css/productCart.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1 class="title-cart">Carrito</h1>
-        <div class="project">
-            <div class="shop">
-                <div class="box">
-                    <img src="/img/products/bateria.jpg">
-                    <div class="content">
-                        <h3>Bateria Electrica</h3>
-                        <h4>Precio $120000</h4>
-                        <p class="unit">Cantidad <input name="" value="0"></p>
-                        <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="/img/products/guitarra-electrica.jpg">
-                    <div class="content">
-                        <h3>Guitarra electrica</h3>
-                        <h4>Precio $40500</h4>
-                        <p class="unit">Cantidad <input name="" value="0"></p>
-                        <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="/img/products/bajo.jpg">
-                    <div class="content">
-                        <h3>Bajo</h3>
-                        <h4>Precio $25000</h4>
-                        <p class="unit">Cantidad <input name="" value="0"></p>
-                        <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
-                    </div>
-                </div>
+    <header>
+        <nav class="navBar">
+            <img src="/img/logo.png" alt="logo">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar productos marcas y más">
+                <i class="fas fa-search search-icon"></i>
             </div>
-            <div class="right-bar">
-                <p><span>Subtotal</span></p>
-                <hr>
-                <p><span>Envio</span></p>
-                <hr>
-                <p><span>Total</span></p>
-                <a href="/"><i class="fa fa-shopping-cart"></i>Realizar compra</a>
+            <div class="rightOptions">
+                <a href="/login" class="options">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h5>Iniciar Sesión</h5>
+                </a>
+                <a href="/register" class="options">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h5>Regístrate</h5>
+                </a>
+                <a href="/productCart" class="options productCart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h5>Carrito 0</h5>
+                </a>
+            </div>
+        </nav>
+        <div class="navProducts">
+            <button>Inst. Cuerda <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Inst. Viento <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Percusión <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Teclado y Piano <i class="fa-solid fa-chevron-down"></i></button>
+            <button>Accesorios <i class="fa-solid fa-chevron-down"></i></button>
+        </div>
+    </header>
+
+    <section class="productCart">
+        <div class="wrapper">
+            <h1 class="title-cart">Carrito</h1>
+            <div class="project">
+                <div class="shop">
+                    <div class="box">
+                        <img src="/img/products/bateria.jpg">
+                        <div class="content">
+                            <h3>Bateria Electrica</h3>
+                            <h4>Precio $120000</h4>
+                            <p class="unit">Cantidad <input name="" value="0"></p>
+                            <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="/img/products/guitarra-electrica.jpg">
+                        <div class="content">
+                            <h3>Guitarra electrica</h3>
+                            <h4>Precio $40500</h4>
+                            <p class="unit">Cantidad <input name="" value="0"></p>
+                            <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="/img/products/bajo.jpg">
+                        <div class="content">
+                            <h3>Bajo</h3>
+                            <h4>Precio $25000</h4>
+                            <p class="unit">Cantidad <input name="" value="0"></p>
+                            <p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bar">
+                    <p><span>Subtotal</span></p>
+                    <hr>
+                    <p><span>Envio</span></p>
+                    <hr>
+                    <p><span>Total</span></p>
+                    <a href="/"><i class="fa fa-shopping-cart"></i>Realizar compra</a>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </section>
 
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <h2>Nosotros</h2>
+                <p>Nos esforzamos por proporcionar productos de calidad, información detallada y un servicio al cliente
+                    excepcional para ayudar a nuestros clientes a encontrar los instrumentos perfectos y accesorios
+                    relacionados con la música que necesitan.
+                </p>
+            </div>
+            <div class="box">
+                <a href="#">
+                    <img src="/img/logo.png" alt="Logo">
+                </a>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+            <div class="box-pagos">
+                <h2>Metodos de pago</h2>
+                <div class="metodos-pagos">
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small><b>MusiTienda</b> - Todos los Derechos Reservados. &copy; 2023 </small>
+        </div>
+    </footer>
+
+
+</body>
 
 </html>
