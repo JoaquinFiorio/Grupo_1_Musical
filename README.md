@@ -1,4 +1,4 @@
-Vico la mas crack# Grupo_1_Musical
+# Grupo_1_Musical
 
 # ¿Como levantar el Proyecto en un servidor local?
 
