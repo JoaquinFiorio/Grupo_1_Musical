@@ -137,7 +137,6 @@ input[type="submit"] {
 
 .olvido {
     color: white;
-    text-decoration: underline;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -145,6 +144,8 @@ input[type="submit"] {
 
 .olvido a{
     cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    text-decoration: none;
 }
 
 .rowRight {
