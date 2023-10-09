@@ -36,6 +36,10 @@ h1 {
 
 /* NAVBAR */
 
+.hamburgerMenu {
+    display: none;
+}
+
 header .navBar {
     display: flex;
     justify-content: space-between;
@@ -170,7 +174,7 @@ header img {
     align-items: center;
     gap: 10%;
     border: 2px solid var(--color-4);
-    padding: 15px 0px;
+    padding: 15px 10px;
 }
 
 .servicio {
@@ -264,6 +268,7 @@ header img {
 .pie-pagina {
     width: 100%;
     background-color: var(--color-4);
+    font-family: "Nunito", sans-serif;
 }
 
 .pie-pagina .grupo-1 {
@@ -349,6 +354,13 @@ header img {
     font-size: 15px;
 }
 
+@media (max-width: 980px) {
+    .rectangulo {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .pie-pagina .grupo-1 {
@@ -389,5 +401,25 @@ header img {
         width: 30px;
         height: 30px;
         line-height: 30px;
+    }
+    .formulario {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .servicio {
+        font-size: 14px;
+    }
+
+    .navProducts {
+        display: none;
+    }
+
+    .rightOptions {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: flex;
+        font-size: 27px;
     }
 }
