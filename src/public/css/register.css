@@ -8,6 +8,16 @@ a {
     text-decoration: none;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
+}
+
 /* Estilos scroll para navegadores WebKit (Chrome, Safari) */
 
 ::-webkit-scrollbar {

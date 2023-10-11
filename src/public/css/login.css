@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
+}
+
 a {
     text-decoration: none;
 }
@@ -69,11 +79,13 @@ button {
     background-color: #9b2b2b;
     position: relative;
     z-index: 2;
+    font-family: "Raleway", sans-serif;
 }
 
 .registerButton {
     margin-left: -40px;
     background-color: #beb5af8f;
+    font-family: "Raleway", sans-serif;
 }
 
 .socialMedia {

@@ -20,13 +20,11 @@ a {
 
 @font-face {
     font-family: 'Raleway';
-    /* Puedes darle el nombre que quieras */
     src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Nunito';
-    /* Puedes darle el nombre que quieras */
     src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
 }
 
@@ -50,8 +48,12 @@ header .navBar {
     padding-top: 30px;
 }
 
-header img {
+header .headerImg {
     width: 20%;
+}
+
+header .headerImg img {
+    width: 100%;
 }
 
 .search-container {
@@ -199,6 +201,7 @@ main {
 .variety {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .variety img {
