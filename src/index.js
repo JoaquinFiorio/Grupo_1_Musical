@@ -4,26 +4,27 @@ require("dotenv").config();
 
 const app = express();
 
+app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/index.html'));
+    res.render(path.join(__dirname, 'views/index'));
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/login.html'));
+    res.render(path.join(__dirname, 'views/login'));
 });
 
 app.get('/productCart', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/productCart.html'));
+    res.render(path.join(__dirname, 'views/productCart'));
 });
 
 app.get('/productDetail', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/productDetail.html'));
+    res.render(path.join(__dirname, 'views/productDetail'));
 });
 
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/register.html'));
+    res.render(path.join(__dirname, 'views/register'));
 });
 
 app.listen(process.env.PORT || 3030, () => {
