@@ -12,8 +12,27 @@
     --color-5: #beb5af;
 }
 
-body {
-    font-family: montserrat;
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h2, h3, h4, h5, h6, p, a {
+    font-family: 'Nunito', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -41,8 +60,12 @@ header .navBar {
     padding-top: 30px;
 }
 
-header img {
+header .headerImg {
     width: 20%;
+}
+
+header .headerImg img {
+    width: 100%;
 }
 
 .search-container {
@@ -322,6 +345,7 @@ header img {
 
 .pie-pagina .grupo-2 small {
     font-size: 15px;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Fin Footer */

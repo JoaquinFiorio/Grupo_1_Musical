@@ -99,8 +99,7 @@
     .conteiner {
         flex-direction: column;
     }
-
-    img {
-        display: none;
+    header .headerImg img {
+        width: 130%;
     }
 }

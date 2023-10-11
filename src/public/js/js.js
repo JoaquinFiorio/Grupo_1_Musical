@@ -21,7 +21,7 @@ const swiper = new Swiper(".slide-content", {
             slidesPerView: 1,
         }
     }
-})
+});
 
 const swiper2 = new Swiper(".slide2", {
     slidesPerView: 3,
@@ -48,7 +48,7 @@ const swiper2 = new Swiper(".slide2", {
             slidesPerView: 3,
         }
     }
-})
+});
 
 const swiper3 = new Swiper(".slide3", {
     slidesPerView: 3,
@@ -75,4 +75,4 @@ const swiper3 = new Swiper(".slide3", {
             slidesPerView: 3,
         }
     }
-})
+});
