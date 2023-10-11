@@ -93,13 +93,22 @@
         display: flex;
         font-size: 27px;
     }
+
+    .product-detail {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 450px) {
     .conteiner {
         flex-direction: column;
     }
+
     header .headerImg img {
         width: 130%;
+    }
+
+    .container-details-product {
+        flex-direction: column;
     }
 }
