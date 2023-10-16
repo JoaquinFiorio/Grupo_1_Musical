@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="icon" href="/img/icono.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-...">
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
-</head>
-
+<%- include('./partials/head') %>
 <body>
     <header>
         <nav class="navBar">
@@ -169,44 +157,7 @@
         </div>
     </section>
 
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <h2>Nosotros</h2>
-                <p>Nos esforzamos por proporcionar productos de calidad, información detallada y un servicio al cliente
-                    excepcional para ayudar a nuestros clientes a encontrar los instrumentos perfectos y accesorios
-                    relacionados con la música que necesitan.
-                </p>
-            </div>
-            <div class="box">
-                <a href="#">
-                    <img src="/img/logo.png" alt="Logo">
-                </a>
-                <div class="red-social">
-                    <a href="#" class="fa-brands fa-facebook-f"></a>
-                    <a href="#" class="fa-brands fa-instagram"></a>
-                    <a href="#" class="fa-brands fa-twitter"></a>
-                    <a href="#" class="fa-brands fa-youtube"></a>
-                </div>
-            </div>
-            <div class="box-pagos">
-                <h2>Metodos de pago</h2>
-                <div class="metodos-pagos">
-                    <i class="fa-brands fa-cc-mastercard"></i>
-                    <i class="fa-brands fa-cc-visa"></i>
-                    <i class="fa-brands fa-cc-paypal"></i>
-                    <i class="fa-solid fa-credit-card"></i>
-                </div>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small><b>MusiTienda</b> - Todos los Derechos Reservados. &copy; 2023 </small>
-        </div>
-    </footer>
-
-    <script src="/js/swiper-bundle.min.js"></script>
-    <script src="/js/js.js"></script>
-    <script src="https://kit.fontawesome.com/eb496ab1a0.js"></script>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>
