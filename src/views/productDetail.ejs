@@ -3,239 +3,192 @@
 
 <%- include('./partials/head') %>
 
-<body>
-    <header>
-        <nav class="navBar">
-            <a class="headerImg" href="/">
-                <img src="/img/logo.png" alt="logo">
-            </a>
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Buscar productos marcas y más">
-                <i class="fas fa-search search-icon"></i>
-            </div>
-            <div class="rightOptions">
-                <a href="/login" class="options">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h5>Iniciar Sesión</h5>
-                </a>
-                <a href="/register" class="options">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <h5>Regístrate</h5>
-                </a>
-                <a href="/productCart" class="options productCart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <h5>Carrito 0</h5>
-                </a>
-            </div>
-            <div class="hamburgerMenu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </nav>
-        <div class="navProducts">
-            <button>Inst. Cuerda <i class="fa-solid fa-chevron-down"></i></button>
-            <button>Inst. Viento <i class="fa-solid fa-chevron-down"></i></button>
-            <button>Percusión <i class="fa-solid fa-chevron-down"></i></button>
-            <button>Teclado y Piano <i class="fa-solid fa-chevron-down"></i></button>
-            <button>Accesorios <i class="fa-solid fa-chevron-down"></i></button>
-        </div>
-    </header>
+    <body>
+        <%- include('./partials/header') %>
 
-    <main>
-        <section class="product-detail">
-            <div class="container-img">
-                <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                <div class="variety">
-                    <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                    <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                    <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                    <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                </div>
-            </div>
-
-            <div class="container-info-product">
-                <div class="product-name">
-                    <span>Bajo</span>
-                </div>
-                <div class="category-product">
-                    <span>Categoria del producto</span>
-                </div>
-                <div class="container-price">
-                    <span>$25.000</span>
-                </div>
-
-                <div class="container-details-product">
-                    <div class="payments-method">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Mercado Pago</span>
-                    </div>
-                    <div class="division">
-                        <hr>
-                    </div>
-                    <div class="payments-methods-icon">
-                        <div class="payments-up">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                        </div>
-                        <div class="payments-down">
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
-                            <i class="fas fa-credit-card"></i>
+            <main>
+                <section class="product-detail">
+                    <div class="container-img">
+                        <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                        <div class="variety">
+                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
                         </div>
                     </div>
-                </div>
 
-                <div class="delivery">
-                    <div class="title-description-delivery">
-                        <i class="fa-solid fa-truck"></i>
-                        <span>
-                            Hacemos envios a todo el pais.
-                            Calcula el costo desde aqui
-                        </span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
+                    <div class="container-info-product">
+                        <div class="product-name">
+                            <span>Bajo</span>
+                        </div>
+                        <div class="category-product">
+                            <span>Categoria del producto</span>
+                        </div>
+                        <div class="container-price">
+                            <span>$25.000</span>
+                        </div>
 
-                <div class="question">
-                    <div class="title-description-question">
-                        <i class="fa-solid fa-comment"></i>
-                        <span>
-                            Hacemos envios a todo el pais.
-                            Calcula el costo desde aqui
-                        </span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
+                        <div class="container-details-product">
+                            <div class="payments-method">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Mercado Pago</span>
+                            </div>
+                            <div class="division">
+                                <hr>
+                            </div>
+                            <div class="payments-methods-icon">
+                                <div class="payments-up">
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="payments-down">
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="delivery">
+                            <div class="title-description-delivery">
+                                <i class="fa-solid fa-truck"></i>
+                                <span>
+                                    Hacemos envios a todo el pais.
+                                    Calcula el costo desde aqui
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            <div class="title-description-question">
+                                <i class="fa-solid fa-comment"></i>
+                                <span>
+                                    Hacemos envios a todo el pais.
+                                    Calcula el costo desde aqui
+                                </span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
 
 
-                <div class="container-social">
-                    <span>Compartir</span>
-                    <div class="container-buttons-social">
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    </div>
-                </div>
-                <div class="container-add-cart">
-                    <div class="container-quantity">
-                        <input type="number" placeholder="1" value="1" min="1" class="input-quantity" />
-                        <div class="btn-increment-decrement">
-                            <i class="fa-solid fa-chevron-up" id="increment"></i>
-                            <i class="fa-solid fa-chevron-down" id="decrement"></i>
+                        <div class="container-social">
+                            <span>Compartir</span>
+                            <div class="container-buttons-social">
+                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="container-add-cart">
+                            <div class="container-quantity">
+                                <input type="number" placeholder="1" value="1" min="1" class="input-quantity" />
+                                <div class="btn-increment-decrement">
+                                    <i class="fa-solid fa-chevron-up" id="increment"></i>
+                                    <i class="fa-solid fa-chevron-down" id="decrement"></i>
+                                </div>
+                            </div>
+                            <button class="btn-add-to-cart">
+                                <i class="fa-solid fa-plus"></i>
+                                Añadir al carrito
+                            </button>
                         </div>
                     </div>
-                    <button class="btn-add-to-cart">
-                        <i class="fa-solid fa-plus"></i>
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
-        </section>
-        <div class="container-description">
-            <div class="title-description">
-                <h4>Descripción</h4>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="text-description">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Laboriosam iure provident atque voluptatibus
-                    reiciendis quae rerum, maxime placeat enim cupiditate
-                    voluptatum, temporibus quis iusto. Enim eum qui delectus
-                    deleniti similique? Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Sint autem magni earum est
-                    dolorem saepe perferendis repellat ipsam laudantium cum
-                    assumenda quidem quam, vero similique? Iusto officiis
-                    quod blanditiis iste?
-                </p>
-            </div>
-        </div>
-
-        <div class="container-additional-information">
-            <div class="title-additional-information">
-                <h4>Garantia</h4>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="text-additional-information hidden">
-                <p>Todos nuestros prodcutos cuentan con garantia directa de su imortadora,
-                    consultanos en caso de alguna duda.
-                </p>
-            </div>
-        </div>
-
-        <div class="container-reviews">
-            <div class="title-reviews">
-                <h4>Metodos de envio</h4>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="text-reviews hidden">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit. Laboriosam iure provident atque voluptatibus
-                    reiciendis quae rerum, maxime placeat enim cupiditate
-                    voluptatum, temporibus quis iusto. Enim eum qui delectus
-                    deleniti similique? Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Sint autem magni earum est
-                    dolorem saepe perferendis repellat ipsam laudantium cum
-                    assumenda quidem quam, vero similique? Iusto officiis
-                    quod blanditiis iste?
-                </p>
-            </div>
-        </div>
-    </main>
-
-    <section class="destacado">
-        <div class="title">
-            <h1>PUEDE INTERESARTE</h1>
-        </div>
-        <div class="slide-container swiper">
-            <div class="slide-content slide4">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-1.jpg" alt="">
+                </section>
+                <div class="container-description">
+                    <div class="title-description">
+                        <h4>Descripción</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-8.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-27.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-3.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-8.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide swiperProducts">
-                        <img src="/img/products/slider_1-3.jpg" alt="">
+                    <div class="text-description">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Laboriosam iure provident atque voluptatibus
+                            reiciendis quae rerum, maxime placeat enim cupiditate
+                            voluptatum, temporibus quis iusto. Enim eum qui delectus
+                            deleniti similique? Lorem, ipsum dolor sit amet
+                            consectetur adipisicing elit. Sint autem magni earum est
+                            dolorem saepe perferendis repellat ipsam laudantium cum
+                            assumenda quidem quam, vero similique? Iusto officiis
+                            quod blanditiis iste?
+                        </p>
                     </div>
                 </div>
-                <div class="swiper-button-next swiper-navBtn"></div>
-                <div class="swiper-button-prev swiper-navBtn"></div>
-            </div>
-        </div>
-    </section>
 
-    <section class="newsletter">
-        <div class="rectangulo">
-            <div class="encabezado-formulario">
-                <h1>Unite a nuestra comunidad</h1>
-                <p>Recibí novedades y beneficios exclusivos por mail!</p>
-            </div>
-            <div class="formulario">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <button type="submit">Enviar</button>
-            </div>
-        </div>
-    </section>
+                <div class="container-additional-information">
+                    <div class="title-additional-information">
+                        <h4>Garantia</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="text-additional-information hidden">
+                        <p>Todos nuestros prodcutos cuentan con garantia directa de su imortadora,
+                            consultanos en caso de alguna duda.
+                        </p>
+                    </div>
+                </div>
 
-    <%- include('./partials/footer') %>
-</body>
+                <div class="container-reviews">
+                    <div class="title-reviews">
+                        <h4>Metodos de envio</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="text-reviews hidden">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Laboriosam iure provident atque voluptatibus
+                            reiciendis quae rerum, maxime placeat enim cupiditate
+                            voluptatum, temporibus quis iusto. Enim eum qui delectus
+                            deleniti similique? Lorem, ipsum dolor sit amet
+                            consectetur adipisicing elit. Sint autem magni earum est
+                            dolorem saepe perferendis repellat ipsam laudantium cum
+                            assumenda quidem quam, vero similique? Iusto officiis
+                            quod blanditiis iste?
+                        </p>
+                    </div>
+                </div>
+            </main>
+
+            <section class="destacado">
+                <div class="title">
+                    <h1>PUEDE INTERESARTE</h1>
+                </div>
+                <div class="slide-container swiper">
+                    <div class="slide-content slide4">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-8.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-27.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-8.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                    </div>
+                </div>
+            </section>
+
+            <%- include('./partials/newsLetter') %>
+                <%- include('./partials/footer') %>
+    </body>
 
 </html>
