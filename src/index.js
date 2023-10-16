@@ -8,23 +8,43 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.render(path.join(__dirname, 'views/index'));
+    const data = {
+        title: 'Home',
+        css: 'index.css'
+    };
+    res.render(path.join(__dirname, 'views/index'), data);
 });
 
 app.get('/login', (req, res) => {
-    res.render(path.join(__dirname, 'views/login'));
+    const data = {
+        title: 'Login',
+        css: 'login.css'
+    };
+    res.render(path.join(__dirname, 'views/login'), data);
 });
 
 app.get('/productCart', (req, res) => {
-    res.render(path.join(__dirname, 'views/productCart'));
+    const data = {
+        title: 'Product Cart',
+        css: 'productCart.css'
+    };
+    res.render(path.join(__dirname, 'views/productCart'), data);
 });
 
 app.get('/productDetail', (req, res) => {
-    res.render(path.join(__dirname, 'views/productDetail'));
+    const data = {
+        title: 'Product Detail',
+        css: 'productDetail.css'
+    };
+    res.render(path.join(__dirname, 'views/productDetail'), data);
 });
 
 app.get('/register', (req, res) => {
-    res.render(path.join(__dirname, 'views/register'));
+    const data = {
+        title: 'Register',
+        css: 'register.css'
+    };
+    res.render(path.join(__dirname, 'views/register'), data);
 });
 
 app.listen(process.env.PORT || 3030, () => {
