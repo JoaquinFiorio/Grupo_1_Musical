@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+
+            <main>
+                <h1>Lista de productos </h1>
+
+            </main>
+
+            <section class="destacado">
+                <div class="title">
+                    <h1>PUEDE INTERESARTE</h1>
+                </div>
+                <div class="slide-container swiper">
+                    <div class="slide-content slide4">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-1.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-8.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-27.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-8.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide swiperProducts">
+                                <img src="/img/products/slider_1-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                    </div>
+                </div>
+            </section>
+
+            <%- include('./partials/newsLetter') %>
+                <%- include('./partials/footer') %>
+    </body>
+
+</html>
