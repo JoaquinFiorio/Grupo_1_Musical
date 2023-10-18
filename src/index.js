@@ -47,6 +47,31 @@ app.get('/register', (req, res) => {
     res.render(path.join(__dirname, 'views/register'), data);
 });
 
+app.get('/productList', (req, res) => {
+    const data = {
+        title: 'Product List',
+        css: 'productList.css'
+    };
+    res.render(path.join(__dirname, 'views/productList'), data);
+});
+
+app.get('/productUploader', (req, res) => {
+    const data = {
+        title: 'Product Uploader',
+        css: 'productUploader.css'
+    };
+    res.render(path.join(__dirname, 'views/productUploader'), data);
+});
+
+app.get('/productEdit', (req, res) => {
+    const data = {
+        title: 'Product Edit',
+        css: 'productEdit.css'
+    };
+    res.render(path.join(__dirname, 'views/productEdit'), data);
+});
+
+
 app.listen(process.env.PORT || 3030, () => {
     console.log(`Servidor iniciado en http://localhost:${process.env.PORT}`);
 });
