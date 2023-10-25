@@ -1,30 +1,72 @@
 [
     {
         "id": 1,
-        "name": "Carpaccio fresco",
-        "description": "Entrada Carpaccio de salmón con cítricos",
-        "price": 65.50,
-        "image": "/img/products/slider_1-8.jpg"
+        "name": "Guitarra Acústica",
+        "description": "Guitarra acústica de calidad con cuerdas de acero",
+        "price": 250.00,
+        "image": "/img/products/slider_1-27.jpg"
     },
     {
         "id": 2,
-        "name": "Risotto de berenjena",
-        "description": "Risotto de berenjena y queso de cabra",
-        "price": 47.00,
-        "image": "/img/products/slider_1-8.jpg"
+        "name": "Teclado Digital",
+        "description": "Teclado digital de 88 teclas con efectos y sonidos realistas",
+        "price": 350.00,
+        "image": "/img/products/slider_1-27.jpg"
     },
     {
         "id": 3,
-        "name": "Mousse de arroz",
-        "description": "Mousse de arroz con leche y aroma de azahar",
-        "price": 27.50,
-        "image": "/img/products/slider_1-8.jpg"
+        "name": "Batería Completa",
+        "description": "Set de batería completa con platillos y pedal de bombo",
+        "price": 700.00,
+        "image": "/img/products/slider_1-27.jpg"
     },
     {
         "id": 4,
-        "name": "Espárragos blancos",
-        "description": "Espárragos blancos con vinagreta de verduras y jamón ibérico",
-        "price": 37.50,
-        "image": "/img/products/slider_1-8.jpg"
+        "name": "Bajo Eléctrico",
+        "description": "Bajo eléctrico de 4 cuerdas con pastillas activas",
+        "price": 320.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Violín Profesional",
+        "description": "Violín profesional de madera maciza con arco de pelo de caballo",
+        "price": 600.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Flauta Travesera",
+        "description": "Flauta travesera plateada con estuche y accesorios",
+        "price": 180.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Piano de Cola",
+        "description": "Piano de cola de alta gama con teclas de marfil",
+        "price": 5000.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Saxofón Tenor",
+        "description": "Saxofón tenor dorado con estuche y boquilla",
+        "price": 450.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Trompeta Profesional",
+        "description": "Trompeta profesional con acabado plateado y estuche",
+        "price": 280.00,
+        "image": "/img/products/slider_1-27.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Clarinete de Ébano",
+        "description": "Clarinete de ébano con llaves plateadas y estuche de lujo",
+        "price": 380.00,
+        "image": "/img/products/slider_1-27.jpg"
     }
 ]

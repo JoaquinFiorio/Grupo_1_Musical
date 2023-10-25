@@ -40,19 +40,19 @@
                         </div>
                     </div>
                     <div class="" id="products">
-                            <% locals.products && products.forEach(product=> {%>
+                        <% products.forEach(product=> {%>
+                            <div>
+                                <img src="<%= product.image %>" alt="">
                                 <div>
-                                    <img src="<%= product.image %>" alt="">
-                                    <div>
-                                        <h4>
-                                            <%= product.name %>
-                                        </h4>
-                                        <p class="">
-                                            <%= product.description %> U$S <%= product.price %>
-                                        </p>
-                                    </div>
+                                    <h4>
+                                        <%= product.name %>
+                                    </h4>
+                                    <p class="">
+                                        <%= product.description %> U$S <%= product.price %>
+                                    </p>
                                 </div>
-                            <% }) %>
+                            </div>
+                        <% }) %>
                     </div>
                 </div>
             </section>
