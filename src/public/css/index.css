@@ -4,14 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --color-1: #f3680b;
-    --color-2: #9b2b2b;
-    --color-3: #542404;
-    --color-4: #9b806f;
-    --color-5: #beb5af;
-}
-
 a {
     text-decoration: none;
     color: black;
