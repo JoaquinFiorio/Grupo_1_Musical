@@ -6,7 +6,17 @@
     <body>
         <%- include('./partials/header') %>
         <main> 
-            
+          <div class="producto">
+            <h3>Subir producto</h3>
+            <form action="/">
+                <input type="text" placeholder="Nombre de producto">
+                <input type="text" placeholder="Descripcion">
+                <input type="text" placeholder="Categoría">
+                <input type="text" placeholder="Sub Categoría">
+                <input type="text" value="Precio">
+                <input type="submit" value="Subir">
+            </form>
+          </div>  
         </main>
         <%- include('./partials/footer') %>
     </body>
