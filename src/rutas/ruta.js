@@ -23,4 +23,7 @@ router.get('/productUploader', controladorVistas.productUploader);
 
 router.get('/productEdit', controladorVistas.productEdit);
 
+router.get('/adminList', controladorVistas.adminList);
+
 module.exports = router;
+

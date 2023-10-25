@@ -60,7 +60,16 @@ const controladorVistas = {
             css: 'productEdit.css'
         };
         res.render(path.join(__dirname, '../views/productEdit'), data);
+    },
+
+    adminList: (req, res) => {
+        const data = {
+            title: 'Admin list',
+            css: 'adminList.css'
+        };
+        res.render(path.join(__dirname, '../views/adminproductlist'), data);
     }
 }
+
 
 module.exports = controladorVistas;
