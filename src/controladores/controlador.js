@@ -1,4 +1,5 @@
 const path = require("path");
+const { getProducts } = require("../modelos/modelo");
 
 /* OBJETO CON TODAS LAS FUNCIONES NECESARIAS PARA RENDERIZAR LAS RUTAS */
 
@@ -41,7 +42,8 @@ const controladorVistas = {
     productList: (req, res) => {
         const data = {
             title: 'Product List',
-            css: 'productList.css'
+            css: 'productList.css',
+            products: getProducts()
         };
         res.render(path.join(__dirname, '../views/productList'), data);
     },

@@ -6,10 +6,56 @@
     <body>
         <%- include('./partials/header') %>
 
-            <main>
-                <h1>Lista de productos </h1>
-
-            </main>
+            <section class="seccion">
+                <div class="title">
+                    <h1>Lista de productos </h1>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <h5></h5>
+                                <input type="checkbox">
+                            </div>
+                            <div>
+                                <h5></h5>
+                                <input type="checkbox">
+                            </div>
+                            <div>
+                                <h5></h5>
+                                <input type="checkbox">
+                            </div>
+                        </div>
+                        <div>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                            <h6>Categoría</h6>
+                        </div>
+                    </div>
+                    <div class="" id="products">
+                            <% locals.products && products.forEach(product=> {%>
+                                <div>
+                                    <img src="<%= product.image %>" alt="">
+                                    <div>
+                                        <h4>
+                                            <%= product.name %>
+                                        </h4>
+                                        <p class="">
+                                            <%= product.description %> U$S <%= product.price %>
+                                        </p>
+                                    </div>
+                                </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </section>
 
             <section class="destacado">
                 <div class="title">
@@ -44,7 +90,7 @@
             </section>
 
             <%- include('./partials/newsLetter') %>
-                <%- include('./partials/footer') %>
+            <%- include('./partials/footer') %>
     </body>
 
 </html>
