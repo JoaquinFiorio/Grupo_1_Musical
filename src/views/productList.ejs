@@ -2,44 +2,47 @@
 <html lang="en">
 
 <%- include('./partials/head') %>
-
     <body>
         <%- include('./partials/header') %>
-
+            <div class="title">
+                <h1>Lista de productos </h1>
+            </div>
             <section class="seccion">
-                <div class="title">
-                    <h1>Lista de productos </h1>
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <h5></h5>
-                                <input type="checkbox">
+                <div class="contenedor">
+                    <div class="seccionIzquierda">
+                        <div class="contenedorSwitches">
+                            <div class="switches">
+                                <h4>Envío Gratis</h4>
+                                <input type="checkbox" id="switch1" />
+                                <label for="switch1"></label>
                             </div>
-                            <div>
-                                <h5></h5>
-                                <input type="checkbox">
+                            <div class="switches">
+                                <h4>Programa Ahora 12</h4>
+                                <input type="checkbox" id="switch2" />
+                                <label for="switch2"></label>
                             </div>
-                            <div>
-                                <h5></h5>
-                                <input type="checkbox">
+                            <div class="switches">
+                                <h4>Cuotas sin interés</h4>
+                                <input type="checkbox" id="switch3" />
+                                <label for="switch3"></label>
                             </div>
                         </div>
-                        <div>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
-                            <h6>Categoría</h6>
+                        <div class="categorias">
+                            <ul>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                                <li>Categoría</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="" id="products">
+                    <div class="seccionProducts" id="products">
                         <% products.forEach(product=> {%>
                             <div>
                                 <img src="<%= product.image %>" alt="">
