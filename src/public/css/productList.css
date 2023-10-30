@@ -119,6 +119,12 @@ label:active:after {
     list-style-type: "- ";
 }
 
+.catInstrumentos ul li,
+.catInstrumentos ul .catDetalle {
+    list-style: none;
+    margin-left: 20px;
+}
+
 /* PRODUCTS */
 
 img {
