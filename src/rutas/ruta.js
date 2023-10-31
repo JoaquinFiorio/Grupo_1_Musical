@@ -25,5 +25,13 @@ router.get('/productEdit', controladorVistas.productEdit);
 
 router.get('/adminList', controladorVistas.adminList);
 
+router.get('/products/:id', controladorVistas.getProduct);
+
+router.put('/products/:id', controladorVistas.updateProduct);
+
+router.delete('/products/:id', controladorVistas.deleteProduct);
+
+router.post('/products', controladorVistas.createProduct);
+
 module.exports = router;
 

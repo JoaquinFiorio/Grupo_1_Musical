@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "category": "Usuario Estándar",
+        "image": "user1.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "email": "alice.smith@example.com",
+        "password": "securePass",
+        "category": "Usuario Premium",
+        "image": "user2.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Bob",
+        "lastName": "Johnson",
+        "email": "bob.johnson@example.com",
+        "password": "secret123",
+        "category": "Usuario Estándar",
+        "image": "user3.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Emily",
+        "lastName": "Wilson",
+        "email": "emily.wilson@example.com",
+        "password": "strongPassword",
+        "category": "Usuario Premium",
+        "image": "user4.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "David",
+        "lastName": "Brown",
+        "email": "david.brown@example.com",
+        "password": "password456",
+        "category": "Usuario Estándar",
+        "image": "user5.jpg"
+    },
+    {
+        "id": 6,
+        "firstName": "Sarah",
+        "lastName": "Davis",
+        "email": "sarah.davis@example.com",
+        "password": "securePass123",
+        "category": "Usuario Estándar",
+        "image": "user6.jpg"
+    },
+    {
+        "id": 7,
+        "firstName": "Michael",
+        "lastName": "Clark",
+        "email": "michael.clark@example.com",
+        "password": "userPassword",
+        "category": "Usuario Premium",
+        "image": "user7.jpg"
+    },
+    {
+        "id": 8,
+        "firstName": "Olivia",
+        "lastName": "Taylor",
+        "email": "olivia.taylor@example.com",
+        "password": "olivia123",
+        "category": "Usuario Estándar",
+        "image": "user8.jpg"
+    },
+    {
+        "id": 9,
+        "firstName": "William",
+        "lastName": "Wilson",
+        "email": "william.wilson@example.com",
+        "password": "williamPass",
+        "category": "Usuario Premium",
+        "image": "user9.jpg"
+    },
+    {
+        "id": 10,
+        "firstName": "Sophia",
+        "lastName": "Roberts",
+        "email": "sophia.roberts@example.com",
+        "password": "pass1234",
+        "category": "Usuario Estándar",
+        "image": "user10.jpg"
+    },
+    {
+        "id": 11,
+        "firstName": "James",
+        "lastName": "Lee",
+        "email": "james.lee@example.com",
+        "password": "jamesPass",
+        "category": "Usuario Premium",
+        "image": "user11.jpg"
+    },
+    {
+        "id": 12,
+        "firstName": "Ava",
+        "lastName": "Harris",
+        "email": "ava.harris@example.com",
+        "password": "avapassword",
+        "category": "Usuario Estándar",
+        "image": "user12.jpg"
+    },
+    {
+        "id": 13,
+        "firstName": "Ethan",
+        "lastName": "Young",
+        "email": "ethan.young@example.com",
+        "password": "ethanPass",
+        "category": "Usuario Premium",
+        "image": "user13.jpg"
+    },
+    {
+        "id": 14,
+        "firstName": "Mia",
+        "lastName": "Anderson",
+        "email": "mia.anderson@example.com",
+        "password": "miasecure",
+        "category": "Usuario Estándar",
+        "image": "user14.jpg"
+    },
+    {
+        "id": 15,
+        "firstName": "Liam",
+        "lastName": "Martin",
+        "email": "liam.martin@example.com",
+        "password": "liam12345",
+        "category": "Usuario Premium",
+        "image": "user15.jpg"
+    },
+    {
+        "id": 16,
+        "firstName": "Charlotte",
+        "lastName": "Garcia",
+        "email": "charlotte.garcia@example.com",
+        "password": "charlottePass",
+        "category": "Usuario Estándar",
+        "image": "user16.jpg"
+    },
+    {
+        "id": 17,
+        "firstName": "Noah",
+        "lastName": "Rodriguez",
+        "email": "noah.rodriguez@example.com",
+        "password": "noahSecure",
+        "category": "Usuario Premium",
+        "image": "user17.jpg"
+    },
+    {
+        "id": 18,
+        "firstName": "Isabella",
+        "lastName": "Wright",
+        "email": "isabella.wright@example.com",
+        "password": "isabella123",
+        "category": "Usuario Estándar",
+        "image": "user18.jpg"
+    },
+    {
+        "id": 19,
+        "firstName": "Benjamin",
+        "lastName": "Lopez",
+        "email": "benjamin.lopez@example.com",
+        "password": "benjaminPass",
+        "category": "Usuario Premium",
+        "image": "user19.jpg"
+    },
+    {
+        "id": 20,
+        "firstName": "Aria",
+        "lastName": "Scott",
+        "email": "aria.scott@example.com",
+        "password": "ariapassword",
+        "category": "Usuario Estándar",
+        "image": "user20.jpg"
+    }
+]
