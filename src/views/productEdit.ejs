@@ -11,53 +11,28 @@
                 <form action="/">
                     <div class="form-group">
                         <label for="nombre">Nombre de producto</label>
-                        <input type="text" id="nombre" placeholder="Nombre del producto">
+                        <input type="text" id="nombre" placeholder="Nombre del producto" value="<%= productEdit.name %>">
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripción</label>
-                        <input type="text" id="descripcion" placeholder="Descripción">
+                        <input type="text" id="descripcion" placeholder="Descripción" value="<%= productEdit.description %>">
                     </div>
                     <div class="form-group">
                         <label for="categoria">Categoría</label>
-                        <input type="text" id="categoria" placeholder="Categoría">
+                        <input type="text" id="categoria" placeholder="Categoría" value="<%= productEdit.category %>">
                     </div>
                     <div class="form-group">
                         <label for="subcategoria">Sub Categoría</label>
-                        <input type="text" id="subcategoria" placeholder="Sub Categoría">
+                        <input type="text" id="subcategoria" placeholder="Sub Categoría" value="<%= productEdit.subCategory %>">
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="text" id="precio" placeholder="Precio">
-                    </div>
-                    <div class="form-group">
-                        <label for="imagen">Imagen del producto</label>
-                        <input type="file" id="imagen" accept="image/*" onchange="previewImage(this)">
-                    </div>
-                    <div class="form-group">
-                        <label for="imagen-preview">Vista Previa</label>
-                        <img id="imagen-preview" src="#" alt="Vista previa de la imagen" style="max-width: 100%; display: none;">
+                        <input type="text" id="precio" placeholder="Precio" value="<%= productEdit.price %>">
                     </div>
                     <input type="submit" value="Editar">
                 </form>
             </div>
         </main>
         <%- include('./partials/footer') %>
-
-        <script>
-            function previewImage(input) {
-                var preview = document.getElementById('imagen-preview');
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        preview.src = e.target.result;
-                        preview.style.display = 'block';
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    preview.src = '#';
-                    preview.style.display = 'none';
-                }
-            }
-        </script>
     </body>
 </html>

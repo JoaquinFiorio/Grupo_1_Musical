@@ -9,24 +9,24 @@
             <main>
                 <section class="product-detail">
                     <div class="container-img">
-                        <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                        <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
                         <div class="variety">
-                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
-                            <img src="/img/products/bajo.jpg" alt="imagen-producto" />
+                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
+                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
+                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
+                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
                         </div>
                     </div>
 
                     <div class="container-info-product">
                         <div class="product-name">
-                            <span>Bajo</span>
+                            <span><%= productDetail.name %></span>
                         </div>
                         <div class="category-product">
-                            <span>Categoria del producto</span>
+                            <span><%= productDetail.category %></span>
                         </div>
                         <div class="container-price">
-                            <span>$25.000</span>
+                            <span><%= productDetail.price %></span>
                         </div>
 
                         <div class="container-details-product">

@@ -26,9 +26,11 @@ const controladorVistas = {
         res.render(path.join(__dirname, '../views/productCart'), data);
     },
     productDetail: (req, res) => {
+        const product = getProducts().find((product) => product.id == req.params.id);
         const data = {
             title: 'Product Detail',
-            css: 'productDetail.css'
+            css: 'productDetail.css',
+            productDetail: product
         };
         res.render(path.join(__dirname, '../views/productDetail'), data);
     },
@@ -55,9 +57,11 @@ const controladorVistas = {
         res.render(path.join(__dirname, '../views/productUploader'), data);
     },
     productEdit: (req, res) => {
+        const product = getProducts().find((product) => product.id == req.params.id);
         const data = {
             title: 'Product Edit',
-            css: 'productEdit.css'
+            css: 'productEdit.css',
+            productEdit: product
         };
         res.render(path.join(__dirname, '../views/productEdit'), data);
     },
@@ -67,19 +71,7 @@ const controladorVistas = {
             css: 'adminList.css'
         };
         res.render(path.join(__dirname, '../views/adminproductlist'), data);
-    },
-    getProduct: (req, res) => {
-
-    },
-    deleteProduct: (req, res) => {
-
-    },
-    updateProduct: (req, res) => {
-
-    },
-    createProduct: (req, res) => {
-
-    },
+    }
 }
 
 
