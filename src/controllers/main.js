@@ -1,5 +1,5 @@
 const path = require("path");
-const { getProducts } = require("../modelos/modelo");
+const { getProducts } = require("../models/model");
 
 /* OBJETO CON TODAS LAS FUNCIONES NECESARIAS PARA RENDERIZAR LAS RUTAS */
 

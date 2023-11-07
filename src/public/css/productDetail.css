@@ -2,7 +2,13 @@ h1 {
     font-family: 'Raleway', sans-serif;
 }
 
-h2, h3, h4, h5, h6, p, span {
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
     font-family: 'Nunito', sans-serif;
 }
 
@@ -204,7 +210,8 @@ main {
     cursor: pointer;
 }
 
-.btn-add-to-cart {
+.btn-add-to-cart,
+.btn-delete-product {
     border: none;
     background-color: #252525;
     padding: 10px;
@@ -219,6 +226,10 @@ main {
 
 .btn-add-to-cart:hover {
     color: #1bbeb4;
+}
+
+.btn-delete-product:hover {
+    color: red;
 }
 
 .payments-method span {

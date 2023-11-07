@@ -1,6 +1,5 @@
 const express = require("express");
 const multer = require("multer");
-const productController = require("../controllers/controladorProducto");
 const path = require("path");
 
 const router = express.Router();
@@ -18,10 +17,13 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-router.put('/:id', productController.updateProduct);
+const productController = require("../controllers/productController");
 
-router.delete('/:id', productController.deleteProduct);
+//router.get('/:id/edit', productController.editProduct);
+router.put('/:id/edit', productController.updateProduct);
 
-router.post('/', upload.single('imageFile'), productController.createProduct);
+router.post('/create', upload.single('imageFile'), productController.createProduct);
+
+router.delete('/:id/delete', productController.deleteProduct);
 
 module.exports = router;
