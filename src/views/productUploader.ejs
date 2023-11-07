@@ -8,30 +8,30 @@
         <main> 
             <div class="producto">
                 <h3>Subir producto</h3>
-                <form action="/">
+                <form action="/products" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nombre">Nombre de producto</label>
-                        <input type="text" id="nombre" placeholder="Nombre del producto">
+                        <input type="text" id="nombre" name="name" placeholder="Nombre del producto">
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripción</label>
-                        <input type="text" id="descripcion" placeholder="Descripción">
+                        <input type="text" id="descripcion" name="description" placeholder="Descripción">
                     </div>
                     <div class="form-group">
                         <label for="categoria">Categoría</label>
-                        <input type="text" id="categoria" placeholder="Categoría">
+                        <input type="text" id="categoria" name="category" placeholder="Categoría">
                     </div>
                     <div class="form-group">
                         <label for="subcategoria">Sub Categoría</label>
-                        <input type="text" id="subcategoria" placeholder="Sub Categoría">
+                        <input type="text" id="subcategoria" name="Subcategory" placeholder="Sub Categoría">
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="text" id="precio" placeholder="Precio">
+                        <input type="text" id="precio" name="price" placeholder="Precio">
                     </div>
                     <div class="form-group">
                         <label for="imagen">Imagen del producto</label>
-                        <input type="file" id="imagen" accept="image/*" onchange="previewImage(this)">
+                        <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)">
                     </div>
                     <div class="form-group">
                         <label for="imagen-preview">Vista Previa</label>
@@ -45,9 +45,9 @@
 
         <script>
             function previewImage(input) {
-                var preview = document.getElementById('imagen-preview');
+                let preview = document.getElementById('imagen-preview');
                 if (input.files && input.files[0]) {
-                    var reader = new FileReader();
+                    let reader = new FileReader();
                     reader.onload = function (e) {
                         preview.src = e.target.result;
                         preview.style.display = 'block';

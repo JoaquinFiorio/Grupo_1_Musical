@@ -137,9 +137,9 @@
                         </div>
                     </div>
                     <div class="seccionProducts" id="products">
-                        <% products.forEach(product=> {%>
-                            <div class="tarjeta">
-                                <img src="<%= product.image %>" alt="">
+                        <% products.forEach(product=> { %>
+                            <a href="/productDetail/<%= product.id %>" class="tarjeta">
+                                <img src="/img/products/<%= product.image %>" alt="">
                                 <div>
                                     <h3>
                                         <%= product.name %>
@@ -152,7 +152,7 @@
                                     </h6>
                                     <button class="comprar">Comprar</button>
                                 </div>
-                            </div>
+                            </a>
                             <% }) %>
                     </div>
                 </div>
