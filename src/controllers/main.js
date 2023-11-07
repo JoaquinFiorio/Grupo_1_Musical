@@ -3,7 +3,7 @@ const { getProducts } = require("../models/model");
 
 /* OBJETO CON TODAS LAS FUNCIONES NECESARIAS PARA RENDERIZAR LAS RUTAS */
 
-const controladorVistas = {
+const viewController = {
     index: (req, res) => {
         const data = {
             title: 'Home',
@@ -77,4 +77,4 @@ const controladorVistas = {
 }
 
 
-module.exports = controladorVistas;
+module.exports = viewController;
