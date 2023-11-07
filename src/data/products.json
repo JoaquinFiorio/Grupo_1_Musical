@@ -1,23 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Guitarra Prueba",
-    "description": "Guitarra de cuerda",
-    "category": "Guitarras",
-    "Subcategory": "Cuerda",
-    "price": "200",
-    "image": "1699315264793-product.jpg"
-  },
-  {
-    "id": 2,
-    "name": "la barrosa",
-    "description": "Guitarra de cuerda",
-    "category": "Guitarras",
-    "Subcategory": "Cuerda",
-    "price": "200",
-    "image": "undefined-product.jpg"
-  },
-  {
     "id": 3,
     "name": "la barrosa",
     "description": "Guitarra de cuerda",
@@ -34,5 +16,14 @@
     "Subcategory": "Cuerda",
     "price": "200",
     "image": "product-1699315632783.jpg"
+  },
+  {
+    "id": 5,
+    "name": "bajo",
+    "description": "aa",
+    "category": "aa",
+    "Subcategory": "aa",
+    "price": "15000",
+    "image": "product-1699378904567.png"
   }
 ]
