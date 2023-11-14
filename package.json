@@ -4,7 +4,7 @@
   "description": "# Temática del Market Place",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js --ignore src/data/*.json"
   },
   "repository": {
     "type": "git",
