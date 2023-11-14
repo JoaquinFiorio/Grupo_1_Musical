@@ -10,6 +10,8 @@ const productController = {
 		res.render('detail', { product });
 	},
 	updateProduct: (req, res) => {
+		console.log(req.body)
+		console.log(req.params)
 		const indexProduct = products.findIndex((product) => product.id == req.params.id);
 		products[indexProduct] = {
 			...products[indexProduct],
