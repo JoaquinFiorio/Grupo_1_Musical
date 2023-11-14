@@ -8,10 +8,10 @@
             <main>
                 <div class="producto">
                     <h3>Editar producto</h3>
-                    <form action="/products/<%= productEdit.id %>/edit?_method=PUT" method="post">
+                    <form action="/">
                         <div class="form-group">
                             <label for="nombre">Nombre de producto</label>
-                            <input type="text" id="nombre" name="name" placeholder="Nombre del producto"
+                            <input name="name" type="text" id="nombre" placeholder="Nombre del producto"
                                 value="<%= productEdit.name %>">
                         </div>
                         <div class="form-group">

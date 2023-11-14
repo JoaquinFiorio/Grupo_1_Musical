@@ -1,60 +1,40 @@
-main {
-    margin: 50px auto;
+:root {
+    --morado-1: #ac5adc;
+    --morado-2: #5f0d90;
+    --morado-3: #a042d7;
+    --azul-1: #3a23c5;
+    --azul-2: #160673;
+    --azul-3: #6654d2;
+    --blanco-1: white;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth; 
+}
+
+  *,
+  *:before,
+  *:after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+img {
+    width: 20%;
+}
+
+.product-uploader {
+    padding: 50px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .producto {
-    width: 360px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px auto;
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-h3 {
-color: brown;
-margin-bottom: 20px;
-}
-
-.form-group {
-text-align: left;
-margin-bottom: 15px;
-}
-
-label {
-display: block;
-margin-bottom: 5px;
-color: #333;
-font-weight: bold;
-}
-
-input[type="text"],
-input[type="file"] {
-width: 100%;
-padding: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 14px;
-margin-top: 5px;
-}
-
-input[type="submit"] {
-width: 100%;
-padding: 10px;
-background-color: brown;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 16px;
-transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-background-color: #963c0e;
+    width: 200px;
 }
