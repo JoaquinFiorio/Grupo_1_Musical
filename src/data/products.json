@@ -1,7 +1,7 @@
 [
   {
     "id": 3,
-    "name": "VICO CRACK test",
+    "name": "Probanding",
     "description": "Guitarra de cuerda test",
     "category": "Guitarras test",
     "Subcategory": "Cuerda",
@@ -30,10 +30,11 @@
   {
     "id": 6,
     "name": "Musi Tienda",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis lorem, tincidunt et massa vitae, semper maximus mauris. Donec sollicitudin commodo libero, non vulputate felis porttitor non. ",
+    "description": "Lorem ip",
     "category": "aa",
     "Subcategory": "aa",
     "price": "321321321",
-    "image": "product-1699380777904.jpg"
+    "image": "product-1699380777904.jpg",
+    "subCategory": ""
   }
 ]
