@@ -128,7 +128,9 @@ label:active:after {
 /* PRODUCTS */
 
 img {
-    width: 20%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contenedor .seccionProducts {

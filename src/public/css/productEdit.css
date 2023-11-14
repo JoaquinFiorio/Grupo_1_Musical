@@ -58,6 +58,6 @@ button {
 }
 
 input[type="submit"]:hover,
-button {
+button:hover {
     background-color: #963c0e;
 }

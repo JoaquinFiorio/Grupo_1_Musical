@@ -68,7 +68,9 @@ const viewController = {
     adminList: (req, res) => {
         const data = {
             title: 'Admin list',
-            css: 'adminList.css'
+            css: 'adminList.css',
+            products: getProducts()
+
         };
         res.render(path.join(__dirname, '../views/adminproductlist'), data);
     }

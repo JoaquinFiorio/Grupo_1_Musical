@@ -26,5 +26,14 @@
     "Subcategory": "aa",
     "price": "15000",
     "image": "product-1699378904567.png"
+  },
+  {
+    "id": 6,
+    "name": "Musi Tienda",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis lorem, tincidunt et massa vitae, semper maximus mauris. Donec sollicitudin commodo libero, non vulputate felis porttitor non. ",
+    "category": "aa",
+    "Subcategory": "aa",
+    "price": "321321321",
+    "image": "product-1699380777904.jpg"
   }
 ]
