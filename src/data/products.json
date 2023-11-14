@@ -1,12 +1,13 @@
 [
   {
     "id": 3,
-    "name": "la barrosa2",
-    "description": "Guitarra de cuerda",
-    "category": "Guitarras",
+    "name": "VICO CRACK test",
+    "description": "Guitarra de cuerda test",
+    "category": "Guitarras test",
     "Subcategory": "Cuerda",
-    "price": "200",
-    "image": "1699315589086-product.jpg"
+    "price": "2000",
+    "image": "1699315589086-product.jpg",
+    "subCategory": "Cuerda test"
   },
   {
     "id": 4,

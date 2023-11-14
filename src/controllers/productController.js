@@ -10,15 +10,13 @@ const productController = {
 		res.render('detail', { product });
 	},
 	updateProduct: (req, res) => {
-		console.log(req.body)
-		console.log(req.params)
 		const indexProduct = products.findIndex((product) => product.id == req.params.id);
 		products[indexProduct] = {
 			...products[indexProduct],
 			...req.body
 		};
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-		res.redirect('/products');
+		res.redirect('/adminList');
 	},
 	createProduct: (req, res) => {
 		const newProduct = {
