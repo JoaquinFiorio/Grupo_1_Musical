@@ -12,10 +12,9 @@
                             <p>Producto <%= product.id %>
                             </p>
                             <a href="/productEdit/<%= product.id %>">
-                                <div class="conteiner-img">
-                                    <img src="/img/products/<%= product.image %>" alt="imagen-producto">
+                                <div class="conteiner-img"
+                                    style="background-image: url('/img/products/<%= product.image %>');">
                                 </div>
-
                                 <p>
                                     <%= product.name %>
                                 </p>
