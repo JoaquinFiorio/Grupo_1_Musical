@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 
 const viewsRoutes = require("./routes/main");
 const productRoutes = require("./routes/products");
+const userRoutes = require("./routes/user");
 
 /* INICIALIZAMOS TODOS LOS METODOS DE EXPRESS */
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 /* RUTAS */
 app.use("/", viewsRoutes);
 app.use("/products", productRoutes);
+app.use("/users", userRoutes);
 
 app.listen(process.env.PORT || 3030, () => {
     console.log(`Servidor iniciado en http://localhost:${process.env.PORT}`);
