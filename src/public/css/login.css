@@ -45,7 +45,7 @@ a {
     background-size: cover;
 }
 
-.conteiner {
+.container {
     padding: 5%;
     display: flex;
     justify-content: space-between;
@@ -149,14 +149,14 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.olvido {
+.forgotPassword {
     color: white;
     width: 100%;
     display: flex;
     justify-content: end;
 }
 
-.olvido a {
+.forgotPassword a {
     cursor: pointer;
     font-family: "Nunito", sans-serif;
     text-decoration: none;
