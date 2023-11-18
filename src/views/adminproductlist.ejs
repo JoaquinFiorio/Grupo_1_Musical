@@ -5,11 +5,11 @@
             <main>
                 <section class="product-uploader">
                     <% products.forEach(product=> { %>
-                        <div class="producto">
+                        <div class="product">
                             <p>Producto <%= product.id %>
                             </p>
                             <a href="/productEdit/<%= product.id %>">
-                                <div class="conteiner-img"
+                                <div class="container-img"
                                     style="background-image: url('/img/products/<%= product.image %>');">
                                 </div>
                                 <p>

@@ -156,7 +156,7 @@ header .headerImg img {
 }
 
 @media (max-width: 980px) {
-    .rectangulo {
+    .rectangle {
         flex-direction: column;
         gap: 20px;
     }
@@ -173,19 +173,19 @@ header .headerImg img {
         margin-bottom: 20px;
     }
 
-    .pie-pagina .grupo-1 {
+    .footer .groupOne {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         display: flex;
         flex-direction: column;
     }
 
-    .pie-pagina .grupo-1 .box img {
+    .footer .groupOne .box img {
         width: 150px;
     }
 
-    .pie-pagina .grupo-1 .box h2,
-    .box-pagos h2 {
+    .footer .groupOne .box h2,
+    .paymentsBox h2 {
         font-size: 18px;
     }
 }
@@ -211,23 +211,23 @@ header .headerImg img {
         width: 162px !important;
     }
 
-    .pie-pagina .grupo-1 {
+    .footer .groupOne {
         grid-template-columns: repeat(1, 1fr);
         display: flex;
         flex-direction: column;
     }
 
-    .pie-pagina .grupo-1 .box img {
+    .footer .groupOne .box img {
         width: 100px;
     }
 
-    .pie-pagina .grupo-1 .box h2,
-    .box-pagos h2 {
+    .footer .groupOne .box h2,
+    .paymentsBox h2 {
         font-size: 16px;
     }
 
-    .pie-pagina .grupo-1 .red-social a,
-    .metodos-pagos i {
+    .footer .groupOne .socialIcon a,
+    .payments i {
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -277,7 +277,7 @@ header .headerImg img {
 /* NEWSLETTER */
 
 /* Estilos para el rectángulo */
-.rectangulo {
+.rectangle {
     width: 85%;
     background-color: #f0f0f0;
     border: 3px solid #333;
@@ -288,25 +288,25 @@ header .headerImg img {
     justify-content: space-between;
 }
 
-.rectangulo h2 {
+.rectangle h2 {
     font-size: 30px;
     color: #333;
     margin-bottom: 10px;
 }
 
-.rectangulo p {
+.rectangle p {
     font-size: 18px;
     color: #666;
     font-family: 'Nunito', sans-serif;
 }
 
-.rectangulo .formulario {
+.rectangle .form {
     display: flex;
     gap: 15px;
 }
 
-.rectangulo input[type="text"],
-.rectangulo input[type="email"] {
+.rectangle input[type="text"],
+.rectangle input[type="email"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -314,7 +314,7 @@ header .headerImg img {
     font-size: 16px;
 }
 
-.rectangulo button {
+.rectangle button {
     background-color: #333;
     color: #fff;
     border: none;
@@ -327,14 +327,14 @@ header .headerImg img {
 
 /* Footer */
 
-.pie-pagina {
+.footer {
     position: relative;
     bottom: 0;
     width: 100%;
     background-color: var(--color-4);
 }
 
-.pie-pagina .grupo-1 {
+.footer .groupOne {
     width: 100%;
     margin: auto;
     display: flex;
@@ -346,8 +346,8 @@ header .headerImg img {
 }
 
 
-.pie-pagina .grupo-1 .box,
-.box-pagos {
+.footer .groupOne .box,
+.paymentsBox {
     width: 100%;
     height: 100%;
     display: flex;
@@ -358,37 +358,37 @@ header .headerImg img {
     padding: 0 3%;
 }
 
-.pie-pagina .grupo-1 .box img {
+.footer .groupOne .box img {
     width: 200px;
 }
 
-.pie-pagina .grupo-1 .box h2,
-.box-pagos h2 {
+.footer .groupOne .box h2,
+.paymentsBox h2 {
     color: #fff;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
-.pie-pagina .grupo-1 .box p {
+.footer .groupOne .box p {
     color: #efefef;
     margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .box-pagos {
+.footer .groupOne .paymentsBox {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
 }
 
-.pie-pagina .grupo-1 .box-pagos .metodos-pagos {
+.footer .groupOne .paymentsBox .payments {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pie-pagina .grupo-1 .red-social a,
-.metodos-pagos i {
+.footer .groupOne .socialIcon a,
+.payments i {
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -402,18 +402,18 @@ header .headerImg img {
     border-radius: 50px;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover {
+.footer .groupOne .socialIcon a:hover {
     color: var(--color-5);
 }
 
-.pie-pagina .grupo-2 {
+.footer .groupTwo {
     background-color: var(--color-5);
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
 
-.pie-pagina .grupo-2 small {
+.footer .groupTwo small {
     font-size: 15px;
     font-family: 'Nunito', sans-serif;
 }

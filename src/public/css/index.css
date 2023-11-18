@@ -78,7 +78,7 @@ h1 {
 
 /* SERVICIOS */
 
-.servicios {
+.services {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ h1 {
     padding: 15px 10px;
 }
 
-.servicio {
+.service {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,8 +98,8 @@ h1 {
 
 /* SWIPER PRODUCTOS*/
 
-.buscado,
-.destacado {
+.searchedProduct,
+.popularProduct {
     padding: 0px 3%;
     margin: 30px auto;
 }
@@ -120,146 +120,4 @@ h1 {
 .swiperProducts img {
     width: 80%;
     height: 180px;
-}
-
-/* NEWSLETTER */
-
-/* Estilos para el rectángulo */
-.rectangulo {
-    width: 85%;
-    background-color: #f0f0f0;
-    border: 3px solid #333;
-    padding: 20px;
-    text-align: center;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rectangulo h2 {
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.rectangulo p {
-    font-size: 18px;
-    color: #666;
-    font-family: 'Nunito', sans-serif;
-}
-
-.rectangulo .formulario {
-    display: flex;
-    gap: 15px;
-}
-
-.rectangulo input[type="text"],
-.rectangulo input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.rectangulo button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-
-
-/*Footer*/
-.pie-pagina {
-    width: 100%;
-    background-color: var(--color-4);
-    font-family: "Nunito", sans-serif;
-}
-
-.pie-pagina .grupo-1 {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px 0;
-    text-align: center;
-}
-
-
-.pie-pagina .grupo-1 .box,
-.box-pagos {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 3%;
-}
-
-.pie-pagina .grupo-1 .box img {
-    width: 200px;
-}
-
-.pie-pagina .grupo-1 .box h2,
-.box-pagos h2 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.pie-pagina .grupo-1 .box p {
-    color: #efefef;
-    margin-bottom: 10px;
-}
-
-.pie-pagina .grupo-1 .box-pagos {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-
-.pie-pagina .grupo-1 .box-pagos .metodos-pagos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pie-pagina .grupo-1 .red-social a,
-.metodos-pagos i {
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: var(--color-2);
-    text-align: center;
-    transition: all 300ms ease;
-    border-radius: 50px;
-}
-
-.pie-pagina .grupo-1 .red-social a:hover {
-    color: var(--color-5);
-}
-
-.pie-pagina .grupo-2 {
-    background-color: var(--color-5);
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-
-.pie-pagina .grupo-2 small {
-    font-size: 15px;
 }
