@@ -78,7 +78,6 @@ const viewController = {
         const data = {
             title: 'Profile',
             css: 'profile.css'
-
         };
         res.render(path.join(__dirname, '../views/profile'), data);
     }
