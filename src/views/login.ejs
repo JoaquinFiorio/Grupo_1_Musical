@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-    <%- include('./partials/head') %>
-<body>
-    <section class="login">
-        <div class="conteiner">
-            <div class="rowLeft">
-                <div class="buttons">
-                    <button class="loginButton">
-                        Iniciar Sesión
-                    </button>
-                    <a href="register">
-                        <button class="registerButton">
-                            Regístrate
+<%- include('./partials/head') %>
+
+    <body>
+        <section class="login">
+            <div class="conteiner">
+                <div class="rowLeft">
+                    <div class="buttons">
+                        <button class="loginButton">
+                            Iniciar Sesión
                         </button>
-                    </a>
-                </div>
-                <div class="socialMedia">
-                    <a href="https://www.facebook.com" target="_blank" class="circle facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.google.com" target="_blank" class="circle google">
-                        <i class="fab fa-google"></i>
-                    </a>
-                </div>
-                <form action="/">
-                    <input type="email" placeholder="Correo Electrónico">
-                    <input type="password" placeholder="Contraseña">
-                    <div class="olvido">
-                        <a>¿Olvidaste tu contraseña?</a>
+                        <a href="register">
+                            <button class="registerButton">
+                                Regístrate
+                            </button>
+                        </a>
                     </div>
-                    <input type="submit" value="Ingresar">
-                </form>
+                    <div class="socialMedia">
+                        <a href="https://www.facebook.com" target="_blank" class="circle facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.google.com" target="_blank" class="circle google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                    <form action="/">
+                        <input type="email" placeholder="Correo Electrónico">
+                        <input type="password" placeholder="Contraseña">
+                        <div class="olvido">
+                            <a>¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <input type="submit" value="Ingresar">
+                    </form>
+                </div>
+                <div class="rowRight">
+                    <img width="100%" src="/img/login/imgLogin.jpg" alt="">
+                </div>
             </div>
-            <div class="rowRight">
-                <img width="100%" src="/img/login/imgLogin.jpg" alt="">
-            </div>
-        </div>
-    </section>
-</body>
-</html>
+        </section>
+    </body>
+
+    </html>
