@@ -54,14 +54,14 @@ body {
     font-weight: 300;
 }
 
-.wrapper .profile .profile_skills {
+.wrapper .profile .profile_info {
     background: #fff;
     border-radius: 10px;
     padding: 25px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125);
 }
 
-.wrapper .profile .profile_skills .skills p {
+.wrapper .profile .profile_info .info p {
     text-transform: uppercase;
     text-align: center;
     font-weight: 700;
@@ -69,12 +69,35 @@ body {
     padding: 5px;
 }
 
-.wrapper .profile .profile_skills .skills ul li {
+.wrapper .profile .profile_info .info ul li {
     font-size: 30px;
     margin: 10px;
     list-style: none;
 }
 
-.wrapper .profile .profile_skills .skills i {
+.wrapper .profile .profile_info .info i {
     font-size: 15px;
+}
+
+.wrapper .profile .profile_info .info .modifyUser {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.wrapper .profile .profile_info .info .modifyUser button {
+    width: 100%;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.wrapper .profile .profile_info .info .modifyUser button:hover {
+    background-color: #963c0e;
 }
