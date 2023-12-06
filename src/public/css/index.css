@@ -78,7 +78,7 @@ h1 {
 
 /* SERVICIOS */
 
-.servicios {
+.services {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +87,7 @@ h1 {
     padding: 15px 10px;
 }
 
-.servicio {
+.service {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@ h1 {
 
 /* SWIPER PRODUCTOS*/
 
-.buscado,
+.searched,
 .destacado {
     padding: 0px 3%;
     margin: 30px auto;
