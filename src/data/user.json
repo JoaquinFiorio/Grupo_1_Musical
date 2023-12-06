@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "john.doe@example.com",
-        "password": "password123",
-        "category": "Usuario Estándar",
-        "image": "user1.jpg"
+        "username": "cfibbit0",
+        "first_name": "Conrado",
+        "last_name": "Fibbit",
+        "email": "cfibbit0@geocities.com",
+        "address": "619 Gerald Hill",
+        "password": "uC7>&U=%KB",
+        "avatar": "https://robohash.org/placeatautquisquam.png?size=50x50&set=set1"
     },
     {
         "id": 2,

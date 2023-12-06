@@ -45,7 +45,7 @@ a {
     background-size: cover;
 }
 
-.conteiner {
+.container {
     padding: 5%;
     display: flex;
     justify-content: space-between;
@@ -148,19 +148,6 @@ input[type="submit"] {
     margin-top: 20px;
     font-size: 18px;
     cursor: pointer;
-}
-
-.olvido {
-    color: white;
-    text-decoration: underline;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-}
-
-.olvido a {
-    cursor: pointer;
-    font-family: "Nunito", sans-serif;
 }
 
 .rowRight {

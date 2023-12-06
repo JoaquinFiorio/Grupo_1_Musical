@@ -25,5 +25,7 @@ router.get('/productEdit/:id', viewsControllers.productEdit);
 
 router.get('/adminList', viewsControllers.adminList);
 
+router.get('/profile', viewsControllers.profile);
+
 module.exports = router;
 

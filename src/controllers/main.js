@@ -73,6 +73,13 @@ const viewController = {
 
         };
         res.render(path.join(__dirname, '../views/adminproductlist'), data);
+    },
+    profile: (req, res) => {
+        const data = {
+            title: 'Profile',
+            css: 'profile.css'
+        };
+        res.render(path.join(__dirname, '../views/profile'), data);
     }
 }
 
