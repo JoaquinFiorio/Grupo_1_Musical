@@ -41,5 +41,12 @@ const userController = {
         };
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/profile');
+    },
+    login: () => {
+            const user = req.session.user;
+            if (!user) {
+                return res.send('Usuario no logeado');
+            }
+            return res.render('profile', { user });
     }
 }
