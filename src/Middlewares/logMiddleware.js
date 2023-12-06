@@ -1,7 +1,17 @@
-const fs = require ('fs');
-function logMiddleware (req,res,next) {
-    fs.appendFileSync('log.txt' , 'se ingreso en la pagina ' + req.url);
-    next();
-}
+// const { body } = require('express-validator');
 
-module.exports = logMiddleware;
+// const userRegisterValidator = [
+//     body('name').notEmpty().withMessage('El nombre es requerido'),
+//     body('color').notEmpty().withMessage('El color es requerido'),
+//     body('email').notEmpty().withMessage('El E-mail es requerido')
+//         .isEmail().withMessage('Ingresa un E-mail Valido')
+// ];
+
+// module.exports = {
+//     userRegisterValidator
+// };
+
+
+
+
+
