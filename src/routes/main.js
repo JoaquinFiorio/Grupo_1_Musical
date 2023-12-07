@@ -27,5 +27,8 @@ router.get('/adminList', viewsControllers.adminList);
 
 router.get('/profile', viewsControllers.profile);
 
+router.get('/errorUser', viewsControllers.errorUser);
+
 module.exports = router;
+
 

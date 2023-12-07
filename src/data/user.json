@@ -48,5 +48,55 @@
     "email": "cojoa12345@gmail.com",
     "password": "$2b$10$z3FGJBbPwFkF5bd.WgGtqOJ0pdf1G7hhf2W0v3aJqZynMXV1Q5Gve",
     "image": "user-1701960501131.png"
+  },
+  {
+    "id": 5,
+    "username": "asdasdas",
+    "first_name": "",
+    "last_name": "asdadas",
+    "adress": "adsada",
+    "email": "adasdasd@hotmail.com",
+    "password": "$2b$10$8/oMpnQamGG539ddAO9bduRi0TIIYdCJ3attecqPrRup6V0/Tba7S",
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 6,
+    "username": "asda",
+    "first_name": "",
+    "last_name": "asdad",
+    "adress": "asdads",
+    "email": "adsda@hotmail.com",
+    "password": "$2b$10$JHO36/ATSVD5ic9cuBPEZu/14io8Se0n3YNm0zxqLsHGz9Op7XFmi",
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 7,
+    "username": "asdas",
+    "first_name": "",
+    "last_name": "asda",
+    "adress": "asda",
+    "email": "cojoa12345@gmail.com",
+    "password": "$2b$10$jQtSi4Z2aIofwojTE3/MeOMMK8qtkHgPZL37Ip7jRm5cy/Vn3fcEG",
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 8,
+    "username": "",
+    "first_name": "",
+    "last_name": "",
+    "adress": "",
+    "email": "",
+    "password": "$2b$10$X9NeZPFGXFEzV1WJdgxV/u42F8HQRyLSm1HzOghlggrfh1gDoH1pq",
+    "image": "default-image.jpg"
+  },
+  {
+    "id": 9,
+    "username": "joaquin.fiorio@hotmail.com",
+    "first_name": "",
+    "last_name": "",
+    "adress": "",
+    "email": "",
+    "password": "$2b$10$cOZtGYoiqvV6L/eZAHNneut9ydiFItxwkpdKMeMqV2HmdTu.J0U5q",
+    "image": "default-image.jpg"
   }
 ]

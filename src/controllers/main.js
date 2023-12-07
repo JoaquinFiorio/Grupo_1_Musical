@@ -80,6 +80,9 @@ const viewController = {
             css: 'profile.css'
         };
         res.render(path.join(__dirname, '../views/profile'), data);
+    }, 
+    errorUser: (req, res) => {
+        res.render(path.join(__dirname, '../views/errorUser'));
     }
 }
 
