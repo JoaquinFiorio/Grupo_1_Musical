@@ -24,11 +24,15 @@
                             <i class="fab fa-google"></i>
                         </a>
                     </div>
-                    <form action="/">
-                        <input type="text" placeholder="Nombre">
-                        <input type="text" placeholder="Apellido">
-                        <input type="email" placeholder="Correo Electrónico">
-                        <input type="password" placeholder="Contraseña">
+                    <form action="/users" method="post" enctype="multipart/form-data">
+                        <input type="text" name="username" placeholder="Nombre de Usuario">
+                        <input type="text" name="first_name" placeholder="Nombre">
+                        <input type="text" name="last_name" placeholder="Apellido">
+                        <input type="text" name="adress" placeholder="Dirección">
+                        <input type="email" name="email" placeholder="Correo Electrónico">
+                        <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)">
+                        <img id="imagen-preview" src="#" alt="Vista previa de la imagen" style="max-width: 100%; display: none;">
+                        <input type="password" name="password" placeholder="Contraseña">
                         <input type="submit" value="Registrar">
                     </form>
                 </div>
@@ -37,6 +41,24 @@
                 </div>
             </div>
         </section>
+
+        <script>
+            function previewImage(input) {
+                let preview = document.getElementById('imagen-preview');
+                if (input.files && input.files[0]) {
+                    let reader = new FileReader();
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                } else {
+                    preview.src = '#';
+                    preview.style.display = 'none';
+                }
+            }
+        </script>
+        
     </body>
 
     </html>

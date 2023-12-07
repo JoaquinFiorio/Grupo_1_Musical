@@ -2,32 +2,43 @@ const path = require("path");
 const fs = require("fs");
 const bcrypt = require("bcrypt")
 
-const userFilePath = path.join(__dirname, '../data/user.json');
-let users = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+const usersFilePath = path.join(__dirname, '../data/user.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
-    registerUser: () => {
+    registerUser: (req, res) => {
         const newUser = {
             id: users[users.length - 1].id + 1,
             ...req.body,
-            password: bcrypt.hashSync(req.password, 10),
-            image: req.file?.filename || "default-image.png"
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file?.filename || "default-image.jpg"
         };
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/');
     },
-    signInUser: () => {
+    signInUser: (req, res) => {
         //Recordar usar bcrypt.compareSync(password, user.password) para validar las claves encriptadas
+        const { email, password } = req.body;
+        let userFound = users.find((user) => user.email === email);
+
+        if(!userFound) {
+            res.status(404).send({ message: "Usuario no encontrado" })
+        }
+
+        if(bcrypt.compareSync(password, userFound.password)) {
+            return res.status(200).send({ message: "Usuario logueado con exito" })
+        }
+
+        return res.status(500).send({ message: "Esta mal la contraseña" })
+    },
+    getUser: (req, res) => {
 
     },
-    getUser: () => {
+    getUsers: (req, res) => {
 
     },
-    getUsers: () => {
-
-    },
-    deleteUser: () => {
+    deleteUser: (req, res) => {
         const indexUser = users.findIndex((user) => user.id == req.params.id);
         users.splice(indexUser, 1);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
@@ -42,11 +53,13 @@ const userController = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
         res.redirect('/profile');
     },
-    // login: () => {
-    //         const user = req.session.user;
-    //         if (!user) {
-    //             return res.send('Usuario no logeado');
-    //         }
-    //         return res.render('profile', { user });
-    // }
+    login: () => {
+        const user = req.session.user;
+        if (!user) {
+            return res.send('Usuario no logeado');
+        }
+        return res.render('profile', { user });
+    }
 }
+
+module.exports = userController;
