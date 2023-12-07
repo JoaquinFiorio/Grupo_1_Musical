@@ -1,12 +1,17 @@
 const path = require("path");
 const fs = require("fs");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
+const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/user.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
     registerUser: (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.send({ errors: errors.mapped(), oldData: req.body })
+        }
         const newUser = {
             id: users[users.length - 1].id + 1,
             ...req.body,
@@ -18,19 +23,19 @@ const userController = {
         res.redirect('/');
     },
     signInUser: (req, res) => {
-        //Recordar usar bcrypt.compareSync(password, user.password) para validar las claves encriptadas
         const { email, password } = req.body;
         let userFound = users.find((user) => user.email === email);
 
         if(!userFound) {
-            res.status(404).send({ message: "Usuario no encontrado" })
+            return res.status(404).send({ message: "Usuario no encontrado" })
         }
 
-        if(bcrypt.compareSync(password, userFound.password)) {
-            return res.status(200).send({ message: "Usuario logueado con exito" })
+        if(!bcrypt.compareSync(password, userFound.password)) {
+            return res.status(500).send({ message: "Esta mal la contraseña" })
         }
+        
+        return res.redirect('/');
 
-        return res.status(500).send({ message: "Esta mal la contraseña" })
     },
     getUser: (req, res) => {
 
