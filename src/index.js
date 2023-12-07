@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 require("dotenv").config();
 const methodOverride = require('method-override');
+const session = require("express-session");
 
 /* REQUERIMOS LAS RUTAS DEL ARCHIVO */
 
@@ -20,6 +21,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(
+    session({
+        secret: 'abc-123',
+        resave: false,
+        saveUninitialized: true,
+    })
+);
 
 /* RUTAS */
 app.use("/", viewsRoutes);
