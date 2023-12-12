@@ -27,7 +27,7 @@ router.get("/:id", userController.getUser)
 
 router.post("/login", userController.signInUser)
 
-router.post("/", upload.single('imageFile'), userRegisterValidator, userController.registerUser)
+router.post("/", [upload.single('imageFile'), userRegisterValidator], userController.registerUser)
 
 router.put("/", userController.updateUser)
 
