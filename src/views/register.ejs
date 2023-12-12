@@ -25,14 +25,15 @@
                         </a>
                     </div>
                     <form action="/users" method="post" enctype="multipart/form-data">
-                        <input type="text" name="username" placeholder="Nombre de Usuario">
-                        <input type="text" name="first_name" placeholder="Nombre">
-                        <input type="text" name="last_name" placeholder="Apellido">
-                        <input type="text" name="adress" placeholder="Dirección">
-                        <input type="email" name="email" placeholder="Correo Electrónico">
+                        <input type="text" name="username" placeholder="Nombre de Usuario" required>
+                        <input type="text" name="first_name" placeholder="Nombre" required>
+                        <input type="text" name="last_name" placeholder="Apellido" required>
+                        <input type="text" name="adress" placeholder="Dirección" required>
+                        <input type="email" name="email" placeholder="Correo Electrónico" required>
                         <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)">
-                        <img id="imagen-preview" src="#" alt="Vista previa de la imagen" style="max-width: 100%; display: none;">
-                        <input type="password" name="password" placeholder="Contraseña">
+                        <img id="imagen-preview" src="#" alt="Vista previa de la imagen"
+                            style="max-width: 100%; display: none;">
+                        <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="submit" value="Registrar">
                     </form>
                 </div>
@@ -58,7 +59,7 @@
                 }
             }
         </script>
-        
+
     </body>
 
     </html>

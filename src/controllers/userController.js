@@ -26,14 +26,14 @@ const userController = {
         const { email, password } = req.body;
         let userFound = users.find((user) => user.email === email);
 
-        if(!userFound) {
-            return res.status(404).send({ message: "Usuario no encontrado" })
+        if (!userFound) {
+            res.status(404).send({ message: "Usuario no encontrado" });
         }
 
-        if(!bcrypt.compareSync(password, userFound.password)) {
-            return res.status(500).send({ message: "Esta mal la contraseña" })
+        if (!bcrypt.compareSync(password, userFound.password)) {
+            return res.status(500).send({ message: "Esta mal la contraseña" });
         }
-        
+
         return res.redirect('/');
 
     },

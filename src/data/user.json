@@ -98,5 +98,15 @@
     "email": "",
     "password": "$2b$10$cOZtGYoiqvV6L/eZAHNneut9ydiFItxwkpdKMeMqV2HmdTu.J0U5q",
     "image": "default-image.jpg"
+  },
+  {
+    "id": 10,
+    "username": "imaamartinez",
+    "first_name": "ims",
+    "last_name": "ms",
+    "adress": "ss 44",
+    "email": "imanolmartinez249@gmail.com",
+    "password": "$2b$10$hsq34KmWLru8oNHcfwqQ5uAdNyCWOTYmy6iSmZuYP9lfZa2Zk4nYq",
+    "image": "user-1702387027224.png"
   }
 ]
