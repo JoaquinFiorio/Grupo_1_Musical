@@ -8,18 +8,28 @@
             <i class="fas fa-search search-icon"></i>
         </div>
         <div class="rightOptions">
-            <a href="/login" class="options">
-                <i class="fa-solid fa-circle-user"></i>
-                <h5>Iniciar Sesión</h5>
-            </a>
-            <a href="/register" class="options">
-                <i class="fa-solid fa-pen-to-square"></i>
-                <h5>Regístrate</h5>
-            </a>
-            <a href="/productCart" class="options productCart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <h5>Carrito 0</h5>
-            </a>
+            <% if (loggedIn) { %>
+                <!-- Mostrar esto si el usuario está autenticado -->
+                <a href="/profile" class="options">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h5>Perfil</h5>
+                </a>
+                <a href="/productCart" class="options productCart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h5>Carrito 0</h5>
+                </a>
+                <!-- ... (otros enlaces para usuarios autenticados) ... -->
+            <% } else { %>
+                <!-- Mostrar esto si el usuario NO está autenticado -->
+                <a href="/login" class="options">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h5>Iniciar Sesión</h5>
+                </a>
+                <a href="/register" class="options">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h5>Regístrate</h5>
+                </a>
+            <% } %>
         </div>
         <div class="hamburgerMenu">
             <i class="fa-solid fa-bars"></i>

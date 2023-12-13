@@ -20,19 +20,21 @@ const userController = {
         };
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/');
+        res.redirect('/login');
     },
     signInUser: (req, res) => {
         const { email, password } = req.body;
         let userFound = users.find((user) => user.email === email);
 
         if (!userFound) {
-            res.status(404).send({ message: "Usuario no encontrado" });
+            return res.status(404).send({ message: "Usuario no encontrado" });
         }
 
         if (!bcrypt.compareSync(password, userFound.password)) {
             return res.status(500).send({ message: "Esta mal la contraseña" });
         }
+
+        res.cookie('usuario', JSON.stringify(userFound.username), { maxAge: 3600000 });
 
         return res.redirect('/');
 

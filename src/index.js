@@ -3,6 +3,7 @@ const path = require('path');
 require("dotenv").config();
 const methodOverride = require('method-override');
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 /* REQUERIMOS LAS RUTAS DEL ARCHIVO */
 
@@ -28,6 +29,7 @@ app.use(
         saveUninitialized: true,
     })
 );
+app.use(cookieParser());
 
 /* RUTAS */
 app.use("/", viewsRoutes);

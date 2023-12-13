@@ -5,84 +5,123 @@ const { getProducts } = require("../models/model");
 
 const viewController = {
     index: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Home',
-            css: 'index.css'
+            css: 'index.css',
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/index'), data);
+        return res.render(path.join(__dirname, '../views/index'), data);
     },
     login: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Login',
-            css: 'login.css'
+            css: 'login.css',
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/login'), data);
+        if(loggedIn === true) {
+            return res.redirect("/");
+        }
+        return res.render(path.join(__dirname, '../views/login'), data);
     },
     productCart: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Product Cart',
-            css: 'productCart.css'
+            css: 'productCart.css',
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/productCart'), data);
+        if(loggedIn === true) {
+            return res.render(path.join(__dirname, '../views/productCart'), data);
+        }
+        return res.redirect("/login")
     },
     productDetail: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const product = getProducts().find((product) => product.id == req.params.id);
         const data = {
             title: 'Product Detail',
             css: 'productDetail.css',
-            productDetail: product
+            productDetail: product,
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/productDetail'), data);
+        return res.render(path.join(__dirname, '../views/productDetail'), data);
     },
     register: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Register',
-            css: 'register.css'
+            css: 'register.css',
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/register'), data);
+        if(loggedIn === true) {
+            return res.redirect("/");
+        }
+        return res.render(path.join(__dirname, '../views/register'), data);
     },
     productList: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Product List',
             css: 'productList.css',
-            products: getProducts()
+            products: getProducts(),
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/productList'), data);
+        return res.render(path.join(__dirname, '../views/productList'), data);
     },
     productUploader: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Product Uploader',
             css: 'productUploader.css'
         };
-        res.render(path.join(__dirname, '../views/productUploader'), data);
+        if(loggedIn === true) {
+            return res.render(path.join(__dirname, '../views/productUploader'), data);
+        }
+        return res.redirect('/login');
     },
     productEdit: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const product = getProducts().find((product) => product.id == req.params.id);
         const data = {
             title: 'Product Edit',
             css: 'productEdit.css',
-            productEdit: product
+            productEdit: product,
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/productEdit'), data);
+        if(loggedIn === true) {
+            return res.render(path.join(__dirname, '../views/productEdit'), data);
+        }
+        return res.redirect('/login');
     },
     adminList: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Admin list',
             css: 'adminList.css',
-            products: getProducts()
-
+            products: getProducts(),
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/adminproductlist'), data);
+        if(loggedIn === true) {
+            return res.render(path.join(__dirname, '../views/adminproductlist'), data);
+        }
+        return res.redirect('/login');
     },
     profile: (req, res) => {
+        const loggedIn = req.cookies.usuario ? true : false;
         const data = {
             title: 'Profile',
-            css: 'profile.css'
+            css: 'profile.css',
+            loggedIn
         };
-        res.render(path.join(__dirname, '../views/profile'), data);
+        if(loggedIn === true) {
+            return res.render(path.join(__dirname, '../views/profile'), data);
+        }
+        return res.redirect('/login');
     }, 
     errorUser: (req, res) => {
-        res.render(path.join(__dirname, '../views/errorUser'));
+        return res.render(path.join(__dirname, '../views/errorUser'));
     }
 }
 

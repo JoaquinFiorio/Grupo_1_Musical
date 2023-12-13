@@ -108,5 +108,15 @@
     "email": "imanolmartinez249@gmail.com",
     "password": "$2b$10$hsq34KmWLru8oNHcfwqQ5uAdNyCWOTYmy6iSmZuYP9lfZa2Zk4nYq",
     "image": "user-1702387027224.png"
+  },
+  {
+    "id": 11,
+    "username": "Joaquin",
+    "first_name": "Joaquin",
+    "last_name": "Fiorio",
+    "adress": "Dorrego620",
+    "email": "joaquin.fiorio@hotmail.com",
+    "password": "$2b$10$p1vgC1eAVom4eg8mqaADpOPxOEuHtD4n1wGCsPCgDfLTeIAp6YpNW",
+    "image": "default-image.jpg"
   }
 ]
