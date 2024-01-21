@@ -136,13 +136,17 @@
                     <div class="sectionProducts" id="products">
                         <% products.forEach(product=> { %>
                             <a href="/productDetail/<%= product.id %>" class="card">
-                                <img src="/img/products/<%= product.image %>" alt="">
+                                <% if (product.Images && product.Images.length > 0) { %>
+                                    <img src="<%= product.Images[0].name %>" alt="<%= product.name %> Image">
+                                  <% } else { %>
+                                    <p>No hay imágenes disponibles para este producto.</p>
+                                  <% } %>
                                 <div>
                                     <h3>
                                         <%= product.name %>
                                     </h3>
                                     <p class="">
-                                        <%= product.description %>
+                                        <%= product.fabrication_year %>
                                     </p>
                                     <h6>
                                         U$S <%= product.price %>
