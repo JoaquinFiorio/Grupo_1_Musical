@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
   let config = {
-    timestamps: true,
+    timestamps: false,
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: false,
@@ -30,10 +30,12 @@ module.exports = (sequelize, dataTypes) => {
     Product_category.belongsTo(models.Product, {
       as: "product",
       foreignKey: "products_id",
+      through: "product_category",
     });
     Product_category.belongsTo(models.Category, {
       as: "category",
       foreignKey: "categories_id",
+      through: "product_category",
     });
   };
   return Product_category;

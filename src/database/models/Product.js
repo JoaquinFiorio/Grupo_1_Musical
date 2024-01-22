@@ -26,6 +26,10 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.DECIMAL(10, 2),
       allowNull: false,
     },
+    description: {
+      type: dataTypes.TEXT,
+      allowNull: true,
+    },
   };
   let config = {
     timestamps: false,
@@ -40,11 +44,23 @@ module.exports = (sequelize, dataTypes) => {
     Product.belongsTo(models.Brand, {
       as: "brand",
       foreignKey: "brands_id",
+      onDelete: "CASCADE",
     }),
       Product.belongsToMany(models.Image, {
         through: models.Product_image,
         foreignKey: "products_id",
         otherKey: "images_id",
+        onDelete: "CASCADE",
+      }),
+      Product.belongsToMany(models.Category, {
+        through: models.Product_category,
+        foreignKey: "products_id",
+        otherKey: "categories_id",
+        onDelete: "CASCADE",
+      }),
+      Product.hasMany(models.Order_detail, {
+        foreignKey: "products_id",
+        onDelete: "CASCADE",
       });
   };
   return Product;

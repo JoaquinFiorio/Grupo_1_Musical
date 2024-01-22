@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
   let config = {
-    timestamps: true,
+    timestamps: false,
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: false,
@@ -42,10 +42,12 @@ module.exports = (sequelize, dataTypes) => {
     Order_detail.belongsTo(models.Order, {
       as: "order",
       foreignKey: "order_id",
+      onDelete: "CASCADE",
     });
     Order_detail.belongsTo(models.Product, {
       as: "product",
       foreignKey: "product_id",
+      onDelete: "CASCADE",
     });
   };
   return Order_detail;
