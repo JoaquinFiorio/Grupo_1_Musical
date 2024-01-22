@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
   let config = {
-    timestamps: true,
+    timestamps: false,
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: false,
@@ -22,5 +22,12 @@ module.exports = (sequelize, dataTypes) => {
   };
   const Category = sequelize.define(alias, cols, config);
 
+  Category.associate = function (models) {
+    Category.belongsToMany(models.Product, {
+      through: models.Product_category,
+      foreignKey: "categories_id",
+      otherKey: "products_id",
+    });
+  };
   return Category;
 };
