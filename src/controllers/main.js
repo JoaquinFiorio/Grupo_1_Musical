@@ -58,7 +58,7 @@ const viewController = {
       res.status(500).send("Internal Server Error");
     }
   },
-  register: (req, res) => {
+  register: async (req, res) => {
     const data = {
       title: "Register",
       css: "register.css",
@@ -100,6 +100,8 @@ const viewController = {
   },
 
   productEdit: async (req, res) => {
+    const brands = await db.Brand.findAll();
+    const categories = await db.Category.findAll();
     try {
       const productId = req.params.id;
 
@@ -124,6 +126,8 @@ const viewController = {
         title: "Product Edit",
         css: "productEdit.css",
         productEdit: product,
+        brands: brands,
+        categories: categories,
       };
 
       res.render(path.join(__dirname, "../views/productEdit"), data);

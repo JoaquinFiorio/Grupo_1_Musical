@@ -31,11 +31,13 @@ module.exports = (sequelize, dataTypes) => {
       as: "product",
       foreignKey: "products_id",
       through: "product_image",
+      onDelete: "CASCADE",
     });
     Product_image.belongsToMany(models.Image, {
       as: "image",
       foreignKey: "images_id",
       through: "product_image",
+      onDelete: "CASCADE",
     });
   };
 

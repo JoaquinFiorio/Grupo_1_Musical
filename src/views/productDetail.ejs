@@ -6,19 +6,21 @@
             <main>
                 <section class="product-detail">
                     <div class="container-img">
-                        <% if (productDetail.Images && productDetail.Images.length > 0) { %>
-                            <img src="<%= productDetail.Images[0].name %>" alt="imagesn-producto" />
-                        <% } else { %>
-                            <!-- Puedes mostrar una imagesn de marcador de posición o un mensaje aquí -->
-                            <p>No hay imágenes disponibles</p>
-                        <% } %>
-                        <div class="variety">
-                            <% if (productDetail.Images && productDetail.Images.length > 1) { %>
-                                <% productDetail.Images.slice(1).forEach(img => { %>
-                                    <img src="<%= img.name %>" alt="imagen-producto" />
-                                <% }); %>
-                            <% } %>
-                        </div>
+                        <% if (productDetail.Images && productDetail.Images.length> 0) { %>
+                            <img src="http://localhost:3030/img/products/<%= productDetail.Images[0].name %>"
+                                alt="imagen-producto" />
+                            <% } else { %>
+                                <!-- Puedes mostrar una imagen de marcador de posición o un mensaje aquí -->
+                                <p>No hay imágenes disponibles</p>
+                                <% } %>
+                                    <div class="variety">
+                                        <% if (productDetail.Images && productDetail.Images.length> 1) { %>
+                                            <% productDetail.Images.slice(1).forEach(img=> { %>
+                                                <img src="http://localhost:3030/img/products/<%= img.name %>"
+                                                    alt="imagen-producto" />
+                                                <% }); %>
+                                                    <% } %>
+                                    </div>
                     </div>
 
                     <div class="container-info-product">
@@ -30,11 +32,13 @@
                         <div class="category-product">
                             <span>
                                 <div class="variety">
-                                    <% if (productDetail.Categories && productDetail.Categories.length > 1) { %>
-                                        <% productDetail.Categories.slice(1).forEach(category => { %>
-                                            <span> <%= category.name %> </span>
-                                        <% }); %>
-                                    <% } %>
+                                    <% if (productDetail.Categories && productDetail.Categories.length> 1) { %>
+                                        <% productDetail.Categories.slice(1).forEach(category=> { %>
+                                            <span>
+                                                <%= category.name %>
+                                            </span>
+                                            <% }); %>
+                                                <% } %>
                                 </div>
                             </span>
                         </div>

@@ -14,15 +14,15 @@ module.exports = (sequelize, dataTypes) => {
     },
     first_name: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      defaultValue: null,
     },
     last_name: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      defaultValue: null,
     },
     phone_number: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      defaultValue: null,
     },
     email: {
       type: dataTypes.TEXT,
@@ -30,19 +30,19 @@ module.exports = (sequelize, dataTypes) => {
     },
     address: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      defaultValue: null,
     },
     postal_code: {
       type: dataTypes.CHAR(6),
-      allowNull: false,
+      defaultValue: null,
     },
     cities_id: {
       type: dataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 1,
     },
     role_id: {
       type: dataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: 2,
     },
     password: {
       type: dataTypes.TEXT,
