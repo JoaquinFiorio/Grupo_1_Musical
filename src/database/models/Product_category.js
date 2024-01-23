@@ -31,11 +31,13 @@ module.exports = (sequelize, dataTypes) => {
       as: "product",
       foreignKey: "products_id",
       through: "product_category",
+      onDelete: "CASCADE",
     });
     Product_category.belongsTo(models.Category, {
       as: "category",
       foreignKey: "categories_id",
       through: "product_category",
+      onDelete: "CASCADE",
     });
   };
   return Product_category;

@@ -1,23 +1,59 @@
 const path = require("path");
 const db = require("../database/models");
+const { where } = require("sequelize");
 
 /* Otra forma de llamar a cada uno de los modelos */
-const product = db.Musitienda;
+/*const product = db.Musitienda;*/
 
 const productController = {
-  updateProduct: (req, res) => {},
+  updateProduct: async (req, res) => {
+    try {
+      const productId = req.params.id;
+      const updatedProductData = req.body; // Datos actualizados del formulario
+
+      // Buscar el producto por ID
+      const product = await db.Product.findByPk(productId);
+
+      // Verificar si el producto existe
+      if (!product) {
+        return res.status(404).send("Producto no encontrado");
+      }
+
+      // Actualizar los datos del producto
+      await product.update(updatedProductData);
+
+      const updatedCategories = req.body.categories;
+
+      // Eliminar las categorías existentes asociadas al producto
+      await db.Product_category.destroy({
+        where: {
+          products_id: productId,
+        },
+      });
+
+      // Asociar las nuevas categorías al producto
+      const productCategories = await Promise.all(
+        updatedCategories.map(async (categoryId) => {
+          return {
+            products_id: product.id,
+            categories_id: categoryId,
+          };
+        })
+      );
+      await db.Product_category.bulkCreate(productCategories);
+
+      // Redirigir o enviar una respuesta exitosa
+      res.redirect("/productList");
+    } catch (error) {
+      console.error("Error editing product:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  },
   createProduct: async (req, res) => {
     try {
       // Obtén la información del formulario
-      const {
-        name,
-        description,
-        brands_id,
-        category,
-        subCategory,
-        price,
-        fabrication_year,
-      } = req.body;
+      const { name, description, brands_id, price, fabrication_year } =
+        req.body;
 
       // 1. Crear el producto
       const product = await db.Product.create({
@@ -28,34 +64,57 @@ const productController = {
         price,
       });
 
-      // REEEEEEEEEEEEEEEEEVISAR
-      // REEEEEEEEEEEEEEEEEVISAR
-      // REEEEEEEEEEEEEEEEEVISAR
-      // REEEEEEEEEEEEEEEEEVISAR
-      // REEEEEEEEEEEEEEEEEVISAR
-      // REEEEEEEEEEEEEEEEEVISAR
-
       // 2. Asociar las imágenes con el producto
       const images = req.files;
-      console.log("Imágenes recibidas:", images);
-      if (images && images.length > 0) {
-        // Crea un array con los objetos necesarios para la tabla intermedia
-        const productImages = await Promise.all(
-          images.map(async (image) => {
-            // Crea la relación en la tabla intermedia
-            return {
-              products_id: product.id,
-              images_id: image.filename,
-            };
-          })
+      const productImages = await images.map(async (image) => {
+        try {
+          const imageCreated = await db.Image.create({
+            name: image.filename,
+          });
+          await db.Product_image.create({
+            products_id: product.id,
+            images_id: imageCreated.id,
+          });
+          console.log(`Saved ${imageCreated} to the database.`);
+        } catch (error) {
+          console.error(
+            `Error saving ${image.filename} to the database: ${error.message}`
+          );
+        }
+      });
+      try {
+        await Promise.all(productImages);
+        console.log("All image filenames saved to the database.");
+      } catch (error) {
+        console.error(
+          `Error saving image filenames to the database: ${error.message}`
         );
-
-        // Asocia las imágenes con el producto en la tabla intermedia
-        await db.ProductImage.bulkCreate(productImages);
-        await db.Image.bulkCreate(images);
       }
-
+      // 3. Asociar las categorías con el producto
+      const categories = req.body.categories;
+      const productCategories = await categories.map(async (category) => {
+        try {
+          await db.Product_category.create({
+            products_id: product.id,
+            categories_id: category,
+          });
+          console.log(`Saved ${db.Product_category.id} to the database.`);
+        } catch (error) {
+          console.error(
+            `Error saving ${category.name} to the database: ${error.message}`
+          );
+        }
+      });
+      try {
+        await Promise.all(productCategories);
+        console.log("All categories saved to the database.");
+      } catch (error) {
+        console.error(
+          `Error saving categories to the database: ${error.message}`
+        );
+      }
       // Redirigir u enviar una respuesta exitosa
+
       res.redirect("/productList");
     } catch (error) {
       console.error("Error creating product:", error);
@@ -75,7 +134,17 @@ const productController = {
         return res.status(404).send("Producto no encontrado");
       }
 
-      // Eliminar el producto
+      // Eliminar el producto en orden de las relaciones
+      await db.Product_image.destroy({
+        where: {
+          products_id: productId,
+        },
+      });
+      await db.Product_category.destroy({
+        where: {
+          products_id: productId,
+        },
+      });
       await product.destroy();
 
       res.redirect("/adminList");

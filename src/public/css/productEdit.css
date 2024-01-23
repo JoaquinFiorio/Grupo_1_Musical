@@ -1,63 +1,93 @@
 main {
-    margin: 50px auto;
+  margin: 50px auto;
 }
 
 .product {
-    width: 360px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px auto;
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+  width: 360px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px auto;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in;
+  background-color: #f9f9f9;
+  border-radius: 10px;
 }
 
 h3 {
-    color: brown;
-    margin-bottom: 20px;
+  color: brown;
+  margin-bottom: 20px;
 }
 
 .form-group {
-    text-align: left;
-    margin-bottom: 15px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+.checkbox-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+  resize: none;
 }
 
 input[type="text"],
 input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 input[type="submit"],
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: brown;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 input[type="submit"]:hover,
 button:hover {
-    background-color: #963c0e;
+  background-color: #963c0e;
 }
