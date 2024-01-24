@@ -14,14 +14,14 @@ const userController = {
       if (!errors.isEmpty()) {
         return res.send({ errors: errors.mapped(), oldData: req.body });
       }
-      const existingUser = await db.Client.findOne({
+      const existingUser = await db.User.findOne({
         where: { email: req.body.email },
       });
       if (existingUser) {
         return res.status(400).send({ message: "user already exists" });
       }
       const { user, email } = req.body;
-      await db.Client.create({
+      await db.User.create({
         user,
         email,
         password: bcrypt.hashSync(req.body.password, 10),
@@ -38,7 +38,7 @@ const userController = {
   signInUser: async (req, res) => {
     try {
       const { email, password } = req.body;
-      const userFound = await db.Client.findOne({
+      const userFound = await db.User.findOne({
         where: { email },
       });
 
@@ -61,7 +61,7 @@ const userController = {
     try {
       const userId = req.params.id;
 
-      await db.Client.destroy({
+      await db.User.destroy({
         where: { id: userId },
       });
 
