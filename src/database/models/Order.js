@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
     },
     // created_at: dataTypes.TIMESTAMP,
     // updated_at: dataTypes.TIMESTAMP,
-    clients_id: {
+    users_id: {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
@@ -39,9 +39,9 @@ module.exports = (sequelize, dataTypes) => {
   const Order = sequelize.define(alias, cols, config);
 
   Order.associate = function (models) {
-    Order.belongsTo(models.Client, {
-      as: "client",
-      foreignKey: "clients_id",
+    Order.belongsTo(models.User, {
+      as: "user",
+      foreignKey: "users_id",
     });
   };
   return Order;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Client";
+  let alias = "User";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -54,20 +54,20 @@ module.exports = (sequelize, dataTypes) => {
     createdAt: "created_at",
     updatedAt: "updated_at",
     deletedAt: false,
-    tableName: "clients",
+    tableName: "Users",
   };
-  const Client = sequelize.define(alias, cols, config);
+  const User = sequelize.define(alias, cols, config);
 
   //relaciones
-  Client.associate = function (models) {
-    Client.belongsTo(models.Role, {
+  User.associate = function (models) {
+    User.belongsTo(models.Role, {
       as: "role",
       foreignKey: "role_id",
     });
-    Client.belongsTo(models.City, {
+    User.belongsTo(models.City, {
       as: "city",
       foreignKey: "cities_id",
     });
   };
-  return Client;
+  return User;
 };
