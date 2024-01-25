@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
-const { userRegisterValidator } = require("../Middlewares/logMiddleware");
+const { userRegisterValidator } = require("../Middlewares/registerMiddleware");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -29,7 +29,8 @@ router.post("/login", userController.signInUser);
 
 router.post(
   "/",
-  [upload.single("imageFile"), userRegisterValidator],
+  upload.single("imageFile"),
+  userRegisterValidator,
   userController.registerUser
 );
 

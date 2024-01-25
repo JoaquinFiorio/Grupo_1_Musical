@@ -59,9 +59,11 @@ const viewController = {
     }
   },
   register: async (req, res) => {
+    const validator = require("validator");
     const data = {
       title: "Register",
       css: "register.css",
+      validator: validator,
     };
     res.render(path.join(__dirname, "../views/register"), data);
   },

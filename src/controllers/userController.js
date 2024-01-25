@@ -20,9 +20,10 @@ const userController = {
       if (existingUser) {
         return res.status(400).send({ message: "user already exists" });
       }
-      const { user, email } = req.body;
+      const { first_name, last_name, email } = req.body;
       await db.User.create({
-        user,
+        first_name,
+        last_name,
         email,
         password: bcrypt.hashSync(req.body.password, 10),
         avatar: req.file?.filename || "default-image.jpg",

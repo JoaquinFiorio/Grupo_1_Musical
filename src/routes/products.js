@@ -3,7 +3,6 @@ const multer = require("multer");
 const path = require("path");
 
 const router = express.Router();
-
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../public/img/products"));
@@ -16,7 +15,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-
 const productController = require("../controllers/productController");
 
 //router.get('/:id/edit', productController.editProduct);
@@ -27,7 +25,5 @@ router.post(
   upload.array("imageFile"),
   productController.createProduct
 );
-
 router.delete("/:id/delete", productController.deleteProduct);
-
 module.exports = router;
