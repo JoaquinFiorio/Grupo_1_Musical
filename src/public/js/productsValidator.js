@@ -7,19 +7,16 @@ form.addEventListener("submit", (event) => {
   const productname_Input = document.getElementById("product_name").value;
   const year_Input = document.getElementById("product_year").value;
   const price_Input = document.getElementById("product_price").value;
-  const description_Input = document.getElementById("product_description").value;
-const imagenes = document.getElementById("imagenes").value;
-var match = imagenes.match(/(\d+)/);
-var numero = match ? (match[0]) : null;
+  const description_Input = document.getElementById(
+    "product_description"
+  ).value;
 
-console.log(imagenes);
+  //aca sacamos el total de las imagenes subidas
+  const imagenes = document.getElementById("imagenes").files;
+  const totalImagenes = imagenes.length;
 
-
-
- const fecha= new Date();
- const anio= fecha.getFullYear();
- 
- 
+  const fecha = new Date();
+  const anio = fecha.getFullYear();
 
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -31,44 +28,46 @@ console.log(imagenes);
   }
 
   // Utiliza validator.js para verificar si el valor es un apellido válido
-  if (!validator.isInt(year_Input, {
-    min: 1900, max: anio
-  })) {
+  if (
+    !validator.isInt(year_Input, {
+      min: 1900,
+      max: anio,
+    })
+  ) {
     alert("Por favor, ingrese un año entre 1900 y " + anio);
     event.preventDefault();
     return false;
   }
 
   // Utiliza validator.js para verificar si el valor es un correo electrónico válido
-  if (!validator.isFloat(price_Input, {
-    min: 1.00
-  })) {
+  if (
+    !validator.isFloat(price_Input, {
+      min: 1.0,
+    })
+  ) {
     alert("Por favor, ingrese un precio mayor a 0.");
     event.preventDefault();
     return false;
   }
 
   // Utiliza validator.js para verificar la descripcion del producto
-  if (!validator.isLength(description_Input, {
-    min: 1, max: 300
-  })) {
+  if (
+    !validator.isLength(description_Input, {
+      min: 1,
+      max: 300,
+    })
+  ) {
     alert("Por favor, describe el producto. Debe tener maximo 300 caracteres");
     event.preventDefault();
     return false;
   }
 
-  console.log(numero);
-  //Utiliza validator.js para verificar la cantidad de imagenes subidas
-if (!validator.isInt(numero, {
-    min: 1, max: 10
-  })) {
-    alert("Por favor, ingrese un maximo de 10 imagenes");
+  // Utiliza validator.js para verificar la cantidad de imágenes subidas
+  if (!validator.isInt(totalImagenes.toString(), { min: 1, max: 10 })) {
+    alert("Por favor, ingrese entre 1 y 10 imágenes.");
     event.preventDefault();
     return false;
   }
+
   return true;
-})
-
-
-
- 
+});
