@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
 const session = require("express-session");
-const { exit } = require("process");
 
 const userController = {
   getUser: (req, res) => {},
@@ -38,6 +37,10 @@ const userController = {
 
   signInUser: async (req, res) => {
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.send({ errors: errors.mapped(), oldData: req.body });
+      }
       const { email, password } = req.body;
       const userFound = await db.User.findOne({
         where: { email },

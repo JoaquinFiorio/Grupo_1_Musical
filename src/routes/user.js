@@ -20,12 +20,13 @@ const upload = multer({ storage: storage });
 /* INICIALIZAMOS LOS CONTROLADORES, ES UN OBJETO CON MUCHOS METODOS ADENTRO */
 
 const userController = require("../controllers/userController");
+const { userLoginValidator } = require("../Middlewares/loginMiddleware");
 
 router.get("/", userController.getUsers);
 
 router.get("/:id", userController.getUser);
 
-router.post("/login", userController.signInUser);
+router.post("/login", userLoginValidator, userController.signInUser);
 
 router.post(
   "/",

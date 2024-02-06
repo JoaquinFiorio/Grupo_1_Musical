@@ -1,5 +1,5 @@
 // Validacion de nombre, apellido, contrasena, correo electronico utilizando validator.js
-const form = document.getElementById("productForm");
+const form = document.getElementById("productEditForm");
 
 form.addEventListener("submit", (event) => {
   // Obtiene el valor del campo de correo electrónico
@@ -10,15 +10,11 @@ form.addEventListener("submit", (event) => {
     "product_description"
   ).value;
 
-  //aca sacamos el total de las imagenes subidas
-  const imagenes = document.getElementById("imagenes").files;
-  const totalImagenes = imagenes.length;
+  const categoryCheckboxes = document.querySelectorAll('input[name="categories"]:checked');
 
   const fecha = new Date();
   const anio = fecha.getFullYear();
 
-  const categoryCheckboxes = document.querySelectorAll('input[name="categories"]:checked');
-  
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   // Utiliza validator.js para verificar si el valor es un nombre válido
@@ -47,7 +43,7 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  // Utiliza validator.js para verificar si es un precio valido
+  // Utiliza validator.js para verificar si el valor es un precio valido
   if (
     !validator.isFloat(price_Input, {
       min: 1.0,
@@ -66,13 +62,6 @@ form.addEventListener("submit", (event) => {
     })
   ) {
     alert("Por favor, describe el producto. Debe tener maximo 300 caracteres");
-    event.preventDefault();
-    return false;
-  }
-
-  // Utiliza validator.js para verificar la cantidad de imágenes subidas
-  if (!validator.isInt(totalImagenes.toString(), { min: 1, max: 10 })) {
-    alert("Por favor, ingrese entre 1 y 10 imágenes.");
     event.preventDefault();
     return false;
   }

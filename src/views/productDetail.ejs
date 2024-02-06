@@ -32,8 +32,8 @@
                         <div class="category-product">
                             <span>
                                 <div class="variety">
-                                    <% if (productDetail.Categories && productDetail.Categories.length> 1) { %>
-                                        <% productDetail.Categories.slice(1).forEach(category=> { %>
+                                    <% if (productDetail.Categories && productDetail.Categories.length> 0) { %>
+                                        <% productDetail.Categories.slice(0).forEach(category=> { %>
                                             <span>
                                                 <%= category.name %>
                                             </span>

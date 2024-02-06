@@ -22,7 +22,7 @@ const productController = {
       // Actualizar los datos del producto
       await product.update(updatedProductData);
 
-      const updatedCategories = req.body.categories;
+      const updatedCategories = Array.isArray(req.body.categories) ? req.body.categories : [req.body.categories];
 
       // Eliminar las categorías existentes asociadas al producto
       await db.Product_category.destroy({
@@ -91,7 +91,7 @@ const productController = {
         );
       }
       // 3. Asociar las categorías con el producto
-      const categories = req.body.categories;
+      const categories = Array.isArray(req.body.categories) ? req.body.categories : [req.body.categories];
       const productCategories = await categories.map(async (category) => {
         try {
           await db.Product_category.create({
@@ -113,6 +113,7 @@ const productController = {
           `Error saving categories to the database: ${error.message}`
         );
       }
+
       // Redirigir u enviar una respuesta exitosa
 
       res.redirect("/productList");
