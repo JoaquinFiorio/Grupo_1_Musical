@@ -48,16 +48,17 @@ Stop Doing:
 # Retrospectiva Sprint 6!
 Start Doing:
 [x] Implementación de prácticas de revisión de código para mejorar la calidad del desarrollo.
+
 More Of:
 [x] Comunicación proactiva entre los miembros del equipo para evitar posibles bloqueos en el progreso.
 [x] Explorar nuevas herramientas que puedan optimizar el flujo de trabajo del equipo.
 
 Keep Doing:
-[x] Mantener las reuniones diarias y semanales para evaluar el progreso y ajustar la planificación según sea necesario.
-[x] Continuar con la eficiente organización en Trello y el uso efectivo de los archivos en el Drive.
+[x] Mantener la comunicacion grupal para el correcto funcionamiento de la organización en general.
+[x] Continuar con las reuniones semanales para ponernos de acuerdo y su consecuente bajada de linea al Trello.
 
 Less Off:
-[x] Evitar distracciones durante las horas de trabajo para garantizar un enfoque constante en las tareas asignadas.
+[x] Evitar distracciones durante las horas de trabajo para garantizar un enfoque constante en las tareas asignadas, y cumplir con los horarios establecidos para las reuniones.
 
 Stop Doing:
 [x] Postergar la resolución de problemas técnicos; abordarlos de manera inmediata.
