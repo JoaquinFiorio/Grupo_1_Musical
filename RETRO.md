@@ -62,3 +62,20 @@ Less Off:
 
 Stop Doing:
 [x] Postergar la resolución de problemas técnicos; abordarlos de manera inmediata.
+
+# Retrospectiva Sprint 7!
+Start Doing:
+[x] Agilización de código visto en clase.
+
+More Of:
+[x] Explorar nuevas herramientas que puedan optimizar el flujo de trabajo del equipo.
+
+Keep Doing:
+[x] Explicar grupalmente de forma clara y sacarse dudas.
+[x] Continuar con las reuniones semanales para ponernos de acuerdo y su consecuente bajada de linea al Trello.
+
+Less Off:
+[x] Cumplir con los horarios establecidos para las reuniones.
+
+Stop Doing:
+[x] Postergar la resolución de problemas técnicos; abordarlos de manera inmediata.
