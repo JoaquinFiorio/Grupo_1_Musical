@@ -22,9 +22,9 @@
                             <i class="fab fa-google"></i>
                         </a>
                     </div>
-                    <form action="/users/login" method="post">
-                        <input type="email" name="email" placeholder="Correo Electrónico" required>
-                        <input type="password" name="password" placeholder="Contraseña" required>
+                    <form action="/users/login" method="post" id="login_form">
+                        <input type="email" name="email" id="email" placeholder="Correo Electrónico" >
+                        <input type="password" name="password" id="password" placeholder="Contraseña" >
                         <div class="forgotPassword">
                             <a>¿Olvidaste tu contraseña?</a>
                         </div>
@@ -36,6 +36,8 @@
                 </div>
             </div>
         </section>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script> 
+        <script src="/js/loginValidator.js"></script>
     </body>
 
     </html>

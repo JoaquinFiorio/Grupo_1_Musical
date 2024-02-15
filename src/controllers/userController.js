@@ -1,72 +1,105 @@
 const path = require("path");
-const fs = require("fs");
 const bcrypt = require("bcrypt");
-const { validationResult } = require('express-validator');
-
-const usersFilePath = path.join(__dirname, '../data/user.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const { validationResult } = require("express-validator");
+const db = require("../database/models");
+const session = require("express-session");
 
 const userController = {
-    registerUser: (req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.send({ errors: errors.mapped(), oldData: req.body })
-        }
-        const newUser = {
-            id: users[users.length - 1].id + 1,
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file?.filename || "default-image.jpg"
-        };
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/login');
-    },
-    signInUser: (req, res) => {
-        const { email, password } = req.body;
-        let userFound = users.find((user) => user.email === email);
+  getUser: (req, res) => {},
+  getUsers: (req, res) => {},
+  registerUser: async (req, res) => {
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.send({ errors: errors.mapped(), oldData: req.body });
+      }
+      const existingUser = await db.User.findOne({
+        where: { email: req.body.email },
+      });
+      if (existingUser) {
+        return res.status(400).send({ message: "user already exists" });
+      }
+      const { first_name, last_name, email } = req.body;
+      await db.User.create({
+        first_name,
+        last_name,
+        email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        avatar: req.file?.filename || "default-image.jpg",
+      });
 
-        if (!userFound) {
-            return res.status(404).send({ message: "Usuario no encontrado" });
-        }
-
-        if (!bcrypt.compareSync(password, userFound.password)) {
-            return res.status(500).send({ message: "Esta mal la contraseña" });
-        }
-
-        res.cookie('usuario', JSON.stringify(userFound.username), { maxAge: 3600000 });
-
-        return res.redirect('/');
-
-    },
-    getUser: (req, res) => {
-
-    },
-    getUsers: (req, res) => {
-
-    },
-    deleteUser: (req, res) => {
-        const indexUser = users.findIndex((user) => user.id == req.params.id);
-        users.splice(indexUser, 1);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/');
-    },
-    updateUser: () => {
-        const indexUser = users.findIndex((user) => user.id == req.params.id);
-        users[indexUser] = {
-            ...users[indexUser],
-            ...req.body
-        };
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        res.redirect('/profile');
-    },
-    login: () => {
-        const user = req.session.user;
-        if (!user) {
-            return res.send('Usuario no logeado');
-        }
-        return res.render('profile', { user });
+      return res.redirect("/");
+    } catch (error) {
+      console.error("Error registering user:", error);
+      return res.status(500).send("Internal Server Error");
     }
-}
+  },
 
+  signInUser: async (req, res) => {
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.send({ errors: errors.mapped(), oldData: req.body });
+      }
+      const { email, password } = req.body;
+      const userFound = await db.User.findOne({
+        where: { email },
+      });
+
+      if (!userFound) {
+        return res.status(404).send({ message: "Usuario no encontrado" });
+      }
+
+      if (!bcrypt.compareSync(password, userFound.password)) {
+        return res.status(500).send({ message: "Contraseña incorrecta" });
+      }
+
+      return res.redirect("/");
+    } catch (error) {
+      console.error("Error signing in user:", error);
+      return res.status(500).send("Internal Server Error");
+    }
+  },
+
+  deleteUser: async (req, res) => {
+    try {
+      const userId = req.params.id;
+
+      await db.User.destroy({
+        where: { id: userId },
+      });
+
+      return res.redirect("/");
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      return res.status(500).send("Internal Server Error");
+    }
+  },
+
+  updateUser: async (req, res) => {
+    try {
+      const userId = req.params.id;
+
+      await db.User.update(
+        { ...req.body },
+        {
+          where: { id: userId },
+        }
+      );
+
+      return res.redirect("/profile");
+    } catch (error) {
+      console.error("Error updating user:", error);
+      return res.status(500).send("Internal Server Error");
+    }
+  },
+
+  login: (req, res) => {
+    const user = req.session.user;
+    if (!user) {
+      return res.send("Usuario no logeado");
+    }
+    return res.render("profile", { user });
+  },
+};
 module.exports = userController;

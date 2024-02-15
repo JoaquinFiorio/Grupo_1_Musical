@@ -9,8 +9,13 @@
                             <p>Producto <%= product.id %>
                             </p>
                             <a href="/productEdit/<%= product.id %>">
-                                <div class="container-img"
-                                    style="background-image: url('/img/products/<%= product.image %>');">
+                                <div class="container-img">
+                                    <% if (product.Images && product.Images.length> 0) { %>
+                                        <img src="http://localhost:3030/img/products/<%= product.Images[0].name %>"
+                                            alt="imagen-producto" />
+                                        <% } else { %>
+                                            <p>No hay imágenes disponibles</p>
+                                            <% } %>
                                 </div>
                                 <p>
                                     <%= product.name %>
@@ -19,10 +24,20 @@
                                     <%= product.description %>
                                 </p>
                                 <p>
-                                    <%= product.category %>
+                                    <% if (product.Categories && product.Categories.length> 0) { %>
+                                        <span>
+                                            <%= product.Categories[0].name %>
+                                        </span>
+                                        <% } %>
                                 </p>
                                 <p>
-                                    <%= product.Subcategory %>
+                                    <% if (product.Categories && product.Categories.length> 1) { %>
+                                        <% product.Categories.slice(1).forEach(category=> { %>
+                                            <span>
+                                                <%= category.name %>
+                                            </span>
+                                            <% }); %>
+                                                <% } %>
                                 </p>
                                 <p>
                                     U$S <%= product.price %>

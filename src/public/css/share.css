@@ -1,422 +1,417 @@
 @font-face {
-    font-family: 'Raleway';
-    src: local('Raleway'), url('../fuentes/Raleway-Regular.ttf') format('truetype');
+  font-family: "Raleway";
+  src: local("Raleway"), url("../font/Raleway-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Nunito';
-    src: local('Nunito'), url('../fuentes/Nunito-Regular.ttf') format('truetype');
+  font-family: "Nunito";
+  src: local("Nunito"), url("../font/Nunito-Regular.ttf") format("truetype");
 }
 
 :root {
-    --color-1: #f3680b;
-    --color-2: #9b2b2b;
-    --color-3: #542404;
-    --color-4: #9b806f;
-    --color-5: #beb5af;
+  --color-1: #f3680b;
+  --color-2: #9b2b2b;
+  --color-3: #542404;
+  --color-4: #9b806f;
+  --color-5: #beb5af;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 /* NAVBAR */
 
 .hamburgerMenu {
-    display: none;
+  display: none;
 }
 
 header .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3%;
-    border-bottom: 1px solid #ccc;
-    height: 150px;
-    padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  border-bottom: 1px solid #ccc;
+  height: 150px;
+  padding-top: 10px;
 }
 
 header .headerImg {
-    width: 20%;
+  width: 20%;
 }
 
-
 header .headerImg img {
-    width: 100%;
+  width: 100%;
 }
 
 .search-container {
-    width: 60%;
-    position: relative;
-    margin: 20px;
+  width: 60%;
+  position: relative;
+  margin: 20px;
 }
 
 .search-input {
-    width: 100%;
-    padding: 10px;
-    padding-right: 40px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Nunito', sans-serif;
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
 }
 
 .search-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    color: #555;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #555;
 }
 
 .rightOptions {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Nunito", sans-serif;
 }
 
 .options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Nav Products */
 
 .navProducts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 2px solid #ccc;
-    padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0px;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown button {
-    background-color: #9b2b2b;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Nunino', sans-serif;
+  background-color: #9b2b2b;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Nunino", sans-serif;
 }
 
 .dropdown-content {
-    list-style: none;
-    padding: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: all 0.5s ease-in;
-    z-index: 2;
-    background-color: #9b2b2bd7;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+  background-color: #9b2b2bd7;
 }
 
 .dropdown-content li {
-    color: white;
-    border: none;
-    padding: 10px;
-    text-align: center;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
 }
 
 .dropdown-content a {
-    text-decoration: none;
-    color: white;
-    display: block;
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    max-height: 1000px;
-    transition: all 0.3s ease-in;
+  max-height: 1000px;
+  transition: all 0.3s ease-in;
 }
 
 .dropdown-content li:hover {
-    background-color: #f3680b;
+  background-color: #f3680b;
 }
 
 .hamburgerMenu {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 980px) {
-    .rectangle {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .rectangle {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
-
 @media (max-width: 768px) {
-    .project {
-        flex-direction: column;
-    }
+  .project {
+    flex-direction: column;
+  }
 
-    .right-bar {
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
+  .right-bar {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 
-    .footer .groupOne {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        display: flex;
-        flex-direction: column;
-    }
+  .footer .groupOne {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .footer .groupOne .box img {
-        width: 150px;
-    }
+  .footer .groupOne .box img {
+    width: 150px;
+  }
 
-    .footer .groupOne .box h2,
-    .paymentsBox h2 {
-        font-size: 18px;
-    }
+  .footer .groupOne .box h2,
+  .paymentsBox h2 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 576px) {
-    .content h3 {
-        margin-bottom: 15px;
-    }
+  .content h3 {
+    margin-bottom: 15px;
+  }
 
-    .content h4 {
-        margin-bottom: 20px;
-    }
+  .content h4 {
+    margin-bottom: 20px;
+  }
 
-    .btn2 {
-        display: none;
-    }
+  .btn2 {
+    display: none;
+  }
 
-    .box {
-        height: 150px;
-    }
+  .box {
+    height: 150px;
+  }
 
-    .bateria {
-        width: 162px !important;
-    }
+  .bateria {
+    width: 162px !important;
+  }
 
-    .footer .groupOne {
-        grid-template-columns: repeat(1, 1fr);
-        display: flex;
-        flex-direction: column;
-    }
+  .footer .groupOne {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+  }
 
-    .footer .groupOne .box img {
-        width: 100px;
-    }
+  .footer .groupOne .box img {
+    width: 100px;
+  }
 
-    .footer .groupOne .box h2,
-    .paymentsBox h2 {
-        font-size: 16px;
-    }
+  .footer .groupOne .box h2,
+  .paymentsBox h2 {
+    font-size: 16px;
+  }
 
-    .footer .groupOne .socialIcon a,
-    .payments i {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-    }
+  .footer .groupOne .socialIcon a,
+  .payments i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
 
-    .formulario {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .formulario {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .service {
-        font-size: 14px;
-    }
+  .service {
+    font-size: 14px;
+  }
 
-    .navProducts {
-        display: none;
-    }
+  .navProducts {
+    display: none;
+  }
 
-    .rightOptions {
-        display: none;
-    }
+  .rightOptions {
+    display: none;
+  }
 
-    .hamburgerMenu {
-        display: flex;
-        font-size: 27px;
-    }
+  .hamburgerMenu {
+    display: flex;
+    font-size: 27px;
+  }
 
-    .product-detail {
-        flex-direction: column;
-    }
+  .product-detail {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 450px) {
-    .conteiner {
-        flex-direction: column;
-    }
+  .conteiner {
+    flex-direction: column;
+  }
 
-    header .headerImg img {
-        width: 130%;
-    }
+  header .headerImg img {
+    width: 130%;
+  }
 
-    .container-details-product {
-        flex-direction: column;
-    }
+  .container-details-product {
+    flex-direction: column;
+  }
 }
 
 /* NEWSLETTER */
 
 /* Estilos para el rectángulo */
 .rectangle {
-    width: 85%;
-    background-color: #f0f0f0;
-    border: 3px solid #333;
-    padding: 20px;
-    text-align: center;
-    margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
+  width: 85%;
+  background-color: #f0f0f0;
+  border: 3px solid #333;
+  padding: 20px;
+  text-align: center;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rectangle h2 {
-    font-size: 30px;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 .rectangle p {
-    font-size: 18px;
-    color: #666;
-    font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: #666;
+  font-family: "Nunito", sans-serif;
 }
 
 .rectangle .form {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
 }
 
 .rectangle input[type="text"],
 .rectangle input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .rectangle button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }
-
 
 /* Footer */
 
 .footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--color-4);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-4);
 }
 
 .footer .groupOne {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px 0;
-    text-align: center;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 20px 0;
+  text-align: center;
 }
-
 
 .footer .groupOne .box,
 .paymentsBox {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 0 3%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 3%;
 }
 
 .footer .groupOne .box img {
-    width: 200px;
+  width: 200px;
 }
 
 .footer .groupOne .box h2,
 .paymentsBox h2 {
-    color: #fff;
-    margin-bottom: 10px;
-    font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .footer .groupOne .box p {
-    color: #efefef;
-    margin-bottom: 10px;
+  color: #efefef;
+  margin-bottom: 10px;
 }
 
 .footer .groupOne .paymentsBox {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer .groupOne .paymentsBox .payments {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .groupOne .socialIcon a,
 .payments i {
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: var(--color-2);
-    text-align: center;
-    transition: all 300ms ease;
-    border-radius: 50px;
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: var(--color-2);
+  text-align: center;
+  transition: all 300ms ease;
+  border-radius: 50px;
 }
 
 .footer .groupOne .socialIcon a:hover {
-    color: var(--color-5);
+  color: var(--color-5);
 }
 
 .footer .groupTwo {
-    background-color: var(--color-5);
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
+  background-color: var(--color-5);
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
 }
 
 .footer .groupTwo small {
-    font-size: 15px;
-    font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
 }
 
 /* Fin Footer */

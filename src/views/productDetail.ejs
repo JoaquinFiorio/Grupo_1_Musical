@@ -6,13 +6,21 @@
             <main>
                 <section class="product-detail">
                     <div class="container-img">
-                        <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
-                        <div class="variety">
-                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
-                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
-                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
-                            <img src="/img/products/<%= productDetail.image %>" alt="imagen-producto" />
-                        </div>
+                        <% if (productDetail.Images && productDetail.Images.length> 0) { %>
+                            <img src="http://localhost:3030/img/products/<%= productDetail.Images[0].name %>"
+                                alt="imagen-producto" />
+                            <% } else { %>
+                                <!-- Puedes mostrar una imagen de marcador de posición o un mensaje aquí -->
+                                <p>No hay imágenes disponibles</p>
+                                <% } %>
+                                    <div class="variety">
+                                        <% if (productDetail.Images && productDetail.Images.length> 1) { %>
+                                            <% productDetail.Images.slice(1).forEach(img=> { %>
+                                                <img src="http://localhost:3030/img/products/<%= img.name %>"
+                                                    alt="imagen-producto" />
+                                                <% }); %>
+                                                    <% } %>
+                                    </div>
                     </div>
 
                     <div class="container-info-product">
@@ -23,7 +31,15 @@
                         </div>
                         <div class="category-product">
                             <span>
-                                <%= productDetail.category %>
+                                <div class="variety">
+                                    <% if (productDetail.Categories && productDetail.Categories.length> 0) { %>
+                                        <% productDetail.Categories.slice(0).forEach(category=> { %>
+                                            <span>
+                                                <%= category.name %>
+                                            </span>
+                                            <% }); %>
+                                                <% } %>
+                                </div>
                             </span>
                         </div>
                         <div class="container-price">
@@ -113,15 +129,7 @@
                     </div>
                     <div class="text-description">
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Laboriosam iure provident atque voluptatibus
-                            reiciendis quae rerum, maxime placeat enim cupiditate
-                            voluptatum, temporibus quis iusto. Enim eum qui delectus
-                            deleniti similique? Lorem, ipsum dolor sit amet
-                            consectetur adipisicing elit. Sint autem magni earum est
-                            dolorem saepe perferendis repellat ipsam laudantium cum
-                            assumenda quidem quam, vero similique? Iusto officiis
-                            quod blanditiis iste?
+                            <%= productDetail.description %>
                         </p>
                     </div>
                 </div>
@@ -132,7 +140,7 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="text-additional-information hidden">
-                        <p>Todos nuestros prodcutos cuentan con garantia directa de su imortadora,
+                        <p>Todos nuestros productos cuentan con garantia directa de su importadora,
                             consultanos en caso de alguna duda.
                         </p>
                     </div>
@@ -166,22 +174,22 @@
                     <div class="slide-content slide4">
                         <div class="card-wrapper swiper-wrapper">
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-1.jpg" alt="">
+                                <img src="../img/products/slider_1-1.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-8.jpg" alt="">
+                                <img src="../img/products/slider_1-8.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-27.jpg" alt="">
+                                <img src="../img/products/slider_1-27.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-3.jpg" alt="">
+                                <img src="../img/products/slider_1-3.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-8.jpg" alt="">
+                                <img src="../img/products/slider_1-8.jpg" alt="">
                             </div>
                             <div class="swiper-slide swiperProducts">
-                                <img src="/img/products/slider_1-3.jpg" alt="">
+                                <img src="../img/products/slider_1-3.jpg" alt="">
                             </div>
                         </div>
                         <div class="swiper-button-next swiper-navBtn"></div>

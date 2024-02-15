@@ -5,30 +5,47 @@
             <main>
                 <div class="product">
                     <h3>Editar producto</h3>
-                    <form action="/products/<%= productEdit.id %>/edit?_method=PUT" method="post">
+                    <form id="productEditForm" action="/products/<%= productEdit.id %>/edit?_method=PUT" method="post">
                         <div class="form-group">
                             <label for="nombre">Nombre de producto</label>
-                            <input name="name" type="text" id="nombre" placeholder="Nombre del producto"
+                            <input name="name" type="text" id="product_name" placeholder="Nombre del producto"
                                 value="<%= productEdit.name %>">
                         </div>
                         <div class="form-group">
+                            <label for="brands">Selecciona una marca</label>
+                            <select id="brands" name="brands_id">
+                                <% brands.forEach(brand=> { %>
+                                    <option value="<%= brand.id %>">
+                                        <%= brand.name %>
+                                    </option>
+                                    <% }); %>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Año de fabricacion</label>
+                            <input type="text" id="product_year" name="fabrication_year" placeholder="Año de fabricacion"
+                                maxlength="4">
+                        </div>
+                        <div class="form-group">
+                            <label>Selecciona una o varias categorías:</label>
+                            <% categories.forEach(category=> { %>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="categoria<%= category.id %>" name="categories"
+                                        value="<%= category.id %>">
+                                    <label for="categoria<%= category.id %>">
+                                        <%= category.name %>
+                                    </label>
+                                </div>
+                                <% }); %>
+                        </div>
+                        <div class="form-group">
                             <label for="descripcion">Descripción</label>
-                            <input type="text" name="description" id="descripcion" placeholder="Descripción"
-                                value="<%= productEdit.description %>">
-                        </div>
-                        <div class="form-group">
-                            <label for="categoria">Categoría</label>
-                            <input type="text" name="category" id="categoria" placeholder="Categoría"
-                                value="<%= productEdit.category %>">
-                        </div>
-                        <div class="form-group">
-                            <label for="subcategoria">Sub Categoría</label>
-                            <input type="text" id="subcategoria" name="subCategory" placeholder="Sub Categoría"
-                                value="<%= productEdit.subCategory %>">
+                            <textarea name="description" id="product_description" placeholder="Descripción"
+                                rows="4"><%= productEdit.description %></textarea>
                         </div>
                         <div class="form-group">
                             <label for="precio">Precio</label>
-                            <input type="text" id="precio" name="price" placeholder="Precio"
+                            <input type="text" id="product_price" name="price" placeholder="Precio"
                                 value="<%= productEdit.price %>">
                         </div>
                         <input type="submit" value="Editar">
@@ -39,6 +56,10 @@
                 </div>
             </main>
             <%- include('./partials/footer') %>
+            <script src="https://unpkg.com/validator@latest/validator.min.js"></script> 
+
+            <script src="/js/productEditValidator.js"></script>
+
     </body>
 
     </html>

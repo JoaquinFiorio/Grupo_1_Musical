@@ -24,17 +24,19 @@
                             <i class="fab fa-google"></i>
                         </a>
                     </div>
-                    <form action="/users" method="post" enctype="multipart/form-data">
-                        <input type="text" name="username" placeholder="Nombre de Usuario" required>
-                        <input type="text" name="first_name" placeholder="Nombre" required>
-                        <input type="text" name="last_name" placeholder="Apellido" required>
-                        <input type="text" name="adress" placeholder="Dirección" required>
-                        <input type="email" name="email" placeholder="Correo Electrónico" required>
-                        <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)">
+                    <form id="registerForm" method="post" action="/users" enctype="multipart/form-data">
+                        <input id="first_name" type="text" name="first_name" placeholder="Nombre" minlength="2"
+                            required>
+                        <input id="last_name" type="text" name="last_name" placeholder="Apellido" minlength="2"
+                            required>
+                        <input id="email" type="text" name="email" placeholder="Correo Electrónico" required>
+                        <input id="password" type="password" name="password" placeholder="Contraseña" minlength="8"
+                            required>
+                        <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)"
+                            required>
                         <img id="imagen-preview" src="#" alt="Vista previa de la imagen"
                             style="max-width: 100%; display: none;">
-                        <input type="password" name="password" placeholder="Contraseña" required>
-                        <input type="submit" value="Registrar">
+                        <button type="submit">Registrarse</button>
                     </form>
                 </div>
                 <div class="rowRight">
@@ -42,7 +44,7 @@
                 </div>
             </div>
         </section>
-
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <script>
             function previewImage(input) {
                 let preview = document.getElementById('imagen-preview');
@@ -59,7 +61,7 @@
                 }
             }
         </script>
-
+        <script src="/js/usersValidator.js"></script>
     </body>
 
     </html>
