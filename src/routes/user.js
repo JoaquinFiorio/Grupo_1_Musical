@@ -21,7 +21,7 @@ const upload = multer({ storage: storage });
 
 const userController = require("../controllers/userController");
 const { userLoginValidator } = require("../Middlewares/loginMiddleware");
-
+const { userRegisterValidator } = require("../Middlewares/registerMiddleware");
 router.get("/", userController.getUsers);
 
 router.get("/:id", userController.getUser);

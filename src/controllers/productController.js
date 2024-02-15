@@ -1,6 +1,7 @@
 const path = require("path");
 const db = require("../database/models");
 const { where } = require("sequelize");
+const { validationResult } = require("express-validator");
 
 /* Otra forma de llamar a cada uno de los modelos */
 /*const product = db.Musitienda;*/
@@ -8,6 +9,10 @@ const { where } = require("sequelize");
 const productController = {
   updateProduct: async (req, res) => {
     try {
+      const error = validationResult(req);
+      if (!error.isEmpty()) {
+        return  res.send({ errors: error.mapped(), oldData: req.body });
+      }
       const productId = req.params.id;
       const updatedProductData = req.body; // Datos actualizados del formulario
 
@@ -51,6 +56,10 @@ const productController = {
   },
   createProduct: async (req, res) => {
     try {
+      const error = validationResult(req);
+      if (!error.isEmpty()) {
+        return res.send({ errors: error.mapped(), oldData: req.body });
+      }
       // Obtén la información del formulario
       const { name, description, brands_id, price, fabrication_year } =
         req.body;

@@ -19,13 +19,17 @@ const upload = multer({ storage: storage , limits: {
   fileSize: 1024 * 1024 * 5 , 
 } });
 const productController = require("../controllers/productController");
+const {productEditValidator } = require("../Middlewares/productEditMiddleware");
+const {productCreateValidator } = require("../Middlewares/productCreateMiddleware");
 
 //router.get('/:id/edit', productController.editProduct);
-router.put("/:id/edit", productController.updateProduct);
+router.put("/:id/edit", productEditValidator , productController.updateProduct);
+
 
 router.post(
   "/create",
   upload.array("imageFile" , 10),
+  productCreateValidator,
   productController.createProduct
 );
 router.delete("/:id/delete", productController.deleteProduct);
