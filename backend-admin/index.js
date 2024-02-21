@@ -23,9 +23,7 @@ sql.connect(function (err) {
 
 /* REQUERIMOS LAS RUTAS DEL ARCHIVO */
 
-const viewsRoutes = require("./routes/main");
-const productRoutes = require("./routes/products");
-const userRoutes = require("./routes/user");
+const apiRoutes = require("./routes/route");
 
 /* INICIALIZAMOS TODOS LOS METODOS DE EXPRESS */
 const app = express();
@@ -34,23 +32,21 @@ const app = express();
 app.set("view engine", "ejs");
 
 /* ARCHIVOS ACCESIBLES PARA TODOS, RUTA ABSOLUTA */
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(
-  session({
-    secret: "abc-123",
-    resave: false,
-    saveUninitialized: true,
-  })
+    session({
+        secret: "abc-123",
+        resave: false,
+        saveUninitialized: true,
+    })
 );
 app.use(cookieParser());
 
 /* RUTAS */
-app.use("/", viewsRoutes);
-app.use("/products", productRoutes);
-app.use("/users", userRoutes);
+app.use("/api", apiRoutes);
 
 app.listen(process.env.PORT || 3030, () => {
   console.log(`Servidor iniciado en http://localhost:${process.env.PORT}`);
