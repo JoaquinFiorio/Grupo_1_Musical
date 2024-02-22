@@ -26,6 +26,7 @@ sql.connect(function (err) {
 const viewsRoutes = require("./routes/main");
 const productRoutes = require("./routes/products");
 const userRoutes = require("./routes/user");
+const cookieParser = require("cookie-parser");
 
 /* INICIALIZAMOS TODOS LOS METODOS DE EXPRESS */
 const app = express();
