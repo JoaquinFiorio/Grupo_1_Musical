@@ -5,7 +5,7 @@ const db = require("../database/models");
 
 const viewController = {
   index: (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
     const data = {
       title: "Home",
       css: "index.css",
@@ -14,7 +14,7 @@ const viewController = {
     return res.render(path.join(__dirname, "../views/index"), data);
   },
   login: (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
     const data = {
       title: "Login",
       css: "login.css",
@@ -26,7 +26,7 @@ const viewController = {
     res.render(path.join(__dirname, "../views/login"), data);
   },
   productCart: (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     const data = {
       title: "Product Cart",
@@ -39,7 +39,7 @@ const viewController = {
     res.render(path.join(__dirname, "../views/productCart"), data);
   },
   productDetail: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     try {
       const productId = req.params.id;
@@ -77,7 +77,7 @@ const viewController = {
     }
   },
   register: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     const validator = require("validator");
     const data = {
@@ -92,7 +92,7 @@ const viewController = {
     res.render(path.join(__dirname, "../views/register"), data);
   },
   productList: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     try {
       const products = await db.Product.findAll({
@@ -120,7 +120,7 @@ const viewController = {
   },
 
   productUploader: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     const brands = await db.Brand.findAll();
     const categories = await db.Category.findAll();
@@ -138,7 +138,7 @@ const viewController = {
   },
 
   productEdit: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     const brands = await db.Brand.findAll();
     const categories = await db.Category.findAll();
@@ -180,7 +180,7 @@ const viewController = {
     }
   },
   adminList: async (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     try {
       const products = await db.Product.findAll({
@@ -211,7 +211,7 @@ const viewController = {
     }
   },
   profile: (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
 
     const data = {
       title: "Profile",
@@ -224,9 +224,14 @@ const viewController = {
     res.render(path.join(__dirname, "../views/profile"), data);
   },
   errorUser: (req, res) => {
-    const loggedIn = req.cookies.usuario ? true : false;
+    const loggedIn = req.cookies.user ? true : false;
+    const data = {
+      title: "Error",
+      css: "errorUser.css",
+      loggedIn,
+    };
 
-    res.render(path.join(__dirname, "../views/errorUser"));
+    res.render(path.join(__dirname, "../views/errorUser"), data);
   },
 };
 

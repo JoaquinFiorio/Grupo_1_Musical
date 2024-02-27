@@ -44,6 +44,10 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.TEXT,
       allowNull: false,
     },
+    avatar: {
+      type: dataTypes.TEXT,
+      defaultValue: null,
+    },
   };
   let config = {
     timestamps: false,
