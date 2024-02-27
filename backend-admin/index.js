@@ -37,13 +37,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(
-    session({
-        secret: "abc-123",
-        resave: false,
-        saveUninitialized: true,
-    })
+  session({
+    secret: "abc-123",
+    resave: false,
+    saveUninitialized: true,
+  })
 );
-app.use(cookieParser());
 
 /* RUTAS */
 app.use("/api", apiRoutes);

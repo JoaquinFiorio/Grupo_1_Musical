@@ -11,7 +11,7 @@ const productController = {
     try {
       const error = validationResult(req);
       if (!error.isEmpty()) {
-        return  res.send({ errors: error.mapped(), oldData: req.body });
+        return res.send({ errors: error.mapped(), oldData: req.body });
       }
       const productId = req.params.id;
       const updatedProductData = req.body; // Datos actualizados del formulario
@@ -27,7 +27,9 @@ const productController = {
       // Actualizar los datos del producto
       await product.update(updatedProductData);
 
-      const updatedCategories = Array.isArray(req.body.categories) ? req.body.categories : [req.body.categories];
+      const updatedCategories = Array.isArray(req.body.categories)
+        ? req.body.categories
+        : [req.body.categories];
 
       // Eliminar las categorías existentes asociadas al producto
       await db.Product_category.destroy({
@@ -100,7 +102,9 @@ const productController = {
         );
       }
       // 3. Asociar las categorías con el producto
-      const categories = Array.isArray(req.body.categories) ? req.body.categories : [req.body.categories];
+      const categories = Array.isArray(req.body.categories)
+        ? req.body.categories
+        : [req.body.categories];
       const productCategories = await categories.map(async (category) => {
         try {
           await db.Product_category.create({

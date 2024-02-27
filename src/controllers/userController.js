@@ -1,6 +1,6 @@
 const path = require("path");
 const bcrypt = require("bcrypt");
-const { validationResult } = require("express-validator");
+const { validationResult, cookie } = require("express-validator");
 const db = require("../database/models");
 const session = require("express-session");
 
@@ -47,12 +47,21 @@ const userController = {
       });
 
       if (!userFound) {
-        return res.status(404).send({ message: "Usuario no encontrado" });
+        return res.render(path.join(__dirname, "../views/errorUser"), {
+          message: "Usuario no encontrado",
+          title: "Error",
+          css: "errorUser.css",
+        });
       }
 
       if (!bcrypt.compareSync(password, userFound.password)) {
-        return res.status(500).send({ message: "Contraseña incorrecta" });
+        return res.render(path.join(__dirname, "../views/errorUser"), {
+          message: "Contraseña incorrecta",
+          title: "Error",
+          css: "errorUser.css",
+        });
       }
+      res.cookie("user", userFound, { maxAge: 3600000, httpOnly: true });
 
       return res.redirect("/");
     } catch (error) {

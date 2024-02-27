@@ -3,50 +3,31 @@
     <body>
         <%- include('./partials/header') %>
             <main>
-                <section class="product-uploader">
+                <div class="sectionProducts" id="products">
                     <% products.forEach(product=> { %>
-                        <div class="product">
-                            <p>Producto <%= product.id %>
-                            </p>
-                            <a href="/productEdit/<%= product.id %>">
-                                <div class="container-img">
-                                    <% if (product.Images && product.Images.length> 0) { %>
-                                        <img src="http://localhost:3030/img/products/<%= product.Images[0].name %>"
-                                            alt="imagen-producto" />
-                                        <% } else { %>
-                                            <p>No hay imágenes disponibles</p>
-                                            <% } %>
-                                </div>
-                                <p>
-                                    <%= product.name %>
-                                </p>
-                                <p>
-                                    <%= product.description %>
-                                </p>
-                                <p>
-                                    <% if (product.Categories && product.Categories.length> 0) { %>
-                                        <span>
-                                            <%= product.Categories[0].name %>
-                                        </span>
-                                        <% } %>
-                                </p>
-                                <p>
-                                    <% if (product.Categories && product.Categories.length> 1) { %>
-                                        <% product.Categories.slice(1).forEach(category=> { %>
-                                            <span>
-                                                <%= category.name %>
-                                            </span>
-                                            <% }); %>
-                                                <% } %>
-                                </p>
-                                <p>
-                                    U$S <%= product.price %>
-                                </p>
-                            </a>
-                        </div>
+                        <a href="/productDetail/<%= product.id %>" class="card">
+                            <% if (product.Images && product.Images.length> 0) { %>
+                                <img src="http://localhost:3030/img/products/<%= product.Images[0].name %>"
+                                    alt="<%= product.name %> Image">
+                                <% } else { %>
+                                    <p>No hay imágenes disponibles para este producto.</p>
+                                    <% } %>
+                                        <div>
+                                            <h3>
+                                                <%= product.name %>
+                                            </h3>
+                                            <p class="">
+                                                <%= product.fabrication_year %>
+                                            </p>
+                                            <h6>
+                                                U$S <%= product.price %>
+                                            </h6>
+                                            <button class="comprar">Comprar</button>
+                                        </div>
+                        </a>
                         <% }) %>
-                </section>
-                <a href="/productUploader"><button>Cargar producto</button></a>
+                </div>
+                <a href="/productUploader"><button class="cargar">Cargar producto</button></a>
             </main>
             <%- include('./partials/footer') %>
     </body>
