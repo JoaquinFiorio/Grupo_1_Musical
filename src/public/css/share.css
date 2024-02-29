@@ -110,6 +110,7 @@ header .headerImg img {
   background-color: #9b2b2b;
   border: none;
   padding: 10px 20px;
+  margin-bottom: 4px;
   color: white;
   border-radius: 10px;
   cursor: pointer;
@@ -117,6 +118,7 @@ header .headerImg img {
 }
 
 .dropdown-content {
+  width: 100%;
   list-style: none;
   padding: 0;
   position: absolute;
@@ -127,6 +129,7 @@ header .headerImg img {
   transition: all 0.5s ease-in;
   z-index: 2;
   background-color: #9b2b2bd7;
+  border-radius: 10px;
 }
 
 .dropdown-content li {

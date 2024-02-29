@@ -1,5 +1,4 @@
 CREATE DATABASE IF NOT EXISTS Musitienda;
-
 USE musitienda;
 
 DROP TABLE IF EXISTS Provinces;
@@ -1424,17 +1423,17 @@ CREATE TABLE Roles (
     id int primary key auto_increment not null, name varchar(50)
 );
 
-INSERT INTO Roles (name) VALUES ("Admin"), ("Customer"), ("Vendor");
+INSERT INTO Roles (name) VALUES ("Cliente"), ("Vendedor");
 
 DROP TABLE IF EXISTS Users;
 
 CREATE TABLE Users (
-    id int primary key auto_increment not null, first_name varchar(50), last_name varchar(50), phone_number varchar(20), email text, address varchar(100), postal_code char(6), cities_id int not null, role_id int not null, password text, avatar text, createdAt timestamp DEFAULT CURRENT_TIMESTAMP, updatedAt timestamp DEFAULT CURRENT_TIMESTAMP, constraint foreign key (cities_id) references Cities (id), constraint foreign key (role_id) references Roles (id)
+    id int primary key auto_increment not null, first_name varchar(50), last_name varchar(50), phone_number varchar(20), email text, address varchar(100), postal_code char(6), city_id int not null, role_id int not null, password text, avatar text, createdAt timestamp DEFAULT CURRENT_TIMESTAMP, updatedAt timestamp DEFAULT CURRENT_TIMESTAMP, constraint foreign key (cities_id) references Cities (id), constraint foreign key (role_id) references Roles (id)
 );
 
 INSERT INTO
     Users (
-        first_name, last_name, phone_number, email, address, postal_code, cities_id, role_id, password, avatar
+        first_name, last_name, phone_number, email, address, postal_code, city_id, role_id, password, avatar
     )
 VALUES (
         'Elayne', 'Subhan', '+62 (417) 686-5527', 'esubhan0@xrea.com', '4 Katie Circle', '4178', '211', '2', '$2b$10$3znIeXCHpBtBGhvv14Yvr.QYdjBhR7RRHadV4U/7rYELfnYkKYqsG', 'user-1701959206715.png'

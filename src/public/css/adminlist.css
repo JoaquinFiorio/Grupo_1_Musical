@@ -55,7 +55,7 @@ img {
   margin: 0;
 }
 
-.sectionProducts .card .comprar {
+.sectionProducts .card .edit {
   text-align: center;
   font-size: 18px;
   color: #fff;
@@ -70,7 +70,7 @@ img {
   background-color: gray;
 }
 
-.sectionProducts .card .comprar:hover {
+.sectionProducts .card .edit:hover {
   background-color: darkred;
   transition: 0.2s;
 }

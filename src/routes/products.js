@@ -14,23 +14,30 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({ storage: storage , limits: {
-  files: 10 , 
-  fileSize: 1024 * 1024 * 5 , 
-} });
+const upload = multer({
+  storage: storage,
+  limits: {
+    files: 10,
+    fileSize: 1024 * 1024 * 5,
+  },
+});
 const productController = require("../controllers/productController");
-const {productEditValidator } = require("../Middlewares/productEditMiddleware");
-const {productCreateValidator } = require("../Middlewares/productCreateMiddleware");
+const {
+  productEditValidator,
+} = require("../Middlewares/productEditMiddleware");
+const {
+  productCreateValidator,
+} = require("../Middlewares/productCreateMiddleware");
 
 //router.get('/:id/edit', productController.editProduct);
-router.put("/:id/edit", productEditValidator , productController.updateProduct);
-
+router.put("/:id/edit", productEditValidator, productController.updateProduct);
 
 router.post(
   "/create",
-  upload.array("imageFile" , 10),
+  upload.array("imageFile", 10),
   productCreateValidator,
   productController.createProduct
 );
+
 router.delete("/:id/delete", productController.deleteProduct);
 module.exports = router;

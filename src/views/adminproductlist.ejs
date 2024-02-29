@@ -5,7 +5,7 @@
             <main>
                 <div class="sectionProducts" id="products">
                     <% products.forEach(product=> { %>
-                        <a href="/productDetail/<%= product.id %>" class="card">
+                        <a href="/productEdit/<%= product.id %>" class="card">
                             <% if (product.Images && product.Images.length> 0) { %>
                                 <img src="http://localhost:3030/img/products/<%= product.Images[0].name %>"
                                     alt="<%= product.name %> Image">
@@ -22,7 +22,7 @@
                                             <h6>
                                                 U$S <%= product.price %>
                                             </h6>
-                                            <button class="comprar">Comprar</button>
+                                            <button class="edit">Editar</button>
                                         </div>
                         </a>
                         <% }) %>

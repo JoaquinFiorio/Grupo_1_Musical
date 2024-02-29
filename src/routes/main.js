@@ -7,28 +7,28 @@ const viewsControllers = require("../controllers/main");
 
 /* RUTAS CON SUS FUNCIONES */
 
-router.get('/', viewsControllers.index);
+router.get("/", viewsControllers.index);
 
-router.get('/login', viewsControllers.login);
+router.get("/login", viewsControllers.login);
 
-router.get('/productCart', viewsControllers.productCart);
+router.get("/productCart", viewsControllers.productCart);
 
-router.get('/productDetail/:id', viewsControllers.productDetail);
+router.get("/productDetail/:id", viewsControllers.productDetail);
 
-router.get('/register', viewsControllers.register);
+router.get("/register", viewsControllers.register);
 
-router.get('/productList', viewsControllers.productList);
+router.get("/productList", viewsControllers.productList);
 
-router.get('/productUploader', viewsControllers.productUploader);
+router.get("/productUploader", viewsControllers.productUploader);
 
-router.get('/productEdit/:id', viewsControllers.productEdit);
+router.get("/productEdit/:id", viewsControllers.productEdit);
 
-router.get('/adminList', viewsControllers.adminList);
+router.get("/adminList", viewsControllers.adminList);
 
-router.get('/profile', viewsControllers.profile);
+router.get("/profile", viewsControllers.profile);
 
-router.get('/errorUser', viewsControllers.errorUser);
+router.get("/profileEdit/:id", viewsControllers.profileEdit);
+
+router.get("/errorUser", viewsControllers.errorUser);
 
 module.exports = router;
-
-
