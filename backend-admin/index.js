@@ -4,6 +4,7 @@ require("dotenv").config();
 const methodOverride = require("method-override");
 const session = require("express-session");
 const mysql = require("mysql2");
+const cors = require("cors");
 
 /* cONECTAMOS A LA BASE DE DATOS */
 const sql = mysql.createConnection({
@@ -32,6 +33,7 @@ const app = express();
 app.set("view engine", "ejs");
 
 /* ARCHIVOS ACCESIBLES PARA TODOS, RUTA ABSOLUTA */
+app.use(cors());
 app.use(express.static(path.join(__dirname, "uploads")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
