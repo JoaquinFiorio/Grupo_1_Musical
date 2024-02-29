@@ -11,11 +11,10 @@ form.addEventListener("submit", (event) => {
   const postal_codeInput = document.getElementById("postal_code").value;
 
   //aca sacamos el total de las imagenes subidas
-  const imagenes = document.getElementById("avatar").files;
+  const imagenes = document.getElementById("imageFile").files;
   console.log("Imagenes: ", imagenes);
 
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
   // Utiliza validator.js para verificar si el valor es un nombre válido
   if (!validator.matches(first_nameInput, /^[A-Za-z\s]+$/)) {
     alert("Por favor, introduce un nombre válido. Solo letras y espacios.");

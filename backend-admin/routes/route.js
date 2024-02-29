@@ -10,6 +10,6 @@ router.get("/product", mainController.getProducts);
 
 router.get("/product/:id", mainController.getProduct);
 
+router.get("/cities/:id", mainController.getCities);
 
 module.exports = router;
-

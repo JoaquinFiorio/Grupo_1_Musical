@@ -109,7 +109,7 @@ const userController = {
         email: req.body.email,
         address: req.body.address,
         postal_code: req.body.postal_code,
-        cities_id: req.body.city_id,
+        city_id: req.body.cities,
         role_id: req.body.role_id,
         avatar: avatar,
       });
