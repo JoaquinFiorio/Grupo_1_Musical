@@ -80,6 +80,25 @@ const mainController = {
       res.status(500).send({ message: "Internal Server Error", error });
     }
   },
+
+  getCities: async (req, res) => {
+    try {
+      const cities = await db.City.findAll({
+        where: { provinces_id: req.params.id },
+      });
+
+      if (!cities) {
+        return res.status(404).send({ message: "Cities Not Found" });
+      }
+
+      return res.status(200).send({ cities });
+
+      // Obtener todas las ciudades
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ message: "Internal Server Error", error });
+    }
+  },
 };
 
 module.exports = mainController;

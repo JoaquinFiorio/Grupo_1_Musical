@@ -1428,7 +1428,7 @@ INSERT INTO Roles (name) VALUES ("Cliente"), ("Vendedor");
 DROP TABLE IF EXISTS Users;
 
 CREATE TABLE Users (
-    id int primary key auto_increment not null, first_name varchar(50), last_name varchar(50), phone_number varchar(20), email text, address varchar(100), postal_code char(6), city_id int not null, role_id int not null, password text, avatar text, createdAt timestamp DEFAULT CURRENT_TIMESTAMP, updatedAt timestamp DEFAULT CURRENT_TIMESTAMP, constraint foreign key (cities_id) references Cities (id), constraint foreign key (role_id) references Roles (id)
+    id int primary key auto_increment not null, first_name varchar(50), last_name varchar(50), phone_number varchar(20), email text, address varchar(100), postal_code char(6), city_id int not null, role_id int not null, password text, avatar text, createdAt timestamp DEFAULT CURRENT_TIMESTAMP, updatedAt timestamp DEFAULT CURRENT_TIMESTAMP, constraint foreign key (city_id) references Cities (id), constraint foreign key (role_id) references Roles (id)
 );
 
 INSERT INTO

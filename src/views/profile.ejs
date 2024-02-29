@@ -11,7 +11,7 @@
                     </div>
                     <div class="profile_info">
                         <div class="info">
-                            <p>Información</p>
+                            <p class="title">Información</p>
                             <ul>
                                 <li><span class="icon"><i class="fa-solid fa-user"></i></span>
                                     <%= user.first_name %>
@@ -21,6 +21,15 @@
                                 </li>
                                 <li><span class="icon"><i class="fa-solid fa-envelope"></i></span>
                                     <%= user.email %>
+                                </li>
+                                <li><span class="icon"><i class="fa-solid fa-phone"></i></span>
+                                    <%= user.phone_number %>
+                                </li>
+                                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <%= user.address %>
+                                </li>
+                                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <%= cities.name %>
                                 </li>
                             </ul>
                             <div class="modifyUser">

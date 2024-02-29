@@ -26,15 +26,22 @@
                         <input type="text" id="email" name="email" placeholder="Correo electrónico del usuario"
                             value="<%= user.email %>">
                     </div>
-                    <!-- Campo de selección para cities -->
                     <div class="form-group">
-                        <label for="cities">Selecciona una ciudad</label>
-                        <select id="cities" name="city_id">
-                            <% cities.forEach(city=> { %>
-                                <option value="<%= city.id %>" <%=city.id===user.city_id ? 'selected' : '' %>>
-                                    <%= city.name %>
+                        <label for="provinces">Selecciona una provincia</label>
+                        <select id="provinces" name="province_id">
+                            <% provinces.forEach(province=> { %>
+                                <option value="<%= province.id %>" <% if (province.id===user.province_id) { %>selected<%
+                                        } %>>
+                                        <%= province.name %>
                                 </option>
                                 <% }); %>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Selecciona la Ciudad</label>
+                        <select id="cities" name="cities">
+
                         </select>
                     </div>
 
@@ -48,7 +55,7 @@
                     <div class="form-group">
                         <label for="postal_code">Codigo postal</label>
                         <input type="text" id="postal_code" name="postal_code" placeholder="Codigo postal"
-                            value="<%= user.postal_code %>" minlength="4">
+                            value="<%= user.postal_code %>" minlength="4" maxlength="4">
 
                     </div>
 
@@ -58,8 +65,8 @@
                         <label for="role_id">Rol</label>
                         <select id="role_id" name="role_id">
                             <% roles.forEach(role=> { %>
-                                <option value="<%= role.id %>" <%=role.id===user.role_id ? 'selected' : '' %>><%=
-                                        role.name %>
+                                <option value="<%= role.id %>" <%=role.id===user.role_id ? 'selected' : '' %>>
+                                    <%= role.name %>
                                 </option>
                                 <% }); %>
                         </select>
@@ -79,7 +86,28 @@
                 </form>
             </div>
         </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var provincesSelect = document.getElementById('provinces');
+                var citiesSelect = document.getElementById('cities');
+
+                provincesSelect.addEventListener('change', function () {
+                    var selectedProvinceId = provincesSelect.value;
+                    console.log(selectedProvinceId);
+                    fetch(`http://localhost:3001/api/cities/${selectedProvinceId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            citiesSelect.innerHTML = '<option value="">Selecciona una ciudad</option>';
+                            data.cities.forEach(city => {
+                                citiesSelect.innerHTML += `<option value="${city.id}">${city.name}</option>`;
+                            });
+                        })
+                        .catch(error => console.error('Error fetching cities:', error));
+                });
+            });
+        </script>
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="/js/userEditValidator.js"></script>
         <script>
             function previewImage(input) {
                 let preview = document.getElementById('imagen-preview');
@@ -96,7 +124,6 @@
                 }
             }
         </script>
-        <script src="/js/userEditValidator.js"></script>
     </body>
 
     </html>
