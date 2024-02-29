@@ -6,10 +6,7 @@
                 <div class="profile">
                     <div class="profile_img_info">
                         <div class="img">
-                            <img src="/img/logo.png" alt="profile_pic">
-                        </div>
-                        <div class="info">
-                            <p class="name">User Name</p>
+                            <img src="../img/users/<%= user.avatar %>" alt="profile_pic">
                         </div>
                     </div>
                     <div class="profile_info">
@@ -17,21 +14,21 @@
                             <p>Información</p>
                             <ul>
                                 <li><span class="icon"><i class="fa-solid fa-user"></i></span>
-                                    <span class="title">Nombre</span>
+                                    <%= user.first_name %>
                                 </li>
                                 <li><span class="icon"><i class="fa-solid fa-user"></i></span>
-                                    <span class="title">Apellido</span>
+                                    <%= user.last_name %>
                                 </li>
                                 <li><span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                                    <span class="title">Email</span>
-                                </li>
-                                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                                    <span class="title">Direccion</span>
+                                    <%= user.email %>
                                 </li>
                             </ul>
                             <div class="modifyUser">
-                                <button type="button">Eliminar</button>
-                                <button type="button">Actualizar</button>
+                                <form action="/users/<%= user.id %>/delete?_method=DELETE" method="post">
+                                    <button type="submit" class="btn-delete-product">Eliminar</button>
+                                </form>
+                                <a href="/profileEdit/<%= user.id %>"><button
+                                        class="btn-edit-product">Editar</button></a>
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(100),
       allowNull: false,
     },
-    province_id: {
+    provinces_id: {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
   City.associate = function (models) {
     City.belongsTo(models.Province, {
       as: "province",
-      foreignKey: "province_id",
+      foreignKey: "provinces_id",
     });
   };
   return City;

@@ -1,0 +1,102 @@
+<%- include('./partials/head') %>
+
+    <body>
+        <main>
+            <div class="product">
+                <h3>Editar usuario</h3>
+                <form id="userEditForm" action="/users/<%= user.id %>/edit?_method=PUT" method="post"
+                    enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="first_name">Nombre</label>
+                        <input name="first_name" type="text" id="first_name" placeholder="Nombre del usuario"
+                            value="<%= user.first_name %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Apellido</label>
+                        <input name="last_name" type="text" id="last_name" placeholder="Apellido del usuario"
+                            value="<%= user.last_name %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="text" id="phone" name="phone" placeholder="Teléfono del usuario"
+                            value="<%= user.phone_number %>" maxlength="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="text" id="email" name="email" placeholder="Correo electrónico del usuario"
+                            value="<%= user.email %>">
+                    </div>
+                    <!-- Campo de selección para cities -->
+                    <div class="form-group">
+                        <label for="cities">Selecciona una ciudad</label>
+                        <select id="cities" name="city_id">
+                            <% cities.forEach(city=> { %>
+                                <option value="<%= city.id %>" <%=city.id===user.city_id ? 'selected' : '' %>>
+                                    <%= city.name %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Direccion</label>
+                        <input type="text" id="address" name="address" placeholder="Direccion"
+                            value="<%= user.address %>" maxlength="100">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal_code">Codigo postal</label>
+                        <input type="text" id="postal_code" name="postal_code" placeholder="Codigo postal"
+                            value="<%= user.postal_code %>" minlength="4">
+
+                    </div>
+
+
+                    <!-- Campo de selección para role_id -->
+                    <div class="form-group">
+                        <label for="role_id">Rol</label>
+                        <select id="role_id" name="role_id">
+                            <% roles.forEach(role=> { %>
+                                <option value="<%= role.id %>" <%=role.id===user.role_id ? 'selected' : '' %>><%=
+                                        role.name %>
+                                </option>
+                                <% }); %>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avatar">Foto de perfil</label>
+                        <input type="file" name="imageFile" id="imageFile" accept="image/*"
+                            onchange="previewImage(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="imagen-preview">Vista Previa</label>
+                        <img id="imagen-preview" src="#" alt="Vista previa de la imagen"
+                            style="max-width: 100%; display: none;">
+                    </div>
+                    <input type="submit" value="Editar">
+                </form>
+            </div>
+        </main>
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script>
+            function previewImage(input) {
+                let preview = document.getElementById('imagen-preview');
+                if (input.files && input.files[0]) {
+                    let reader = new FileReader();
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                } else {
+                    preview.src = '#';
+                    preview.style.display = 'none';
+                }
+            }
+        </script>
+        <script src="/js/userEditValidator.js"></script>
+    </body>
+
+    </html>

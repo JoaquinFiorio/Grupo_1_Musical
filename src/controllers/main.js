@@ -1,5 +1,6 @@
 const path = require("path");
 const db = require("../database/models");
+const { log } = require("console");
 
 /* OBJETO CON TODAS LAS FUNCIONES NECESARIAS PARA RENDERIZAR LAS RUTAS */
 
@@ -210,18 +211,95 @@ const viewController = {
       res.status(500).send("Internal Server Error");
     }
   },
-  profile: (req, res) => {
+  profile: async (req, res) => {
     const loggedIn = req.cookies.user ? true : false;
 
-    const data = {
-      title: "Profile",
-      css: "profile.css",
-      loggedIn,
-    };
     if (loggedIn !== true) {
       return res.redirect("/login");
     }
-    res.render(path.join(__dirname, "../views/profile"), data);
+
+    try {
+      // Obtener el userId de la cookie
+      const userId = req.cookies.user;
+
+      // Consultar la base de datos para obtener campos específicos del usuario por ID
+      const user = await db.User.findByPk(userId.id, {
+        attributes: [
+          "id",
+          "first_name",
+          "last_name",
+          "email",
+          "address",
+          "avatar",
+        ],
+      });
+
+      if (!user) {
+        return res.status(404).send("Usuario no encontrado");
+      }
+
+      const data = {
+        title: "Profile",
+        css: "profile.css",
+        loggedIn,
+        user,
+      };
+
+      res.render(path.join(__dirname, "../views/profile"), data);
+    } catch (error) {
+      console.error("Error al obtener datos del usuario:", error);
+      res.status(500).send("Error interno del servidor");
+    }
+  },
+
+  profileEdit: async (req, res) => {
+    const loggedIn = req.cookies.user ? true : false;
+
+    if (loggedIn !== true) {
+      return res.redirect("/login");
+    }
+
+    try {
+      // Obtener el userId de la cookie
+      const userId = req.cookies.user;
+
+      // Consultar la base de datos para obtener campos específicos del usuario por ID
+      const user = await db.User.findByPk(userId.id);
+
+      if (!user) {
+        return res.status(404).send("Usuario no encontrado");
+      }
+
+      const provinces = await db.Province.findAll();
+      if (!provinces) {
+        return res.status(404).send("Provincia no encontrada");
+      }
+
+      const cities = await db.City.findAll();
+      if (!cities) {
+        return res.status(404).send("Ciudad no encontrada");
+      }
+
+      const roles = await db.Role.findAll();
+      if (!roles) {
+        return res.status(404).send("Rol no encontrado");
+      }
+
+      const data = {
+        title: "ProfileEdit",
+        css: "profileEdit.css",
+        loggedIn,
+        user,
+        provinces,
+        cities,
+        roles,
+      };
+
+      res.render(path.join(__dirname, "../views/profileEdit"), data);
+    } catch (error) {
+      console.error("Error al obtener datos del usuario:", error);
+      res.status(500).send("Error interno del servidor");
+    }
   },
   errorUser: (req, res) => {
     const loggedIn = req.cookies.user ? true : false;

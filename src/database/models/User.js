@@ -32,7 +32,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.CHAR(6),
       defaultValue: null,
     },
-    cities_id: {
+    city_id: {
       type: dataTypes.INTEGER,
       defaultValue: 1,
     },
@@ -66,7 +66,7 @@ module.exports = (sequelize, dataTypes) => {
     });
     User.belongsTo(models.City, {
       as: "city",
-      foreignKey: "cities_id",
+      foreignKey: "city_id",
     });
   };
   return User;

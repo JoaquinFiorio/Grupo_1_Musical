@@ -21,6 +21,8 @@ const upload = multer({ storage: storage });
 const userController = require("../controllers/userController");
 const { userLoginValidator } = require("../Middlewares/loginMiddleware");
 const { userRegisterValidator } = require("../Middlewares/registerMiddleware");
+const { userEditValidator } = require("../Middlewares/userEditMiddleware");
+
 router.get("/", userController.getUsers);
 
 router.get("/:id", userController.getUser);
@@ -34,9 +36,14 @@ router.post(
   userController.registerUser
 );
 
-router.put("/", userController.updateUser);
+router.put(
+  "/:id/edit",
+  userEditValidator,
+  upload.single("imageFile"),
+  userController.updateUser
+);
 
-router.delete("/", userController.deleteUser);
+router.delete("/:id/delete", userController.deleteUser);
 
 router.get("/", (req, res) => {
   console.log("mandar al login si no inicio sesion");
