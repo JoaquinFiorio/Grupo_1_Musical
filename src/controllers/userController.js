@@ -18,7 +18,11 @@ const userController = {
         where: { email: req.body.email },
       });
       if (existingUser) {
-        return res.status(400).send({ message: "user already exists" });
+        return res.render(path.join(__dirname, "../views/errorUser"), {
+          message: "El usuario ya existe",
+          title: "Error",
+          css: "errorUser.css",
+        });
       }
       const { first_name, last_name, email } = req.body;
       await db.User.create({

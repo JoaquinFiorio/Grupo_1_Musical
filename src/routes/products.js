@@ -30,12 +30,18 @@ const {
 } = require("../Middlewares/productCreateMiddleware");
 
 //router.get('/:id/edit', productController.editProduct);
-router.put("/:id/edit", productEditValidator, productController.updateProduct);
+router.put(
+  "/:id/edit",
+  upload.array("imageFile", 10),
+  productEditValidator,
+  productController.updateProduct
+);
 
 router.post(
   "/create",
   upload.array("imageFile", 10),
   productCreateValidator,
+
   productController.createProduct
 );
 

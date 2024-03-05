@@ -17,13 +17,15 @@ form.addEventListener("submit", (event) => {
   const fecha = new Date();
   const anio = fecha.getFullYear();
 
-  const categoryCheckboxes = document.querySelectorAll('input[name="categories"]:checked');
-  
+  const categoryCheckboxes = document.querySelectorAll(
+    'input[name="categories"]:checked'
+  );
+
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   // Utiliza validator.js para verificar si el valor es un nombre válido
-  if (!validator.isAlpha(productname_Input)) {
-    alert("Por favor, introduce un nombre válido. Solo letras.");
+  if (!validator.matches(productname_Input, /^[A-Za-z\s]+$/)) {
+    alert("Por favor, introduce un nombre válido. Solo letras y espacios.");
     event.preventDefault();
     return false;
   }
@@ -79,4 +81,3 @@ form.addEventListener("submit", (event) => {
 
   return true;
 });
-

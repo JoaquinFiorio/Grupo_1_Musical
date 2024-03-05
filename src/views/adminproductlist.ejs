@@ -7,9 +7,10 @@
                     <% products.forEach(product=> { %>
                         <a href="/productEdit/<%= product.id %>" class="card">
                             <% if (product.Images && product.Images.length> 0) { %>
-                                <img src="http://localhost:3030/img/products/<%= product.Images[0].name %>"
-                                    alt="<%= product.name %> Image">
+                                <img src="http://localhost:3030/img/products/<%= product.Images[0].name %> "
+                                    alt="<%= product.name %>">
                                 <% } else { %>
+                                    <img src="http://localhost:3030/img/products/default.png" alt="default">
                                     <p>No hay imágenes disponibles para este producto.</p>
                                     <% } %>
                                         <div>

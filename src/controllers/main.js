@@ -1,6 +1,5 @@
 const path = require("path");
 const db = require("../database/models");
-const { log } = require("console");
 
 /* OBJETO CON TODAS LAS FUNCIONES NECESARIAS PARA RENDERIZAR LAS RUTAS */
 
@@ -228,11 +227,9 @@ const viewController = {
           "id",
           "first_name",
           "last_name",
-          "phone_number",
           "email",
           "address",
           "avatar",
-          "city_id",
         ],
       });
 
@@ -240,18 +237,11 @@ const viewController = {
         return res.status(404).send("Usuario no encontrado");
       }
 
-      const cities = await db.City.findByPk(user.city_id);
-
-      if (!cities) {
-        return res.status(404).send("Ciudad no encontrada");
-      }
-
       const data = {
         title: "Profile",
         css: "profile.css",
         loggedIn,
         user,
-        cities,
       };
 
       res.render(path.join(__dirname, "../views/profile"), data);
@@ -293,6 +283,7 @@ const viewController = {
       if (!roles) {
         return res.status(404).send("Rol no encontrado");
       }
+
       const data = {
         title: "ProfileEdit",
         css: "profileEdit.css",

@@ -11,15 +11,16 @@ form.addEventListener("submit", (event) => {
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   // Utiliza validator.js para verificar si el valor es un nombre válido
-  if (!validator.isAlpha(first_nameInput)) {
-    alert("Por favor, introduce un nombre válido. Solo letras.");
+  // Utiliza validator.js para verificar si el valor es un nombre válido
+  if (!validator.matches(first_nameInput, /^[A-Za-z\s]+$/)) {
+    alert("Por favor, introduce un nombre válido. Solo letras y espacios.");
     event.preventDefault();
     return false;
   }
 
   // Utiliza validator.js para verificar si el valor es un apellido válido
-  if (!validator.isAlpha(last_nameInput)) {
-    alert("Por favor, introduce un apellido válido. solo letras.");
+  if (!validator.matches(last_nameInput, /^[A-Za-z\s]+$/)) {
+    alert("Por favor, introduce un apellido válido. Solo letras y espacios.");
     event.preventDefault();
     return false;
   }

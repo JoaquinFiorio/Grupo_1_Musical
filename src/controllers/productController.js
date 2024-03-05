@@ -13,11 +13,17 @@ const productController = {
       if (!error.isEmpty()) {
         return res.send({ errors: error.mapped(), oldData: req.body });
       }
+
       const productId = req.params.id;
       const updatedProductData = req.body; // Datos actualizados del formulario
 
       // Buscar el producto por ID
-      const product = await db.Product.findByPk(productId);
+      const product = await db.Product.findByPk(productId, {
+        include: [
+          { model: db.Image, as: "Images" },
+          { model: db.Category, as: "Categories" },
+        ],
+      });
 
       // Verificar si el producto existe
       if (!product) {
@@ -49,6 +55,37 @@ const productController = {
       );
       await db.Product_category.bulkCreate(productCategories);
 
+      // Actualizar las imágenes del producto
+      const images = req.files;
+      if (images) {
+        // Eliminar las imágenes existentes asociadas al producto
+        await db.Product_image.destroy({
+          where: {
+            products_id: productId,
+          },
+        });
+
+        // Asociar las nuevas imágenes al producto
+        const productImages = await Promise.all(
+          images.map(async (image) => {
+            try {
+              const imageCreated = await db.Image.create({
+                name: image.filename,
+              });
+              await db.Product_image.create({
+                products_id: productId,
+                images_id: imageCreated.id,
+              });
+              console.log(`Saved ${imageCreated.name} to the database.`);
+            } catch (error) {
+              console.error(
+                `Error saving ${image.filename} to the database: ${error.message}`
+              );
+            }
+          })
+        );
+      }
+
       // Redirigir o enviar una respuesta exitosa
       res.redirect("/productList");
     } catch (error) {
@@ -56,6 +93,7 @@ const productController = {
       res.status(500).send("Internal Server Error");
     }
   },
+
   createProduct: async (req, res) => {
     try {
       const error = validationResult(req);
