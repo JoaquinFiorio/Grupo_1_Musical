@@ -386,304 +386,298 @@ INSERT INTO
         name, brands_id, fabrication_year, price, description
     )
 VALUES (
-        'guitar', '8', '2010', '16724.72', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guitarra', '8', '2010', '16724.72', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'piano', '10', '1992', '49191.53', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'piano', '10', '1992', '49191.53', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'drums', '2', '1997', '58491.34', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tambores', '2', '1997', '58491.34', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'violin', '46', '1996', '81851.34', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'violín', '46', '1996', '81851.34', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'trumpet', '34', '1995', '83814.04', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'trompeta', '34', '1995', '83814.04', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'flute', '32', '2011', '97602.46', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'flauta', '32', '2011', '97602.46', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'saxophone', '4', '2007', '2243.7', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'saxofón', '4', '2007', '2243.7', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'clarinet', '46', '1992', '34377.37', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'clarinete', '46', '1992', '34377.37', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'ukulele', '46', '2003', '49806.77', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'ukelele', '46', '2003', '49806.77', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'accordion', '36', '2009', '59615.37', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'acordeón', '36', '2009', '59615.37', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'banjo', '26', '1963', '43447.26', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'banjo', '26', '1963', '43447.26', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'cello', '20', '2012', '88957.82', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'violonchelo', '20', '2012', '88957.82', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'harp', '42', '2007', '55715.25', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'arpa', '42', '2007', '55715.25', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'trombone', '5', '1993', '89296.42', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'trombón', '5', '1993', '89296.42', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bass guitar', '44', '2010', '11671.09', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'bajo eléctrico', '44', '2010', '11671.09', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'harmonica', '20', '2000', '63229.3', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'armónica', '20', '2000', '63229.3', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'xylophone', '4', '2004', '93358.49', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'xilófono', '4', '2004', '93358.49', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bagpipes', '34', '2001', '39067.02', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'gaita', '34', '2001', '39067.02', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'maracas', '18', '1995', '58385.55', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'maracas', '18', '1995', '58385.55', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'tambourine', '17', '1997', '76203.29', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'pandereta', '17', '1997', '76203.29', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'djembe', '1', '2002', '34469.96', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'djembe', '1', '2002', '34469.96', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'didgeridoo', '9', '1964', '98839.86', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'didgeridoo', '9', '1964', '98839.86', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'mandolin', '3', '2006', '94941.41', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'mandolina', '3', '2006', '94941.41', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'oboe', '30', '1989', '55550.43', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'oboe', '30', '1989', '55550.43', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bassoon', '12', '2012', '72727.76', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'fagot', '12', '2012', '72727.76', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'conga', '46', '2005', '94372.8', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'conga', '46', '2005', '94372.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'tabla', '31', '1988', '67899.3', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tabla', '31', '1988', '67899.3', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'synthesizer', '22', '1995', '61323.78', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'sintetizador', '22', '1995', '61323.78', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'keyboard', '3', '1993', '17431.19', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'teclado', '3', '1993', '17431.19', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'electric guitar', '33', '2004', '22757.52', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guitarra eléctrica', '33', '2004', '22757.52', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'steel drum', '15', '2002', '22900.74', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'steel drum', '15', '2002', '22900.74', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'theremin', '11', '2003', '97085.73', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'theremin', '11', '2003', '97085.73', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'vibraphone', '9', '1989', '82123.51', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'vibráfono', '9', '1989', '82123.51', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'kalimba', '39', '1999', '59560.79', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'kalimba', '39', '1999', '59560.79', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'ukulele', '22', '2012', '75019.87', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'ukelele', '22', '2012', '75019.87', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'oud', '43', '2005', '56091.86', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'oud', '43', '2005', '56091.86', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'sitar', '2', '1990', '37473.06', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'sitar', '2', '1990', '37473.06', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'erhu', '30', '2007', '54145.12', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'erhu', '30', '2007', '54145.12', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'pan flute', '8', '1995', '43977.63', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'flauta de pan', '8', '1995', '43977.63', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bongo', '3', '1994', '56815.52', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'bongó', '3', '1994', '56815.52', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'guzheng', '30', '2012', '71827.7', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guzheng', '30', '2012', '71827.7', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'shamisen', '19', '2010', '93481.73', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'shamisen', '19', '2010', '93481.73', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'koto', '33', '1996', '88314.56', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'koto', '33', '1996', '88314.56', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'dulcimer', '4', '1996', '55050.99', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'dulcémele', '4', '1996', '55050.99', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'zither', '21', '2005', '11217.75', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'cítara', '21', '2005', '11217.75', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'mouth organ', '14', '2011', '81077.71', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'armónica de boca', '14', '2011', '81077.71', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'glockenspiel', '20', '2003', '48202.8', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'glockenspiel', '20', '2003', '48202.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'marimba', '29', '1997', '28533.0', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'marimba', '29', '1997', '28533.0', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'timpani', '18', '2008', '80298.31', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tímpano', '18', '2008', '80298.31', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'guitar', '26', '2002', '91191.42', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guitarra', '26', '2002', '91191.42', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'piano', '2', '2008', '45615.17', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'piano', '2', '2008', '45615.17', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'drums', '21', '1994', '385.97', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tambores', '21', '1994', '385.97', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'violin', '7', '1996', '2332.68', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'violín', '7', '1996', '2332.68', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'trumpet', '21', '2011', '19623.6', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'trompeta', '21', '2011', '19623.6', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'flute', '27', '1996', '19243.21', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'flauta', '27', '1996', '19243.21', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'saxophone', '23', '1993', '1783.68', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'saxofón', '23', '1993', '1783.68', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'clarinet', '37', '1996', '87007.38', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'clarinete', '37', '1996', '87007.38', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'ukulele', '39', '2010', '60302.96', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'ukelele', '39', '2010', '60302.96', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'accordion', '18', '2009', '93237.71', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'acordeón', '18', '2009', '93237.71', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'banjo', '50', '2004', '31699.58', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'banjo', '50', '2004', '31699.58', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'cello', '12', '1993', '2146.1', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'violonchelo', '12', '1993', '2146.1', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'harp', '35', '2008', '60181.04', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'arpa', '35', '2008', '60181.04', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'trombone', '9', '1998', '84526.27', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'trombón', '9', '1998', '84526.27', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bass guitar', '43', '1992', '2818.9', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'bajo eléctrico', '43', '1992', '2818.9', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'harmonica', '23', '2012', '18985.34', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'armónica', '23', '2012', '18985.34', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'xylophone', '1', '2010', '42005.69', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'xilófono', '1', '2010', '42005.69', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bagpipes', '35', '2011', '43912.07', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'gaita', '35', '2011', '43912.07', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'maracas', '19', '1989', '32084.31', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'maracas', '19', '1989', '32084.31', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'tambourine', '35', '1998', '50488.9', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'pandereta', '35', '1998', '50488.9', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'djembe', '17', '2011', '81404.19', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'djembe', '17', '2011', '81404.19', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'didgeridoo', '29', '2007', '76627.25', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'didgeridoo', '29', '2007', '76627.25', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'mandolin', '7', '1983', '78200.47', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'mandolina', '7', '1983', '78200.47', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'oboe', '13', '2005', '77025.59', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'oboe', '13', '2005', '77025.59', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bassoon', '16', '2011', '93529.63', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'fagot', '16', '2011', '93529.63', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'conga', '8', '1995', '23092.03', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'conga', '8', '1995', '23092.03', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'tabla', '40', '1994', '10837.22', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tabla', '40', '1994', '10837.22', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'synthesizer', '38', '2008', '57492.28', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'sintetizador', '38', '2008', '57492.28', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'keyboard', '5', '2003', '55591.49', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'teclado', '5', '2003', '55591.49', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'electric guitar', '30', '1995', '53520.8', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guitarra eléctrica', '30', '1995', '53520.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'steel drum', '8', '1998', '57215.63', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'steel drum', '8', '1998', '57215.63', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'theremin', '28', '2010', '95316.8', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'theremin', '28', '2010', '95316.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'vibraphone', '36', '2006', '43972.73', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'vibráfono', '36', '2006', '43972.73', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'kalimba', '42', '1999', '64736.52', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'kalimba', '42', '1999', '64736.52', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'ukulele', '4', '1994', '91696.07', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'ukelele', '4', '1994', '91696.07', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'oud', '18', '1998', '67510.92', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'oud', '18', '1998', '67510.92', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'sitar', '18', '1988', '32278.93', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'sitar', '18', '1988', '32278.93', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'erhu', '4', '1986', '34782.82', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'erhu', '4', '1986', '34782.82', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'pan flute', '21', '1993', '59762.21', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'flauta de pan', '21', '1993', '59762.21', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'bongo', '32', '1984', '28329.41', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'bongó', '32', '1984', '28329.41', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'guzheng', '49', '2004', '78565.94', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'guzheng', '49', '2004', '78565.94', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'shamisen', '45', '2008', '71502.23', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'shamisen', '45', '2008', '71502.23', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'koto', '36', '2004', '75202.37', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'koto', '36', '2004', '75202.37', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'dulcimer', '49', '2011', '4417.1', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'dulcémele', '49', '2011', '4417.1', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'zither', '20', '2006', '6756.53', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'cítara', '20', '2006', '6756.53', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'mouth organ', '15', '1996', '4064.14', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'armónica de boca', '15', '1996', '4064.14', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'glockenspiel', '32', '1996', '14254.34', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'glockenspiel', '22', '2003', '95417.52', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'marimba', '44', '1985', '95326.0', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'marimba', '22', '2001', '28708.94', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
-        'timpani', '48', '2009', '93239.92', 'Esto es una descripcion generica para poder probar toda la info de los productos'
-    ),
-    (
-        'guitar', '2', '2003', '85900.86', 'Esto es una descripcion generica para poder probar toda la info de los productos'
-    ),
-    (
-        'piano', '39', '1993', '31376.89', 'Esto es una descripcion generica para poder probar toda la info de los productos'
+        'tímpano', '15', '1997', '79583.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     );
 
 DROP TABLE IF EXISTS Images;
