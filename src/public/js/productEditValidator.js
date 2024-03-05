@@ -10,16 +10,22 @@ form.addEventListener("submit", (event) => {
     "product_description"
   ).value;
 
-  const categoryCheckboxes = document.querySelectorAll('input[name="categories"]:checked');
+  const categoryCheckboxes = document.querySelectorAll(
+    'input[name="categories"]:checked'
+  );
 
   const fecha = new Date();
   const anio = fecha.getFullYear();
 
+  //aca sacamos el total de las imagenes subidas
+  const imagenes = document.getElementById("imagenes").files;
+  const totalImagenes = imagenes.length;
+
   // const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   // Utiliza validator.js para verificar si el valor es un nombre válido
-  if (!validator.isAlpha(productname_Input)) {
-    alert("Por favor, introduce un nombre válido. Solo letras.");
+  if (!validator.matches(productname_Input, /^[A-Za-z\s]+$/)) {
+    alert("Por favor, introduce un nombre válido. Solo letras y espacios.");
     event.preventDefault();
     return false;
   }
@@ -66,6 +72,12 @@ form.addEventListener("submit", (event) => {
     return false;
   }
 
+  // Utiliza validator.js para verificar la cantidad de imágenes subidas
+  if (!validator.isInt(totalImagenes.toString(), { min: 1, max: 10 })) {
+    alert("Por favor, ingrese entre 1 y 10 imágenes.");
+    event.preventDefault();
+    return false;
+  }
+
   return true;
 });
-

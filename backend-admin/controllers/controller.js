@@ -5,7 +5,7 @@ const mainController = {
   getUsers: async (req, res) => {
     try {
       const users = await db.User.findAll({
-        attributes: ["id", "first_name", "email"],
+        attributes: ["id", "first_name", "email", "avatar"],
       });
       if (!users) {
         return res.status(404).send({ message: "Users Not Found" });
@@ -51,7 +51,14 @@ const mainController = {
         return res.status(404).send({ message: "Products Not Found" });
       }
       const totalProducts = products.length;
-      return res.status(200).send({ products, totalProducts });
+
+      const categories = await db.Category.findAll();
+
+      if (!categories) {
+        return res.status(404).send({ message: "Categories Not Found" });
+      }
+
+      return res.status(200).send({ products, totalProducts, categories });
     } catch (error) {
       console.log(error);
       res.status(500).send({ message: "Internal Server Error", error });
@@ -94,6 +101,21 @@ const mainController = {
       return res.status(200).send({ cities });
 
       // Obtener todas las ciudades
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({ message: "Internal Server Error", error });
+    }
+  },
+
+  getCategories: async (req, res) => {
+    try {
+      const categories = await db.Category.findAll();
+
+      if (!categories) {
+        return res.status(404).send({ message: "Categories Not Found" });
+      }
+
+      return res.status(200).send({ categories });
     } catch (error) {
       console.log(error);
       res.status(500).send({ message: "Internal Server Error", error });
