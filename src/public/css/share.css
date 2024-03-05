@@ -180,6 +180,7 @@ header .headerImg img {
     grid-gap: 10px;
     display: flex;
     flex-direction: column;
+    font-family: "Nunito", sans-serif;
   }
 
   .footer .groupOne .box img {
@@ -344,6 +345,7 @@ header .headerImg img {
   grid-gap: 20px;
   padding: 20px 0;
   text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .footer .groupOne .box,
@@ -355,18 +357,23 @@ header .headerImg img {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 3%;
+  padding: 0 1%;
+  gap: 30px;
 }
 
 .footer .groupOne .box img {
   width: 200px;
 }
+.footer .groupOne .box h2 {
+  color: #fff;
+  font-size: 30px;
+  padding-top: 25px;
+}
 
-.footer .groupOne .box h2,
 .paymentsBox h2 {
   color: #fff;
-  margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 30px;
+  padding: 25px;
 }
 
 .footer .groupOne .box p {

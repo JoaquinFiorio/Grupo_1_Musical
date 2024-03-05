@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const UserDetail = () => {
   const [user, setUser] = useState({});
@@ -36,9 +36,6 @@ const UserDetail = () => {
         />
       </div>
       <div>
-        <strong>ID:</strong> {user.avatar}
-      </div>
-      <div>
         <strong>Nombre:</strong> {user.first_name || "Nombre no disponible"}
       </div>
       <div>
@@ -49,6 +46,11 @@ const UserDetail = () => {
       </div>
       <div>
         <strong>Email:</strong> {user.email || "Email no disponible"}
+      </div>
+      <div>
+        <Link to={`/users`} className="btn btn-outline-info mt-3">
+          Volver
+        </Link>
       </div>
     </div>
   );
