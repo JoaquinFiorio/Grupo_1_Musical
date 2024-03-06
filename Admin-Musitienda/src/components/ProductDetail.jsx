@@ -35,9 +35,6 @@ const ProductDetail = () => {
         <strong>Nombre:</strong> {product.name || "Nombre no disponible"}
       </div>
       <div>
-        <strong>Marca ID:</strong> {product.brands_id}
-      </div>
-      <div>
         <strong>Año de fabricación:</strong> {product.fabrication_year}
       </div>
       <div>

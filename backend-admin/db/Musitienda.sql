@@ -677,6 +677,12 @@ VALUES (
         'marimba', '22', '2001', '28708.94', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     ),
     (
+        'marimba', '22', '2001', '28708.94', 'Esto es una descripción genérica para poder probar toda la información de los productos'
+    ),
+    (
+        'marimba', '22', '2001', '28708.94', 'Esto es una descripción genérica para poder probar toda la información de los productos'
+    ),
+    (
         'tímpano', '15', '1997', '79583.8', 'Esto es una descripción genérica para poder probar toda la información de los productos'
     );
 
