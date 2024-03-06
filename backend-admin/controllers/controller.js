@@ -69,6 +69,10 @@ const mainController = {
       const product = await db.Product.findByPk(req.params.id, {
         include: [
           {
+            model: db.Brand,
+            as: "brand",
+          },
+          {
             model: db.Image,
             through: "product_image",
           },

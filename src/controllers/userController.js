@@ -30,7 +30,7 @@ const userController = {
         last_name,
         email,
         password: bcrypt.hashSync(req.body.password, 10),
-        avatar: req.file?.filename || "default-image.jpg",
+        avatar: req.file?.filename || "default-avatar.jpg",
       });
 
       return res.redirect("/");

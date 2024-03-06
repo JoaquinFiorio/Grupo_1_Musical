@@ -161,12 +161,14 @@ button[type="submit"] {
 }
 
 .custom-file-label {
-  background-color: #3498db;
+  background-color: #9b2b2b;
+  width: 100%;
   color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 15px 10px;
+  border-radius: 25px;
   cursor: pointer;
   display: inline-block;
+  box-shadow: 4px 2px 5px 0px rgb(0, 0, 0, 0.5);
 }
 .rowRight {
   margin-left: 15%;
