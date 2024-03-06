@@ -31,7 +31,7 @@ const Products = () => {
     return (
         <div>
             {lastAddedProduct && (
-                <div className="row mb-4">
+                <div className="row mb-4 mt-4">
                     <div className="col">
                         <h2>Último Producto Agregado</h2>
                         <Link to={`/products/${lastAddedProduct.id}`}>
@@ -51,9 +51,11 @@ const Products = () => {
                     <div className="col">
                         <h2>Total de Categorías</h2>
                         <strong><p>{categories.length} categorías</p> </strong>
-                        {categories.map((category) => (
-                            <p key={category.id}>{category.name}</p>
-                        ))}
+                        <ul className="list-group">
+                            {categories.map((category) => (
+                                <li key={category.id} className="list-group-item disabled">{category.name}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             )}
@@ -64,17 +66,20 @@ const Products = () => {
                 <p>No hay productos</p>
             )}
             {products.length > 0 ? (
-                <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
                     {products.map((product) => (
-                        <div key={product.id} className="col">
+                        <div key={product.id} className="col-sm-6">
                             <Link to={`/products/${product.id}`}>
-                                <div key={product.id} className="card">
+                                <div key={product.id} className="card h-100">
                                     <img
                                         src={`http://localhost:3030/img/products/${product.Images[0]?.name || 'default.png'}`}
                                         className="card-img-top"
+                                        style={{
+                                            width: "100%",
+                                        }}
                                         alt={product.name || "Producto sin nombre"}
                                     />
-                                    <div className="card-body">
+                                    <div className="card-body border-top mt-3" >
                                         <h5 className="card-title">{product.name || "Nombre no disponible"}</h5>
                                         <p className="card-text">{product.description || "Descripción no disponible"}</p>
                                     </div>
@@ -86,6 +91,11 @@ const Products = () => {
             ) : (
                 <p>Cargando...</p>
             )}
+            <div>
+                <Link to={`/`} className="btn btn-outline-info mt-3">
+                    Volver
+                </Link>
+            </div>
         </div>
     );
 };

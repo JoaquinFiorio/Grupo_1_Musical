@@ -5,7 +5,7 @@ const mainController = {
   getUsers: async (req, res) => {
     try {
       const users = await db.User.findAll({
-        attributes: ["id", "first_name", "email", "avatar"],
+        attributes: ["id", "first_name", "last_name", "avatar"],
       });
       if (!users) {
         return res.status(404).send({ message: "Users Not Found" });

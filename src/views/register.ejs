@@ -33,7 +33,8 @@
                         <input id="password" type="password" name="password" placeholder="Contraseña" minlength="8"
                             required>
                         <input type="file" id="imagen" name="imageFile" accept="image/*" onchange="previewImage(this)"
-                            required>
+                            class="custom-file-input" required>
+                        <label for="imagen" class="custom-file-label">Selecciona una imagen...</label>
                         <img id="imagen-preview" src="#" alt="Vista previa de la imagen"
                             style="max-width: 100%; display: none;">
                         <button type="submit">Registrarse</button>

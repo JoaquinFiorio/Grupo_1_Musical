@@ -1,6 +1,6 @@
 // ProductDetail.jsx
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState({});
@@ -65,11 +65,16 @@ const ProductDetail = () => {
               key={image.id}
               src={`http://localhost:3030/img/products/${image.name || 'default.png'}`}
               className="img-thumbnail mb-3 me-3"
-              style={{ width: "250px", height: "200px" }}
+              style={{ width: "300px", objectFit: "cover" }}
               alt={`Imagen del producto ${product.name}`}
             />
           ))}
         </div>
+      </div>
+      <div>
+        <Link to={`/products`} className="btn btn-outline-info mt-3">
+          Volver
+        </Link>
       </div>
     </div>
   );

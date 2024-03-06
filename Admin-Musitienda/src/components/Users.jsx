@@ -29,10 +29,10 @@ const Users = () => {
                   <div className="card">
                     <div className="card-body">
                       <img src={`http://localhost:3030/img/users/${user.avatar || 'default-avatar.jpg'}`}
-                        className="card-img-top"
+                        className="card-img-top rounded-circle img-thumbnail"
+                        style={{ width: "500px", height: "300px" }}
                         alt={user.first_name || "Nombre no disponible"} />
-                      <h5 className="card-title">{user.first_name || "Nombre no disponible"}</h5>
-                      <p className="card-text">{user.email || "Correo no disponible"}</p>
+                      <h3 className="card-title">{user.first_name + " " + user.last_name || "Nombre no disponible"}</h3>
                     </div>
                   </div>
                 </Link>
@@ -43,6 +43,11 @@ const Users = () => {
       ) : (
         <p>Cargando...</p>
       )}
+      <div>
+        <Link to={`/`} className="btn btn-outline-info mt-3">
+          Volver
+        </Link>
+      </div>
     </div>
   );
 };
