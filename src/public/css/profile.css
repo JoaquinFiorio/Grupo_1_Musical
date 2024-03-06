@@ -31,10 +31,14 @@ body {
 }
 
 .wrapper .profile .profile_img_info .img img {
-  width: 80%;
+  width: 200px;
+  height: 200px;
   display: block;
+  object-fit: cover;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 .wrapper .profile .profile_img_info .info .name {
@@ -63,12 +67,14 @@ body {
   font-size: 30px;
   padding: 5px;
   color: darkred;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 .wrapper .profile .profile_info .info ul li {
   font-size: 25px;
   margin: 10px;
   list-style: none;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
 .wrapper .profile .profile_info .info i {
@@ -90,6 +96,7 @@ body {
   font-size: 25px;
   transition: background-color 0.3s;
   margin-top: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .wrapper .profile .profile_info .info .modifyUser button:hover {

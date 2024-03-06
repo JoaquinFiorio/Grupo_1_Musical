@@ -20,7 +20,14 @@ module.exports = (sequelize, dataTypes) => {
     deletedAt: false,
     tableName: "brands",
   };
+
   const Brand = sequelize.define(alias, cols, config);
+
+  Brand.associate = function (models) {
+    Brand.hasMany(models.Product, {
+      foreignKey: "brands_id",
+    });
+  };
 
   return Brand;
 };

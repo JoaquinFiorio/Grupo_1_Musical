@@ -1,5 +1,5 @@
 // ProductDetail.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const ProductDetail = () => {
@@ -35,11 +35,12 @@ const ProductDetail = () => {
         <strong>Nombre:</strong> {product.name || "Nombre no disponible"}
       </div>
       <div>
-        <strong>Marca ID:</strong> {product.brands_id}
-      </div>
-      <div>
         <strong>Año de fabricación:</strong> {product.fabrication_year}
       </div>
+      <div>
+        <strong>Marca:</strong> {product.brand && product.brand.name || "Marca no disponible"}
+      </div>
+
       <div>
         <strong>Precio:</strong> {product.price}
       </div>
@@ -64,8 +65,8 @@ const ProductDetail = () => {
             <img
               key={image.id}
               src={`http://localhost:3030/img/products/${image.name || 'default.png'}`}
-              className="img-thumbnail mb-3 me-3"
-              style={{ width: "300px", objectFit: "cover" }}
+              className="img-thumbnail col me-2 mb-2"
+              style={{ width: "300px", height: "300px", objectFit: "contain" }}
               alt={`Imagen del producto ${product.name}`}
             />
           ))}

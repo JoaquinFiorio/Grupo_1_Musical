@@ -21,7 +21,7 @@
                                                 <%= product.fabrication_year %>
                                             </p>
                                             <h6>
-                                                U$S <%= product.price %>
+                                                $ <%= product.price %>
                                             </h6>
                                             <button class="edit">Editar</button>
                                         </div>
@@ -29,6 +29,7 @@
                         <% }) %>
                 </div>
                 <a href="/productUploader"><button class="cargar">Cargar producto</button></a>
+
             </main>
             <%- include('./partials/footer') %>
     </body>

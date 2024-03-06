@@ -6,7 +6,6 @@ import Products from "./components/Products";
 import ProductDetail from "./components/ProductDetail";
 import Users from "./components/Users";
 import UserDetail from "./components/UserDetail";
-import Categories from "./components/Categories";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/users/" element={<Users />} />
             <Route path="/users/:id" element={<UserDetail />} />
-            <Route path="/categories" element={<Categories />} />
           </Routes>
         </BrowserRouter>
       </div>

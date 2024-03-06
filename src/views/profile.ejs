@@ -28,9 +28,6 @@
                                 <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span>
                                     <%= user.address %>
                                 </li>
-                                <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span>
-                                    <%= cities.name %>
-                                </li>
                             </ul>
                             <div class="modifyUser">
                                 <form action="/users/<%= user.id %>/delete?_method=DELETE" method="post">
@@ -38,8 +35,12 @@
                                 </form>
                                 <a href="/profileEdit/<%= user.id %>"><button
                                         class="btn-edit-product">Editar</button></a>
+                                <a href="/adminList"> <button class="btn-edit-product">Panel de
+                                        administrador</button></a>
+                                <a href="/"><button class="btn-back-product">Volver al inicio</button></a>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

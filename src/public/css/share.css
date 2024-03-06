@@ -158,125 +158,6 @@ header .headerImg img {
   display: none;
 }
 
-@media (max-width: 980px) {
-  .rectangle {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-  }
-
-  .right-bar {
-    margin-left: 0;
-    margin-bottom: 20px;
-  }
-
-  .footer .groupOne {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    display: flex;
-    flex-direction: column;
-    font-family: "Nunito", sans-serif;
-  }
-
-  .footer .groupOne .box img {
-    width: 150px;
-  }
-
-  .footer .groupOne .box h2,
-  .paymentsBox h2 {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 576px) {
-  .content h3 {
-    margin-bottom: 15px;
-  }
-
-  .content h4 {
-    margin-bottom: 20px;
-  }
-
-  .btn2 {
-    display: none;
-  }
-
-  .box {
-    height: 150px;
-  }
-
-  .bateria {
-    width: 162px !important;
-  }
-
-  .footer .groupOne {
-    grid-template-columns: repeat(1, 1fr);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer .groupOne .box img {
-    width: 100px;
-  }
-
-  .footer .groupOne .box h2,
-  .paymentsBox h2 {
-    font-size: 16px;
-  }
-
-  .footer .groupOne .socialIcon a,
-  .payments i {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .formulario {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .service {
-    font-size: 14px;
-  }
-
-  .navProducts {
-    display: none;
-  }
-
-  .rightOptions {
-    display: none;
-  }
-
-  .hamburgerMenu {
-    display: flex;
-    font-size: 27px;
-  }
-
-  .product-detail {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 450px) {
-  .conteiner {
-    flex-direction: column;
-  }
-
-  header .headerImg img {
-    width: 130%;
-  }
-
-  .container-details-product {
-    flex-direction: column;
-  }
-}
-
 /* NEWSLETTER */
 
 /* Estilos para el rectángulo */
@@ -408,8 +289,9 @@ header .headerImg img {
   border-radius: 50px;
 }
 
-.footer .groupOne .socialIcon a:hover {
-  color: var(--color-5);
+.footer .groupOne .socialIcon a:hover,
+.payments i:hover {
+  background-color: var(--color-3);
 }
 
 .footer .groupTwo {
@@ -425,3 +307,122 @@ header .headerImg img {
 }
 
 /* Fin Footer */
+
+@media (max-width: 980px) {
+  .rectangle {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .right-bar {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer .groupOne {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .footer .groupOne .box img {
+    width: 150px;
+  }
+
+  .footer .groupOne .box h2,
+  .paymentsBox h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content h3 {
+    margin-bottom: 15px;
+  }
+
+  .content h4 {
+    margin-bottom: 20px;
+  }
+
+  .btn2 {
+    display: none;
+  }
+
+  .box {
+    height: 150px;
+  }
+
+  .bateria {
+    width: 162px !important;
+  }
+
+  .footer .groupOne {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer .groupOne .box img {
+    width: 100px;
+  }
+
+  .footer .groupOne .box h2,
+  .paymentsBox h2 {
+    font-size: 16px;
+  }
+
+  .footer .groupOne .socialIcon a,
+  .payments i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .formulario {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service {
+    font-size: 14px;
+  }
+
+  .navProducts {
+    display: none;
+  }
+
+  .rightOptions {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    display: flex;
+    font-size: 27px;
+  }
+
+  .product-detail {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .conteiner {
+    flex-direction: column;
+  }
+
+  header .headerImg img {
+    width: 130%;
+  }
+
+  .container-details-product {
+    flex-direction: column;
+  }
+}
