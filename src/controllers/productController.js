@@ -75,6 +75,7 @@ const productController = {
               await db.Product_image.create({
                 products_id: productId,
                 images_id: imageCreated.id,
+                
               });
               console.log(`Saved ${imageCreated.name} to the database.`);
             } catch (error) {

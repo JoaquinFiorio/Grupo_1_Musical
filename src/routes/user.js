@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
+const uuid = require("uuid");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -9,7 +10,7 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     const ext = path.extname(file.originalname);
-    const filename = `user-${Date.now()}${ext}`;
+    const filename = `user-${uuid.v4()}${ext}`;
     cb(null, filename);
   },
 });

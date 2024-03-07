@@ -3,6 +3,8 @@
     <body>
         <%- include('./partials/header') %>
             <main>
+                <div href="/productUploader" class="btn-add"><a href="/productUploader" class="btn-upload">Cargar
+                        producto</a></div>
                 <div class="sectionProducts" id="products">
                     <% products.forEach(product=> { %>
                         <a href="/productEdit/<%= product.id %>" class="card">
@@ -28,7 +30,7 @@
                         </a>
                         <% }) %>
                 </div>
-                <a href="/productUploader"><button class="cargar">Cargar producto</button></a>
+
 
             </main>
             <%- include('./partials/footer') %>

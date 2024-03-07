@@ -57,17 +57,20 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: gray;
+  transition: 0.5s ease-in all;
 }
 
 .sectionProducts .card .edit:hover {
   background-color: darkred;
-  transition: 0.2s;
+  transition: 0.2s ease-in;
 }
-
-.cargar {
+.btn-add {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
+  margin: 10px auto;
+}
+.btn-upload {
   margin: 10px auto;
   background-color: gray;
   color: #fff;
@@ -75,10 +78,12 @@
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 18px;
+  font-family: "Nunito", sans-serif;
   cursor: pointer;
+  transition: 0.5s ease-in all;
 }
 
-.cargar:hover {
+.btn-upload:hover {
   background-color: darkred;
   transition: 0.2s;
 }
@@ -96,7 +101,7 @@
     height: auto;
   }
 
-  .cargar {
+  .btn-upload {
     justify-content: center;
   }
 }

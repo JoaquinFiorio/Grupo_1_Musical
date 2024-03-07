@@ -26,12 +26,18 @@ const UserDetail = () => {
 
   return (
     <div>
+      <div>
+        <Link to={`/users`} className="btn btn-outline-info"
+          style={{ position: "absolute", top: "10px", left: "10px", textDecoration: "none", fontSize: "25px" }}>
+          Volver
+        </Link>
+      </div>
       <h2>Detalles del Usuario</h2>
       <div>
         <img
           src={`http://localhost:3030/img/users/${user.avatar || 'default-avatar.jpg'}`}
           className="rounded-circle img-thumbnail"
-          style={{ width: "300px", height: "300px" }}
+          style={{ width: "400px", height: "400px", objectFit: "cover" }} 
           alt={user.first_name || "Nombre no disponible"}
         />
       </div>
@@ -46,11 +52,6 @@ const UserDetail = () => {
       </div>
       <div>
         <strong>Email:</strong> {user.email || "Email no disponible"}
-      </div>
-      <div>
-        <Link to={`/users`} className="btn btn-outline-info mt-3">
-          Volver
-        </Link>
       </div>
     </div>
   );

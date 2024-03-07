@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const { validationResult, cookie } = require("express-validator");
 const db = require("../database/models");
 const session = require("express-session");
-const { log } = require("console");
 
 const userController = {
   getUser: (req, res) => {},

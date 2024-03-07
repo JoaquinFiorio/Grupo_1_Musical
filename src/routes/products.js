@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const uuid = require("uuid");
 
 const router = express.Router();
 const storage = multer.diskStorage({
@@ -9,7 +10,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const ext = path.extname(file.originalname);
-    const filename = `product-${Date.now()}${ext}`;
+    const filename = `product-${uuid.v4()}${ext}`;
     cb(null, filename);
   },
 });

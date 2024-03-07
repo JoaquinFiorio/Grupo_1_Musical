@@ -16,20 +16,25 @@
                 </a>
                 <a href="/productCart" class="options productCart">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <h5>Carrito 0</h5>
+                    <h5>Carrito</h5>
                 </a>
+                <a href="/logout" class="options">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h5>Cerrar Sesión</h5>
+                </a>
+
                 <!-- ... (otros enlaces para usuarios autenticados) ... -->
-            <% } else { %>
-                <!-- Mostrar esto si el usuario NO está autenticado -->
-                <a href="/login" class="options">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <h5>Iniciar Sesión</h5>
-                </a>
-                <a href="/register" class="options">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <h5>Regístrate</h5>
-                </a>
-            <% } %>
+                <% } else { %>
+                    <!-- Mostrar esto si el usuario NO está autenticado -->
+                    <a href="/login" class="options">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <h5>Iniciar Sesión</h5>
+                    </a>
+                    <a href="/register" class="options">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <h5>Regístrate</h5>
+                    </a>
+                    <% } %>
         </div>
         <div class="hamburgerMenu">
             <i class="fa-solid fa-bars"></i>
@@ -37,7 +42,7 @@
     </nav>
     <div class="navProducts">
         <div class="dropdown">
-            <button>Inst. Cuerda <i class="fa-solid fa-chevron-down"></i></button>
+            <a href="../productList"><button>Inst. Cuerda <i class="fa-solid fa-chevron-down"></i></button></a>
             <ul class="dropdown-content">
                 <li><a href="#">Inst. Cuerda</a></li>
                 <li><a href="#">Inst. Viento</a></li>
@@ -47,7 +52,7 @@
             </ul>
         </div>
         <div class="dropdown">
-            <button>Inst. Viento <i class="fa-solid fa-chevron-down"></i></button>
+            <a href="../productList"><button>Inst. Viento <i class="fa-solid fa-chevron-down"></i></button></a>
             <ul class="dropdown-content">
                 <li><a href="#">Inst. Cuerda</a></li>
                 <li><a href="#">Inst. Viento</a></li>
@@ -57,7 +62,7 @@
             </ul>
         </div>
         <div class="dropdown">
-            <button>Percusión <i class="fa-solid fa-chevron-down"></i></button>
+            <a href="../productList"><button>Percusión <i class="fa-solid fa-chevron-down"></i></button></a>
             <ul class="dropdown-content">
                 <li><a href="#">Inst. Cuerda</a></li>
                 <li><a href="#">Inst. Viento</a></li>
@@ -67,7 +72,7 @@
             </ul>
         </div>
         <div class="dropdown">
-            <button>Teclado y Piano <i class="fa-solid fa-chevron-down"></i></button>
+            <a href="../productList"><button>Teclado y Piano <i class="fa-solid fa-chevron-down"></i></button></a>
             <ul class="dropdown-content">
                 <li><a href="#">Inst. Cuerda</a></li>
                 <li><a href="#">Inst. Viento</a></li>
@@ -77,7 +82,7 @@
             </ul>
         </div>
         <div class="dropdown">
-            <button>Accesorios <i class="fa-solid fa-chevron-down"></i></button>
+            <a href="../productList"><button>Accesorios <i class="fa-solid fa-chevron-down"></i></button></a>
             <ul class="dropdown-content">
                 <li><a href="#">Inst. Cuerda</a></li>
                 <li><a href="#">Inst. Viento</a></li>
@@ -86,5 +91,6 @@
                 <li><a href="#">Accesorios</a></li>
             </ul>
         </div>
-    </div>    
+    </div>
+
 </header>

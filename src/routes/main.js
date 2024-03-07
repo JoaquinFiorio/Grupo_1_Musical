@@ -31,4 +31,6 @@ router.get("/profileEdit/:id", viewsControllers.profileEdit);
 
 router.get("/errorUser", viewsControllers.errorUser);
 
+router.get("/logout", viewsControllers.logout);
+
 module.exports = router;

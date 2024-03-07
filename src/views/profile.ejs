@@ -2,6 +2,10 @@
 
     <body>
         <main>
+            <a href="/" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
             <div class="wrapper">
                 <div class="profile">
                     <div class="profile_img_info">
@@ -30,15 +34,26 @@
                                 </li>
                             </ul>
                             <div class="modifyUser">
-                                <form action="/users/<%= user.id %>/delete?_method=DELETE" method="post">
-                                    <button type="submit" class="btn-delete-product">Eliminar</button>
-                                </form>
-                                <a href="/profileEdit/<%= user.id %>"><button
-                                        class="btn-edit-product">Editar</button></a>
-                                <a href="/adminList"> <button class="btn-edit-product">Panel de
-                                        administrador</button></a>
-                                <a href="/"><button class="btn-back-product">Volver al inicio</button></a>
+                                <% if (user.role_id !==1) { %>
+                                    <a href="/profileEdit/<%= user.id %>">
+                                        <button class="btn-edit-product">Editar usuario</button>
+                                    </a>
+                                    <form action="/users/<%= user.id %>/delete?_method=DELETE" method="post"
+                                        onsubmit="return confirmDelete();">
+                                        <button type="submit" class="btn-delete-product">Eliminar usuario</button>
+                                    </form>
+                                    <% } %>
+
+                                        <% if (user.role_id===1) { %>
+                                            <a href="/adminList">
+                                                <button class="btn-edit-product">Editar productos</button>
+                                            </a>
+                                            <a href="http://localhost:5173" target="_blank">
+                                                <button class="btn-edit-product">Panel de administrador</button>
+                                            </a>
+                                            <% } %>
                             </div>
+
                         </div>
 
                     </div>
@@ -46,5 +61,10 @@
             </div>
         </main>
     </body>
+    <script>
+        function confirmDelete() {
+            return confirm("¿Estás seguro de que quieres eliminar este usuario?");
+        }
+    </script>
 
     </html>

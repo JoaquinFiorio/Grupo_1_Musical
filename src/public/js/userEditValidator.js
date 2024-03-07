@@ -9,6 +9,8 @@ form.addEventListener("submit", (event) => {
   const emailInput = document.getElementById("email").value;
   const addressInput = document.getElementById("address").value;
   const postal_codeInput = document.getElementById("postal_code").value;
+  const province_idInput = document.getElementById("provinces").value;
+  const city_idInput = document.getElementById("cities").value;
 
   //aca sacamos el total de las imagenes subidas
   const imagenes = document.getElementById("imageFile").files;
@@ -45,6 +47,19 @@ form.addEventListener("submit", (event) => {
     return false;
   }
 
+  // Utiliza validator.js para verificar si el valor es una dirección válida
+  if (!validator.isNumeric(province_idInput)) {
+    alert("Por favor, selecciona una provincia.");
+    event.preventDefault();
+    return false;
+  }
+
+  if (!validator.isNumeric(city_idInput)) {
+    alert("Por favor, selecciona una ciudad.");
+    event.preventDefault();
+    return false;
+  }
+
   const allowedPattern = /^[a-zA-Z0-9\s.,#]+$/;
   if (!validator.matches(addressInput, allowedPattern)) {
     alert(
@@ -55,9 +70,7 @@ form.addEventListener("submit", (event) => {
   }
 
   if (!validator.isNumeric(postal_codeInput)) {
-    alert(
-      "El campo no debe estar vacio, introduzca un valor numerico de 4 digitos"
-    );
+    alert("Debe introducir un codigo postal valido, debe contener 4 digitos");
     event.preventDefault();
     return false;
   }

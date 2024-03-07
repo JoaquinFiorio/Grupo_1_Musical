@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url("../font/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"), url("../font/Nunito-Regular.ttf") format("truetype");
+}
 .section {
   padding: 20px 6%;
 }
@@ -14,6 +23,7 @@
   padding: 20px 0px;
   border-bottom: 3px solid #555;
   margin: 50px auto;
+  font-family: "Nunito", sans-serif;
 }
 
 .swiperProducts {
@@ -25,6 +35,7 @@
 .swiperProducts img {
   width: 80%;
   height: 180px;
+  object-fit: cover;
 }
 
 .container {
@@ -189,4 +200,10 @@ label:active:after {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: gray;
+  transition: 0.8s ease all;
+}
+
+.container .sectionProducts .card button:hover {
+  background-color: darkred;
+  transition: 0.2s;
 }
