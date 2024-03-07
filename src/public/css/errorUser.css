@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway"), url("../font/Raleway-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"), url("../font/Nunito-Regular.ttf") format("truetype");
+}
+
 .errorUser {
   display: flex;
   justify-content: center;
@@ -19,4 +29,14 @@ p {
   color: red;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
+}
+
+.btn-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
 }

@@ -18,20 +18,25 @@ const Users = () => {
 
   return (
     <div>
+      <div>
+        <Link to={`/`} className="btn btn-outline-info"
+          style={{ position: "absolute", top: "10px", left: "10px", textDecoration: "none", fontSize: "25px" }}>
+          Volver
+        </Link>
+      </div>
       <h2>Lista de Usuarios</h2>
       {users.length > 0 ? (
         <div>
           <p>Hay {totalUsers} usuarios</p>
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+          <div className="flex row-wrap gap-4"
+            style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
             {users.map((user) => (
-              <div key={user.id} className="col">
+              <div key={user.id}>
                 <Link to={`/users/${user.id}`}>
                   <div className="card">
                     <div className="card-body">
-                      <img src={`http://localhost:3030/img/users/${user.avatar || 'default-avatar.jpg'}`}
-                        className="card-img-top rounded-circle img-thumbnail"
-                        style={{ width: "500px", height: "300px" }}
-                        alt={user.first_name || "Nombre no disponible"} />
+                      <div className="foto-perfil rounded-circle img-thumbnail"
+                        style={{ backgroundImage: `url(http://localhost:3030/img/users/${user.avatar || 'default-avatar.jpg'})` }}></div>
                       <h3 className="card-title">{user.first_name + " " + user.last_name || "Nombre no disponible"}</h3>
                     </div>
                   </div>
@@ -43,11 +48,6 @@ const Users = () => {
       ) : (
         <p>Cargando...</p>
       )}
-      <div>
-        <Link to={`/`} className="btn btn-outline-info mt-3">
-          Volver
-        </Link>
-      </div>
     </div>
   );
 };

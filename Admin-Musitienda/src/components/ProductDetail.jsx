@@ -27,6 +27,12 @@ const ProductDetail = () => {
 
   return (
     <div>
+      <div>
+        <Link to={`/products`} className="btn btn-outline-info"
+          style={{ position: "absolute", top: "10px", left: "10px", textDecoration: "none", fontSize: "25px" }}>
+          Volver
+        </Link>
+      </div>
       <h2>Detalles del Producto</h2>
       <div>
         <strong>ID:</strong> {product.id}
@@ -51,7 +57,7 @@ const ProductDetail = () => {
         <strong>Categorías:</strong>
         <ul className="list-unstyled">
           {product.Categories && product.Categories.map((category) => (
-            <li key={category.id} className="mb-2">
+            <li key={category.id} className="mb-2 ">
               <span className="badge bg-secondary">{category.name}</span>
             </li>
           ))}
@@ -72,11 +78,7 @@ const ProductDetail = () => {
           ))}
         </div>
       </div>
-      <div>
-        <Link to={`/products`} className="btn btn-outline-info mt-3">
-          Volver
-        </Link>
-      </div>
+
     </div>
   );
 };

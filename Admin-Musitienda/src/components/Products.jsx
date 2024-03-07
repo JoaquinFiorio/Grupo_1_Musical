@@ -30,6 +30,12 @@ const Products = () => {
 
     return (
         <div>
+            <div>
+                <Link to={`/`} className="btn btn-outline-info"
+                    style={{ position: "absolute", top: "10px", left: "10px", textDecoration: "none", fontSize: "25px" }}>
+                    Volver
+                </Link>
+            </div>
             {lastAddedProduct && (
                 <div className="row mb-4 mt-4">
                     <div className="col">
@@ -91,11 +97,6 @@ const Products = () => {
             ) : (
                 <p>Cargando...</p>
             )}
-            <div>
-                <Link to={`/`} className="btn btn-outline-info mt-3">
-                    Volver
-                </Link>
-            </div>
         </div>
     );
 };

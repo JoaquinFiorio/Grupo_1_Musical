@@ -54,6 +54,15 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.foto-perfil {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

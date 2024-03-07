@@ -2,6 +2,10 @@
 
     <body>
         <main>
+            <a href="/profile" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver
+            </a>
             <div class="product">
                 <h3>Editar usuario</h3>
                 <form id="userEditForm" action="/users/<%= user.id %>/edit?_method=PUT" method="post"
@@ -64,13 +68,14 @@
                     <div class="form-group">
                         <label for="role_id">Rol</label>
                         <select id="role_id" name="role_id">
-                            <% roles.forEach(role=> { %>
+                            <% roles.slice(1).forEach(role=> { %>
                                 <option value="<%= role.id %>" <%=role.id===user.role_id ? 'selected' : '' %>>
                                     <%= role.name %>
                                 </option>
                                 <% }); %>
                         </select>
                     </div>
+
 
                     <div class="form-group">
                         <label for="avatar">Foto de perfil</label>

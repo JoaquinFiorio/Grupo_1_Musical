@@ -1328,7 +1328,11 @@ CREATE TABLE Roles (
     id int primary key auto_increment not null, name varchar(50)
 );
 
-INSERT INTO Roles (name) VALUES ("Comprador"), ("Vendedor");
+INSERT INTO
+    Roles (name)
+VALUES ("Admin"),
+    ("Comprador"),
+    ("Vendedor");
 
 DROP TABLE IF EXISTS Users;
 
@@ -1341,7 +1345,7 @@ INSERT INTO
         first_name, last_name, phone_number, email, address, postal_code, city_id, role_id, password, avatar
     )
 VALUES (
-        'Elayne', 'Subhan', '+62 (417) 686-5527', 'esubhan0@xrea.com', '4 Katie Circle', '4178', '211', '2', '$2b$10$3znIeXCHpBtBGhvv14Yvr.QYdjBhR7RRHadV4U/7rYELfnYkKYqsG', 'user-1701959206715.png'
+        'Admin', 'admin', '+1111111111111', 'admin@admin.com', '4 Katie Circle', '4178', '211', '1', '$2b$10$3znIeXCHpBtBGhvv14Yvr.QYdjBhR7RRHadV4U/7rYELfnYkKYqsG', 'user-1709816350439.jpeg'
     );
 
 DROP TABLE IF EXISTS Orders;

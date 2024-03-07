@@ -177,3 +177,12 @@ button[type="submit"] {
 .rowRight img {
   border-radius: 10px;
 }
+.btn-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}

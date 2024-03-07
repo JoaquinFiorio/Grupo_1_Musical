@@ -13,18 +13,7 @@ const viewController = {
     };
     return res.render(path.join(__dirname, "../views/index"), data);
   },
-  login: (req, res) => {
-    const loggedIn = req.cookies.user ? true : false;
-    const data = {
-      title: "Login",
-      css: "login.css",
-      loggedIn,
-    };
-    if (loggedIn === true) {
-      return res.redirect("/");
-    }
-    res.render(path.join(__dirname, "../views/login"), data);
-  },
+
   productCart: (req, res) => {
     const loggedIn = req.cookies.user ? true : false;
 
@@ -76,21 +65,7 @@ const viewController = {
       res.status(500).send("Internal Server Error");
     }
   },
-  register: async (req, res) => {
-    const loggedIn = req.cookies.user ? true : false;
 
-    const validator = require("validator");
-    const data = {
-      title: "Register",
-      css: "register.css",
-      validator: validator,
-      loggedIn,
-    };
-    if (loggedIn === true) {
-      return res.redirect("/");
-    }
-    res.render(path.join(__dirname, "../views/register"), data);
-  },
   productList: async (req, res) => {
     const loggedIn = req.cookies.user ? true : false;
 
@@ -210,6 +185,33 @@ const viewController = {
       res.status(500).send("Internal Server Error");
     }
   },
+  register: async (req, res) => {
+    const loggedIn = req.cookies.user ? true : false;
+
+    const validator = require("validator");
+    const data = {
+      title: "Register",
+      css: "register.css",
+      validator: validator,
+      loggedIn,
+    };
+    if (loggedIn === true) {
+      return res.redirect("/");
+    }
+    res.render(path.join(__dirname, "../views/register"), data);
+  },
+  login: (req, res) => {
+    const loggedIn = req.cookies.user ? true : false;
+    const data = {
+      title: "Login",
+      css: "login.css",
+      loggedIn,
+    };
+    if (loggedIn === true) {
+      return res.redirect("/");
+    }
+    res.render(path.join(__dirname, "../views/login"), data);
+  },
   profile: async (req, res) => {
     const loggedIn = req.cookies.user ? true : false;
 
@@ -231,6 +233,7 @@ const viewController = {
           "email",
           "address",
           "avatar",
+          "role_id",
         ],
       });
 
@@ -251,7 +254,6 @@ const viewController = {
       res.status(500).send("Error interno del servidor");
     }
   },
-
   profileEdit: async (req, res) => {
     const loggedIn = req.cookies.user ? true : false;
 
@@ -310,6 +312,10 @@ const viewController = {
     };
 
     res.render(path.join(__dirname, "../views/errorUser"), data);
+  },
+  logout: (req, res) => {
+    res.clearCookie("user");
+    res.redirect("/login");
   },
 };
 
